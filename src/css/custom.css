@@ -1,0 +1,77 @@
+/**
+ * NRL Curriculum theme.
+ * Primary accent is the NRL brand indigo, toned down for a calm docs feel.
+ * The brand pink is kept out of --ifm-color-primary on purpose so it can't
+ * leak into every link/button — it only appears via --nrl-accent-pink on
+ * badges/tags/highlights.
+ */
+
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/manrope/600.css';
+@import '@fontsource/manrope/700.css';
+@import '@fontsource/manrope/800.css';
+
+:root {
+  --ifm-color-primary: #4754e9;
+  --ifm-color-primary-dark: #3340e6;
+  --ifm-color-primary-darker: #2a37d9;
+  --ifm-color-primary-darkest: #232eb3;
+  --ifm-color-primary-light: #5b68eb;
+  --ifm-color-primary-lighter: #6672ed;
+  --ifm-color-primary-lightest: #8d97f2;
+
+  --nrl-accent-pink: #fe01ac;
+  --nrl-accent-pink-soft: #ffe6f6;
+
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f7f8fc;
+  --ifm-code-font-size: 92%;
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'Manrope', var(--ifm-font-family-base);
+  --ifm-heading-font-weight: 700;
+  --docusaurus-highlighted-code-line-bg: rgba(71, 84, 233, 0.1);
+
+  --nrl-keyidea-color: var(--ifm-color-primary-darkest);
+  --nrl-keyidea-bg: #eef0fd;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #8891f2;
+  --ifm-color-primary-dark: #6e79ef;
+  --ifm-color-primary-darker: #5f6bee;
+  --ifm-color-primary-darkest: #3d4be6;
+  --ifm-color-primary-light: #a2a9f5;
+  --ifm-color-primary-lighter: #b1b7f6;
+  --ifm-color-primary-lightest: #dadcfb;
+
+  --nrl-accent-pink: #ff4fc4;
+  --nrl-accent-pink-soft: #3a1130;
+
+  --ifm-background-color: #14161f;
+  --ifm-background-surface-color: #1b1e2a;
+  --docusaurus-highlighted-code-line-bg: rgba(136, 145, 242, 0.2);
+
+  --nrl-keyidea-color: #c4c9fb;
+  --nrl-keyidea-bg: #1f2340;
+}
+
+/* Sparing pink accent: badges/tags/highlight text only. */
+.nrl-badge {
+  display: inline-block;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--nrl-accent-pink);
+  background: var(--nrl-accent-pink-soft);
+}
+
+/* Custom "Key Idea" admonition — indigo-bordered, distinct from plain notes. */
+.theme-admonition-keyidea {
+  --ifm-alert-background-color: var(--nrl-keyidea-bg);
+  --ifm-alert-border-color: var(--ifm-color-primary);
+  --ifm-alert-color: var(--nrl-keyidea-color);
+}

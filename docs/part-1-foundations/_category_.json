@@ -1,0 +1,10 @@
+{
+  "label": "Part 1: Foundations",
+  "position": 1,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "What the robot is, and just enough C++ to read every example in this book."
+  }
+}

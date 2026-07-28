@@ -1,0 +1,10 @@
+{
+  "label": "Part 5: Examples, Troubleshooting & Reference",
+  "position": 5,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Worked examples, a troubleshooting guide, an API cheat-sheet, and a glossary."
+  }
+}

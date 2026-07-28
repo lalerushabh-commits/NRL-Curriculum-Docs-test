@@ -1,0 +1,10 @@
+{
+  "label": "Part 2: Getting Started",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Installing the tools, understanding your hardware, creating a project, pairing, flashing, and your first working program."
+  }
+}

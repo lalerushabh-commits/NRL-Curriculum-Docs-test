@@ -1,0 +1,10 @@
+{
+  "label": "Part 3: Programming the Robot",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "One short chapter per building block: motors, driving, servos, the gamepad, the IMU, telemetry, the LED, the OLED, and power."
+  }
+}
