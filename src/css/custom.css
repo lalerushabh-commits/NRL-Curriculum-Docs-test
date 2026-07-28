@@ -1,18 +1,18 @@
 /**
- * NRL Curriculum theme.
- * Primary accent is the NRL brand indigo, toned down for a calm docs feel.
- * The brand pink is kept out of --ifm-color-primary on purpose so it can't
- * leak into every link/button — it only appears via --nrl-accent-pink on
- * badges/tags/highlights.
+ * NRL Curriculum theme — matches the nrl.theinnovationstory.com brand:
+ * near-black surfaces, indigo + pink duotone accents, Funnel Display
+ * headings over Inter body text. Dark mode is the primary/default look
+ * (mirroring the marketing site, which has no light variant); light mode
+ * gets the same accent colors on a white/lavender base for accessibility.
  */
 
 @import '@fontsource/inter/400.css';
 @import '@fontsource/inter/500.css';
 @import '@fontsource/inter/600.css';
 @import '@fontsource/inter/700.css';
-@import '@fontsource/manrope/600.css';
-@import '@fontsource/manrope/700.css';
-@import '@fontsource/manrope/800.css';
+@import '@fontsource/funnel-display/600.css';
+@import '@fontsource/funnel-display/700.css';
+@import '@fontsource/funnel-display/800.css';
 
 :root {
   --ifm-color-primary: #4754e9;
@@ -27,10 +27,10 @@
   --nrl-accent-pink-soft: #ffe6f6;
 
   --ifm-background-color: #ffffff;
-  --ifm-background-surface-color: #f7f8fc;
+  --ifm-background-surface-color: #f3f4ff;
   --ifm-code-font-size: 92%;
   --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
-  --ifm-heading-font-family: 'Manrope', var(--ifm-font-family-base);
+  --ifm-heading-font-family: 'Funnel Display', var(--ifm-font-family-base);
   --ifm-heading-font-weight: 700;
   --docusaurus-highlighted-code-line-bg: rgba(71, 84, 233, 0.1);
 
@@ -50,12 +50,31 @@
   --nrl-accent-pink: #ff4fc4;
   --nrl-accent-pink-soft: #3a1130;
 
-  --ifm-background-color: #14161f;
-  --ifm-background-surface-color: #1b1e2a;
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #0d0d10;
+  --ifm-toc-border-color: #292929;
+  --ifm-color-emphasis-300: #2b2b2f;
+  --ifm-hr-border-color: #292929;
+  --ifm-navbar-background-color: #000000;
+  --ifm-footer-background-color: #000000;
+  --ifm-card-background-color: #0d0d10;
   --docusaurus-highlighted-code-line-bg: rgba(136, 145, 242, 0.2);
 
   --nrl-keyidea-color: #c4c9fb;
-  --nrl-keyidea-bg: #1f2340;
+  --nrl-keyidea-bg: #14162b;
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom: 1px solid #1c1c1f;
+}
+
+[data-theme='dark'] .menu__link--active,
+[data-theme='dark'] .menu__link:hover {
+  background: #14141a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.01em;
 }
 
 /* Sparing pink accent: badges/tags/highlight text only. */

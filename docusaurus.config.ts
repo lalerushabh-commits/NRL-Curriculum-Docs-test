@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'NRL Curriculum',
   tagline: 'Learn to program a competition robot with the NRL platform',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   future: {
     v4: true,
@@ -50,12 +50,22 @@ const config: Config = {
     ],
   ],
 
-  themes: ['@easyops-cn/docusaurus-search-local'],
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        indexDocs: true,
+        docsRouteBasePath: '/',
+        hashed: true,
+      },
+    ],
+  ],
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'dark',
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'NRL Curriculum',
@@ -73,11 +83,6 @@ const config: Config = {
         {
           href: 'https://nrl.theinnovationstory.com/',
           label: 'NRL Home',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/lalerushabh-commits/NRL-Curriculum-Docs',
-          label: 'GitHub',
           position: 'right',
         },
       ],

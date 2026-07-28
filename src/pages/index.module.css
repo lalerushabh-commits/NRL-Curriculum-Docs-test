@@ -4,20 +4,49 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 6rem 0 4rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: var(--ifm-background-color);
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 3rem 1.5rem;
   }
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.heroAccent {
+  color: var(--nrl-accent-pink);
+}
+
+.heroTagline {
+  font-size: 1.25rem;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.ctaButton {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  font-weight: 700;
+}
+
+.ctaButton:hover {
+  background: var(--nrl-accent-pink);
+  color: #ffffff;
 }

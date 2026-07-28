@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="NRL logo">
-  <rect x="0" y="0" width="32" height="32" rx="8" fill="#000000"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="NRL favicon">
+  <rect x="0" y="0" width="32" height="32" rx="8" fill="#fe01ac"/>
   <g transform="translate(4,4)">
     <path d="M17.2686 0C20.9835 0.000113472 24.0008 3.02187 24.001 6.74316V20H19.9961V24H8.7041C3.9001 23.9998 0.000246245 20.0934 0 15.2812V4H4.00488V0H17.2686ZM2.64844 13.3633H8.60742V7.39062H2.64844V13.3633ZM10.9355 13.3633H16.8955V7.39062H10.9355V13.3633Z" fill="#ffffff"/>
   </g>
