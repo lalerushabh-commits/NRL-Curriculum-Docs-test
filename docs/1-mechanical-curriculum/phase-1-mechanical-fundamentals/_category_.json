@@ -1,0 +1,10 @@
+{
+  "label": "Phase 1: Mechanical Fundamentals",
+  "position": 1,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "[Foundation] Gears and gear ratio, load/payload/forces, and a review of simple machines — levers and the wheel and axle."
+  }
+}

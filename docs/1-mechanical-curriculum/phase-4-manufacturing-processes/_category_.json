@@ -1,0 +1,10 @@
+{
+  "label": "Phase 4: Manufacturing Processes",
+  "position": 4,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "[Making It Real] FDM 3D printing, laser cutting, CNC machining, and injection moulding — how robot parts actually get made."
+  }
+}

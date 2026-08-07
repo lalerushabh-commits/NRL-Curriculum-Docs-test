@@ -1,0 +1,10 @@
+{
+  "label": "Phase 3: Mechanism Design & Assembly",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "[Applied CAD] Spur vs. helical gears, building them in Onshape, four-bar linkages, and gear meshing assemblies."
+  }
+}

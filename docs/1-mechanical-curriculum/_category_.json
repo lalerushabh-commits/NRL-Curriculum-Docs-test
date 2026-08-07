@@ -1,0 +1,10 @@
+{
+  "label": "1. Mechanical Curriculum",
+  "position": 1,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Gears, forces, simple machines, CAD in Onshape, mechanism design, and manufacturing processes — the mechanical-engineering foundations behind every NRL robot."
+  }
+}

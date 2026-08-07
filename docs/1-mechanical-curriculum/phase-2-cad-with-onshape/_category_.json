@@ -1,0 +1,10 @@
+{
+  "label": "Phase 2: CAD with Onshape",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Learning Onshape's interface, sketching, 3D features, and assemblies through Onshape's own courses and videos."
+  }
+}

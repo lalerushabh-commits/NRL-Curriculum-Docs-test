@@ -1,0 +1,10 @@
+{
+  "label": "2. Programming Curriculum",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn to program a competition robot with the NRL platform — from foundations through autonomous routines."
+  }
+}
