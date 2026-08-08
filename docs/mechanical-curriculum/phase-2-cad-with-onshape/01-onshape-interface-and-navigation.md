@@ -5,8 +5,11 @@ slug: /phase-2-cad-with-onshape/onshape-interface-and-navigation
 ---
 
 import YouTubeEmbed from '@site/src/components/YouTubeEmbed';
+import ExternalModuleNote from '@site/src/components/ExternalModuleNote';
 
-This module is taught through video walkthroughs rather than written notes — watch the video below to get comfortable with Onshape's interface before moving on to sketching.
+<ExternalModuleNote via="video" />
+
+Watch the video below to get comfortable with Onshape's interface before moving on to sketching.
 
 <YouTubeEmbed id="F_Og0ChY7bc" title="Onshape Interface and Navigation" />
 

@@ -1,16 +1,26 @@
 import React, {type ReactNode} from 'react';
 import styles from './styles.module.css';
 
-export interface YouTubeEmbedProps {
-  /** A single video's ID (the part after v= or after youtu.be/). */
-  id?: string;
-  /** A playlist ID (the part after list= in a playlist URL). */
-  listId?: string;
+interface BaseProps {
   /** Accessible title, also shown as the iframe title attribute. */
   title: string;
   /** Optional caption rendered under the embed. */
   caption?: ReactNode;
 }
+
+interface SingleVideoProps extends BaseProps {
+  /** A single video's ID (the part after v= or after youtu.be/). */
+  id: string;
+  listId?: never;
+}
+
+interface PlaylistProps extends BaseProps {
+  id?: never;
+  /** A playlist ID (the part after list= in a playlist URL). */
+  listId: string;
+}
+
+export type YouTubeEmbedProps = SingleVideoProps | PlaylistProps;
 
 export default function YouTubeEmbed({id, listId, title, caption}: YouTubeEmbedProps): ReactNode {
   const src = listId

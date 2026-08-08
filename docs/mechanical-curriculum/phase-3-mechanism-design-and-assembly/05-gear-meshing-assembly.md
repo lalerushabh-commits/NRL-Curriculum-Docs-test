@@ -5,7 +5,10 @@ slug: /phase-3-mechanism-design-and-assembly/gear-meshing-assembly
 ---
 
 import YouTubeEmbed from '@site/src/components/YouTubeEmbed';
+import ExternalModuleNote from '@site/src/components/ExternalModuleNote';
 
-This module is taught through a video walkthrough — follow along in Onshape as you watch.
+<ExternalModuleNote via="video" />
+
+Follow along in Onshape as you watch.
 
 <YouTubeEmbed id="X-Qk3VlCDPo" title="Gear Meshing Assembly" />

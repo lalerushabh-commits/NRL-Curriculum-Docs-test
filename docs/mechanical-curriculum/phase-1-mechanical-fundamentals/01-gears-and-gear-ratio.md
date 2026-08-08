@@ -19,7 +19,7 @@ Fewer teeth → smaller gear, higher speed, lower torque.
 
 When two gears touch, one rotates clockwise while the other rotates counter-clockwise. Every pair of meshing gears rotates in opposite directions. Adding another gear reverses the direction again.
 
-![Two meshing gears rotating in opposite directions.](/img/mechanical/phase1-gear-rotation.png)
+![Two meshing gears rotating in opposite directions.](/img/mechanical/phase1-gear-rotation.jpg)
 
 ## Driver Gear and Driven Gear
 

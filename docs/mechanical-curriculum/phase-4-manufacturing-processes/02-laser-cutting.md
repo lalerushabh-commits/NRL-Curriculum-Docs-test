@@ -1,5 +1,5 @@
 ---
-title: "1.2: Laser Cutting"
+title: "Module 4.2: Laser Cutting"
 sidebar_position: 2
 slug: /phase-4-manufacturing-processes/laser-cutting
 ---

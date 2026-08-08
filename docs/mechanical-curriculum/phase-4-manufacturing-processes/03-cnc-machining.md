@@ -1,5 +1,5 @@
 ---
-title: "1.3: CNC Machining"
+title: "Module 4.3: CNC Machining"
 sidebar_position: 3
 slug: /phase-4-manufacturing-processes/cnc-machining
 ---

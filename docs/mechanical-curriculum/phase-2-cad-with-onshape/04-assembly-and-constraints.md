@@ -5,8 +5,9 @@ slug: /phase-2-cad-with-onshape/assembly-and-constraints
 ---
 
 import YouTubeEmbed from '@site/src/components/YouTubeEmbed';
+import ExternalModuleNote from '@site/src/components/ExternalModuleNote';
 
-This module is taught through Onshape's own interactive course and a video playlist rather than written notes here.
+<ExternalModuleNote via="course-and-playlist" />
 
 Start here: [Creating an Assembly — Assembly Interface](https://learn.onshape.com/learn/course/introduction-to-onshape-assemblies/creating-an-assembly/assembly-interface).
 

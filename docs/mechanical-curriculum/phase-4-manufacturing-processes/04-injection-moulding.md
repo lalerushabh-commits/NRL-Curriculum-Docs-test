@@ -1,5 +1,5 @@
 ---
-title: "1.4: Injection Moulding"
+title: "Module 4.4: Injection Moulding"
 sidebar_position: 4
 slug: /phase-4-manufacturing-processes/injection-moulding
 ---

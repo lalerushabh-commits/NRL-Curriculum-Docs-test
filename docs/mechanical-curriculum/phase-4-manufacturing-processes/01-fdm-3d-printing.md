@@ -1,5 +1,5 @@
 ---
-title: "1.1: FDM (Fused Deposition Modeling) 3D Printing"
+title: "Module 4.1: FDM (Fused Deposition Modeling) 3D Printing"
 sidebar_position: 1
 slug: /phase-4-manufacturing-processes/fdm-3d-printing
 ---

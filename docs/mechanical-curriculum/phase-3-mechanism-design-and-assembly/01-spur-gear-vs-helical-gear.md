@@ -1,5 +1,5 @@
 ---
-title: "1.1: Spur Gear vs. Helical Gear"
+title: "Module 3.1: Spur Gear vs. Helical Gear"
 sidebar_position: 1
 slug: /phase-3-mechanism-design-and-assembly/spur-gear-vs-helical-gear
 ---
