@@ -1,0 +1,10 @@
+{
+  "label": "Phase 5: Self-Practice",
+  "position": 5,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Given only a dimensioned drawing sheet, model each part yourself in Onshape — then check your work against a solution video where one's available."
+  }
+}
