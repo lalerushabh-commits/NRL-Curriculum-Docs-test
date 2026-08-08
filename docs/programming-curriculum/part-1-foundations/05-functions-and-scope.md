@@ -234,8 +234,6 @@ Everything across these four modules is plain C++. It works in any C++ program, 
 | 1.4 — Conditionals & Loops | `if` / `else if` / `else`, `switch`, `while`, `for`, `do-while`, `break`, `continue`. |
 | 1.5 — Functions & Scope | Name a piece of work, pass values in, hand a value back. Braces decide what's visible. |
 
-**Keep going**: [w3schools.com/cpp](https://www.w3schools.com/cpp/cpp_intro.asp) and [geeksforgeeks.org/c-plus-plus](https://www.geeksforgeeks.org/cpp/c-plus-plus/) are both good for extra practice.
-
 :::tip
 Redo every example on this page and the previous three from memory before moving on to the rest of the book — that's the fastest way to make it stick.
 :::
