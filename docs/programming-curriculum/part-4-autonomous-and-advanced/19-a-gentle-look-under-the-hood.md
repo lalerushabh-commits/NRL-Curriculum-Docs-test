@@ -1,5 +1,5 @@
 ---
-title: 19. A Gentle Look Under the Hood
+title: "Module 4.4: A Gentle Look Under the Hood"
 sidebar_position: 4
 slug: /part-4-autonomous-and-advanced/a-gentle-look-under-the-hood
 ---

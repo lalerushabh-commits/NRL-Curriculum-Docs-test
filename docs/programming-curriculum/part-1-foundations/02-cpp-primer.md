@@ -1,5 +1,5 @@
 ---
-title: 2. A Five-Minute C++ Primer
+title: "Module 1.2: A Five-Minute C++ Primer"
 sidebar_position: 2
 slug: /part-1-foundations/cpp-primer
 ---

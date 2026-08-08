@@ -1,5 +1,5 @@
 ---
-title: 16. Writing an Autonomous OpMode
+title: "Module 4.1: Writing an Autonomous OpMode"
 sidebar_position: 1
 slug: /part-4-autonomous-and-advanced/writing-an-autonomous-opmode
 ---

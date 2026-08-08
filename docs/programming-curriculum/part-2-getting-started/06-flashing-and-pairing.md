@@ -1,5 +1,5 @@
 ---
-title: 6. Flashing and Pairing
+title: "Module 2.4: Flashing and Pairing"
 sidebar_position: 4
 slug: /part-2-getting-started/flashing-and-pairing
 ---

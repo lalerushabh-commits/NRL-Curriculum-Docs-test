@@ -1,5 +1,5 @@
 ---
-title: 8. Driving with TankDrive
+title: "Module 3.2: Driving with TankDrive"
 sidebar_position: 2
 slug: /part-3-programming-the-robot/driving-with-tankdrive
 ---

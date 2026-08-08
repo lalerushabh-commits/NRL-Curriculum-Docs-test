@@ -1,12 +1,12 @@
 ---
-title: 22. API Quick Reference
+title: "Module 5.3: API Quick Reference"
 sidebar_position: 3
 slug: /part-5-examples-troubleshooting-reference/api-quick-reference
 ---
 
 import ApiTable from '@site/src/components/ApiTable';
 
-A one-page cheat-sheet for everything covered in Part 3 and Part 4. See each chapter for full explanations and worked examples.
+A one-page cheat-sheet for everything covered in Phase 3 and Phase 4. See each module for full explanations and worked examples.
 
 ## OpMode skeleton
 

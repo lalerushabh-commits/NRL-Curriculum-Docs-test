@@ -1,5 +1,5 @@
 ---
-title: 4. Creating Your Own Project (HexaSDK)
+title: "Module 2.2: Creating Your Own Project (HexaSDK)"
 sidebar_position: 2
 slug: /part-2-getting-started/creating-your-own-project
 ---

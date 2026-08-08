@@ -1,12 +1,12 @@
 ---
-title: 14. The OLED Display
+title: "Module 3.8: The OLED Display"
 sidebar_position: 8
 slug: /part-3-programming-the-robot/the-oled-display
 ---
 
 import ApiTable from '@site/src/components/ApiTable';
 
-The Robot can carry a small **OLED screen** for on-robot readouts. The `HexaOLED` class gives you a simple drawing surface — text, lines, rectangles, and circles. This is optional; most programs send data via telemetry ([Chapter 12](/part-3-programming-the-robot/telemetry)) instead, but an on-robot display is great for pit debugging.
+The Robot can carry a small **OLED screen** for on-robot readouts. The `HexaOLED` class gives you a simple drawing surface — text, lines, rectangles, and circles. This is optional; most programs send data via telemetry ([Module 3.6](/part-3-programming-the-robot/telemetry)) instead, but an on-robot display is great for pit debugging.
 
 ## Declaring and drawing
 

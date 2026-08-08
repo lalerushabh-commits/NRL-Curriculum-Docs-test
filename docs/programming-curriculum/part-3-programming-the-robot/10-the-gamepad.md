@@ -1,5 +1,5 @@
 ---
-title: 10. The Gamepad
+title: "Module 3.4: The Gamepad"
 sidebar_position: 4
 slug: /part-3-programming-the-robot/the-gamepad
 ---
@@ -70,5 +70,5 @@ void init() override {
 ```
 
 :::tip[Which to use?]
-Use `justPressed()` in `loop()` for most things — it keeps all your logic in one place. Reach for `onPress()` bindings when you have a lot of independent one-shot buttons and want to keep `loop()` tidy. For multi-step sequences, use Actions ([Chapter 17](/part-4-autonomous-and-advanced/the-action-system)).
+Use `justPressed()` in `loop()` for most things — it keeps all your logic in one place. Reach for `onPress()` bindings when you have a lot of independent one-shot buttons and want to keep `loop()` tidy. For multi-step sequences, use Actions ([Module 4.2](/part-4-autonomous-and-advanced/the-action-system)).
 :::

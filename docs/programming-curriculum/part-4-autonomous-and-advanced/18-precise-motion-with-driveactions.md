@@ -1,5 +1,5 @@
 ---
-title: 18. Precise Motion with DriveActions
+title: "Module 4.3: Precise Motion with DriveActions"
 sidebar_position: 3
 slug: /part-4-autonomous-and-advanced/precise-motion-with-driveactions
 ---

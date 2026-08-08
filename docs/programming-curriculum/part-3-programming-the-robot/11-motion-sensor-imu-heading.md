@@ -1,12 +1,12 @@
 ---
-title: 11. The Motion Sensor (IMU) & Heading
+title: "Module 3.5: The Motion Sensor (IMU) & Heading"
 sidebar_position: 5
 slug: /part-3-programming-the-robot/motion-sensor-imu-heading
 ---
 
 import ApiTable from '@site/src/components/ApiTable';
 
-The robot carries an **IMU** (Inertial Measurement Unit) — a chip that senses acceleration and rotation. Its most useful output for us is **heading**: which way the robot is pointing, in degrees. Heading is what makes precise autonomous turns possible ([Chapter 18](/part-4-autonomous-and-advanced/precise-motion-with-driveactions)).
+The robot carries an **IMU** (Inertial Measurement Unit) — a chip that senses acceleration and rotation. Its most useful output for us is **heading**: which way the robot is pointing, in degrees. Heading is what makes precise autonomous turns possible ([Module 4.3](/part-4-autonomous-and-advanced/precise-motion-with-driveactions)).
 
 ## Two ways to use it
 

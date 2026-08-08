@@ -1,5 +1,5 @@
 ---
-title: 13. The Status LED
+title: "Module 3.7: The Status LED"
 sidebar_position: 7
 slug: /part-3-programming-the-robot/the-status-led
 ---

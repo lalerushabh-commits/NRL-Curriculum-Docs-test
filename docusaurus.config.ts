@@ -98,7 +98,11 @@ const config: Config = {
               to: '/how-to-use-this-book',
             },
             {
-              label: 'Part 1: Foundations',
+              label: 'Mechanical Curriculum',
+              to: '/phase-1-mechanical-fundamentals/gears-and-gear-ratio',
+            },
+            {
+              label: 'Programming Curriculum',
               to: '/part-1-foundations/welcome-to-nrl',
             },
           ],

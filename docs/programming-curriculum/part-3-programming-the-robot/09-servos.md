@@ -1,5 +1,5 @@
 ---
-title: 9. Servos
+title: "Module 3.3: Servos"
 sidebar_position: 3
 slug: /part-3-programming-the-robot/servos
 ---
@@ -34,12 +34,12 @@ static HexaServo arm{{ .signalPin = SERVO_1, .startAngle = 90.0f, .settleMs = 0 
 ]} />
 
 :::note[settleMs = 0 means "hold"]
-With `.settleMs = 0`, the servo keeps its signal and firmly holds its commanded angle — which is what you usually want for an arm. This relies on a clean servo power supply; if a servo buzzes at rest on a weak battery, that's a power issue (see [Chapter 21](/part-5-examples-troubleshooting-reference/common-mistakes-and-troubleshooting)), not a code bug.
+With `.settleMs = 0`, the servo keeps its signal and firmly holds its commanded angle — which is what you usually want for an arm. This relies on a clean servo power supply; if a servo buzzes at rest on a weak battery, that's a power issue (see [Module 5.2](/part-5-examples-troubleshooting-reference/common-mistakes-and-troubleshooting)), not a code bug.
 :::
 
 ## A complete servo OpMode
 
-This sweeps an arm servo between two poses on a button, using edge detection so one press = one toggle (the pattern is explained fully in [Chapter 10](/part-3-programming-the-robot/the-gamepad)).
+This sweeps an arm servo between two poses on a button, using edge detection so one press = one toggle (the pattern is explained fully in [Module 3.4](/part-3-programming-the-robot/the-gamepad)).
 
 ```cpp
 #include "NRL.h"

@@ -1,5 +1,5 @@
 ---
-title: 7. Motors
+title: "Module 3.1: Motors"
 sidebar_position: 1
 slug: /part-3-programming-the-robot/motors
 ---

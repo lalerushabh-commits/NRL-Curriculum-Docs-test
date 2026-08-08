@@ -1,5 +1,5 @@
 ---
-title: 20. Worked Examples
+title: "Module 5.1: Worked Examples"
 sidebar_position: 1
 slug: /part-5-examples-troubleshooting-reference/worked-examples
 ---

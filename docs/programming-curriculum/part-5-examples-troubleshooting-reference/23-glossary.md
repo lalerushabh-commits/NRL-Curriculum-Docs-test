@@ -1,5 +1,5 @@
 ---
-title: 23. Glossary
+title: "Module 5.4: Glossary"
 sidebar_position: 4
 slug: /part-5-examples-troubleshooting-reference/glossary
 ---

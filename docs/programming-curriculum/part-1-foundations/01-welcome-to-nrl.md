@@ -1,5 +1,5 @@
 ---
-title: 1. Welcome to NRL
+title: "Module 1.1: Welcome to NRL"
 sidebar_position: 1
 slug: /part-1-foundations/welcome-to-nrl
 ---
@@ -47,7 +47,7 @@ public:
 REGISTER_OPMODE(MyProgram, "My Program", TELEOP); // makes it show up on the Controller
 ```
 
-That last line — `REGISTER_OPMODE(...)` — is what makes your program appear in the menu on the Controller so you can select and run it. We will unpack every piece of this in [Chapter 7](/part-3-programming-the-robot/motors).
+That last line — `REGISTER_OPMODE(...)` — is what makes your program appear in the menu on the Controller so you can select and run it. We will unpack every piece of this in [Module 3.1](/part-3-programming-the-robot/motors).
 
 ## Two kinds of OpMode
 

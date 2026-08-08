@@ -1,5 +1,5 @@
 ---
-title: 15. Power & Battery
+title: "Module 3.9: Power & Battery"
 sidebar_position: 9
 slug: /part-3-programming-the-robot/power-and-battery
 ---

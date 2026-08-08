@@ -1,5 +1,5 @@
 ---
-title: 24. Conclusion & Next Steps
+title: "Module 5.5: Conclusion & Next Steps"
 sidebar_position: 5
 slug: /part-5-examples-troubleshooting-reference/conclusion-and-next-steps
 ---

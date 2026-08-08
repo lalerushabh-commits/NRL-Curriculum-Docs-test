@@ -1,5 +1,5 @@
 ---
-title: 12. Telemetry
+title: "Module 3.6: Telemetry"
 sidebar_position: 6
 slug: /part-3-programming-the-robot/telemetry
 ---

@@ -1,5 +1,5 @@
 ---
-title: 5. Understanding Your Hardware
+title: "Module 2.3: Understanding Your Hardware"
 sidebar_position: 3
 slug: /part-2-getting-started/understanding-your-hardware
 ---
@@ -15,7 +15,7 @@ You do not need to be an electronics expert, but knowing what plugs in where —
 
 ## Key connectors on the Robot board
 
-These are the names you will type in your programs. Keep this table handy for Part 3.
+These are the names you will type in your programs. Keep this table handy for Phase 3.
 
 | Constant (name in code) | Connector | Used for |
 | --- | --- | --- |
@@ -31,7 +31,7 @@ These are the names you will type in your programs. Keep this table handy for Pa
 
 ## Power and current sensing
 
-The Robot board can measure its own **battery voltage** and how much **current** the motors and servos are drawing, through an onboard analog-to-digital converter (an MCP3008 chip). You read these through a ready-made object called `power` — no setup required. We cover it in [Chapter 15](/part-3-programming-the-robot/power-and-battery).
+The Robot board can measure its own **battery voltage** and how much **current** the motors and servos are drawing, through an onboard analog-to-digital converter (an MCP3008 chip). You read these through a ready-made object called `power` — no setup required. We cover it in [Module 3.9](/part-3-programming-the-robot/power-and-battery).
 
 :::note[One current sensor per rail — not per motor]
 The board has one current sensor on the motor rail and derives the servo rail from the total. So `power.getMotorCurrent()` is the current for *all* motors together, not any single motor. There is deliberately no per-motor current reading.

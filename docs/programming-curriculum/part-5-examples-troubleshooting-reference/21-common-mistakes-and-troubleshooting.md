@@ -1,5 +1,5 @@
 ---
-title: 21. Common Mistakes & Troubleshooting
+title: "Module 5.2: Common Mistakes & Troubleshooting"
 sidebar_position: 2
 slug: /part-5-examples-troubleshooting-reference/common-mistakes-and-troubleshooting
 ---

@@ -1,5 +1,5 @@
 ---
-title: 17. The Action System
+title: "Module 4.2: The Action System"
 sidebar_position: 2
 slug: /part-4-autonomous-and-advanced/the-action-system
 ---

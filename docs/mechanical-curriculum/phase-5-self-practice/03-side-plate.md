@@ -6,7 +6,7 @@ slug: /phase-5-self-practice/side-plate
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-This is a self-practice exercise. There are no written modeling instructions here on purpose — the dimensioned drawing sheet below has everything you need: overall geometry, hole positions, fillet radii, and material thickness. Model the part in Onshape yourself before checking the solution.
+This is a DIY (Do It Yourself) exercise. There are no written modeling instructions here on purpose — the dimensioned drawing sheet below has everything you need: overall geometry, hole positions, fillet radii, and material thickness. Model the part in Onshape yourself before checking the solution.
 
 <a href={useBaseUrl('/files/mechanical/side-plate-drawing-sheet.pdf')} target="_blank" rel="noopener noreferrer">
   <img src={useBaseUrl('/img/mechanical/phase5-side-plate-thumbnail.png')} alt="Side Plate dimensioned drawing sheet" />
