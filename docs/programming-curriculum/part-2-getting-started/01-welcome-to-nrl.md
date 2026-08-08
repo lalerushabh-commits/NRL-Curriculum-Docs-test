@@ -61,7 +61,3 @@ That last line — `REGISTER_OPMODE(...)` — is what makes your program appear 
 - A **TeleOp** program that drives your robot with the joysticks and works an arm and gripper on the shoulder buttons.
 - An **Autonomous** program that drives forward and makes a precise 90° turn using the robot's motion sensor.
 - Programs that read sensors, light up an LED, draw on a small screen, and stream live data back to the Controller.
-
-![The Robot's small OLED screen shows your team name and pairing status at a glance.](/img/curriculum/ch01-oled-screen.png)
-
-*The Robot's small OLED screen shows your team name and pairing status at a glance.*
