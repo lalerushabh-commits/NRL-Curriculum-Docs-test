@@ -5,6 +5,6 @@
   "collapsed": false,
   "link": {
     "type": "generated-index",
-    "description": "What the robot is, and just enough C++ to read every example in this book."
+    "description": "Plain C++ from scratch — no robot, no NRL framework — everything you need to read every code example in this book."
   }
 }

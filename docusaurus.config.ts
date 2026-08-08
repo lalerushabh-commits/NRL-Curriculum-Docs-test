@@ -103,7 +103,7 @@ const config: Config = {
             },
             {
               label: 'Programming Curriculum',
-              to: '/part-1-foundations/welcome-to-nrl',
+              to: '/part-1-foundations/introduction-to-cpp',
             },
           ],
         },

@@ -27,8 +27,8 @@ You don't have to do them in order relative to each other — a mechanical lead 
 
 | Phase | What it covers |
 | --- | --- |
-| **Phase 1 — Foundations** | What the robot is, and just enough C++ to read every example in this book. |
-| **Phase 2 — Getting Started** | Installing the tools, understanding your hardware, creating a project, pairing, flashing, and your first working program. |
+| **Phase 1 — Foundations** | Plain C++ from scratch — no robot, no NRL framework — everything you need to read every code example in this book. |
+| **Phase 2 — Getting Started** | What the robot is, then installing the tools, understanding your hardware, creating a project, pairing, flashing, and your first working program. |
 | **Phase 3 — Programming the Robot** | One short module per building block: motors, driving, servos, the gamepad, the IMU, telemetry, the LED, the OLED, and power. |
 | **Phase 4 — Autonomous & Advanced** | Robots that drive themselves: the action system, closed-loop turns, and a gentle look at the control ideas underneath. |
 | **Phase 5 — Reference** | Worked examples, a troubleshooting guide, an API cheat-sheet, and a glossary. |

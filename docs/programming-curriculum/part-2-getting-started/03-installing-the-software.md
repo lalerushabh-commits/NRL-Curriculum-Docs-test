@@ -1,6 +1,6 @@
 ---
-title: "Module 2.1: Installing the Software"
-sidebar_position: 1
+title: "Module 2.2: Installing the Software"
+sidebar_position: 2
 slug: /part-2-getting-started/installing-the-software
 ---
 

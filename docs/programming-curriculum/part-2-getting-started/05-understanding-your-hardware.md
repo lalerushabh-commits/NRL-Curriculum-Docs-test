@@ -1,6 +1,6 @@
 ---
-title: "Module 2.3: Understanding Your Hardware"
-sidebar_position: 3
+title: "Module 2.4: Understanding Your Hardware"
+sidebar_position: 4
 slug: /part-2-getting-started/understanding-your-hardware
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "Module 1.1: Welcome to NRL"
+title: "Module 2.1: Welcome to NRL"
 sidebar_position: 1
-slug: /part-1-foundations/welcome-to-nrl
+slug: /part-2-getting-started/welcome-to-nrl
 ---
 
 The **NRL platform** is a plug-and-play robotics kit designed for competition teams and classrooms. It is built around **two small computers** called ESP32-S3 microcontrollers:
