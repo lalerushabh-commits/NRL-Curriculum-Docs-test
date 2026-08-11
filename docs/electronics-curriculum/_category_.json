@@ -1,0 +1,10 @@
+{
+  "label": "2. Electronics Curriculum",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "The hardware of the NRL robot — the Command Hub, the Controller, power, motors, sensors, wiring, and the wireless link between them."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "label": "Phase 2: Your Hardware",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "A guided tour of the two boards — the Command Hub and the Controller — and the safety rules that protect you and them."
+  }
+}

@@ -102,6 +102,10 @@ const config: Config = {
               to: '/phase-1-mechanical-fundamentals/gears-and-gear-ratio',
             },
             {
+              label: 'Electronics Curriculum',
+              to: '/phase-1-electronics-foundations/welcome-to-nrl-electronics',
+            },
+            {
               label: 'Programming Curriculum',
               to: '/part-1-foundations/introduction-to-cpp',
             },

@@ -1,0 +1,10 @@
+{
+  "label": "Phase 5: Wiring, Wireless & the Whole Robot",
+  "position": 5,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Connecting everything with the harness, the wireless link and antenna, reading the robot's lights and screens, troubleshooting, and inspection — plus a reference and glossary."
+  }
+}

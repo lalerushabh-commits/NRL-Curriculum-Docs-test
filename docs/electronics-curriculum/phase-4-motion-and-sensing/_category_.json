@@ -1,0 +1,10 @@
+{
+  "label": "Phase 4: Motion & Sensing",
+  "position": 4,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "One short module per building block: motors, servos, the motor driver, signals, buses, the IMU, and the line sensor."
+  }
+}

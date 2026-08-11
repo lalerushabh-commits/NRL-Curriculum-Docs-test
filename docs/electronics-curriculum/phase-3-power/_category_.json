@@ -1,0 +1,10 @@
+{
+  "label": "Phase 3: Power",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "The battery, its two chargers, the battery checker, the main switch, and the voltage rails — how energy flows through the robot, and what happens when it doesn't."
+  }
+}
