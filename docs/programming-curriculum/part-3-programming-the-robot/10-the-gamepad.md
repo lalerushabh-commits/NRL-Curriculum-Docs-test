@@ -6,6 +6,10 @@ slug: /part-3-programming-the-robot/the-gamepad
 
 import ApiTable from '@site/src/components/ApiTable';
 
+![The HEXA Controller, with every button, joystick, and status LED labelled.](/img/curriculum/ch10-hexa-controller-button-labelling.png)
+
+*The HEXA Controller, with every button, joystick, and status LED labelled.*
+
 Everything the driver does on the Controller reaches your program through one ready-made object: **`gamepad1`**. You don't declare it — it's always there, refreshed automatically at the start of every `loop()`.
 
 ## Reading the joysticks
