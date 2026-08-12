@@ -54,13 +54,9 @@ Once the Robot is flashed, its OLED screen shows your team's details.
 
 The Robot and Controller should be on the same channel before pairing — you can see your WiFi channel of the Robot on the OLED screen. The bot must be **paired** so they only talk to each other, even in a room full of other kits. Pairing uses the Robot's button and a short code shown on the Controller.
 
-![The Robot's small OLED screen shows your team name and pairing status at a glance.](/img/curriculum/ch01-oled-screen.png)
-
-*The Robot's small OLED screen shows your team name and pairing status at a glance.*
-
 You can change the WiFi channel of both bot and controller under **SETTING → WIFI CHANNEL**.
 
-![Each kit is pinned to a radio channel derived from its team number, so multiple robots can run in the same room.](/img/curriculum/ch06-wifi-channel-setting.png)
+![Each kit is pinned to a radio channel derived from its team number, so multiple robots can run in the same room.](/img/curriculum/ch06-wifi-channel-setting.jpg)
 
 *Each kit is pinned to a radio channel derived from its team number, so multiple robots can run in the same room.*
 
@@ -69,14 +65,6 @@ To pair, first press the tactile button on the **Robot** for 3 seconds. Then, un
 ![Holding the left and right bumpers on the Controller during pairing.](/img/curriculum/ch06-pairing-demo.gif)
 
 *Holding the left and right bumpers on the Controller during pairing.*
-
-![Put the Robot into pairing mode with its onboard button.](/img/curriculum/ch06-pairing-button.png)
-
-*Put the Robot into pairing mode with its onboard button.*
-
-![The Controller shows a 4-digit pairing code; confirm it to link the two boards.](/img/curriculum/ch06-pairing-code.png)
-
-*The Controller shows a 4-digit pairing code; confirm it to link the two boards.*
 
 Once paired, the link is remembered (saved in the board's non-volatile memory), so you only pair once. The Controller's header shows the connection status and the Robot's battery voltage.
 
