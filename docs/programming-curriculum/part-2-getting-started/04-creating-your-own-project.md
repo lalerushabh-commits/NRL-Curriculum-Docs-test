@@ -46,8 +46,9 @@ Double-click **`new-nrl-project`** (the Windows Batch File) — this is the laun
 
 *Double-click new-nrl-project (Windows Batch File) to start the wizard.*
 
-- **macOS:** double-click `tools/new-nrl-project.command`
-- **Linux:** run `bash tools/new-nrl-project.sh`
+:::note[Windows only, for now]
+NRL currently supports Windows. macOS and Linux are not yet compatible.
+:::
 
 ## Step 6 — Confirm the security prompt
 
