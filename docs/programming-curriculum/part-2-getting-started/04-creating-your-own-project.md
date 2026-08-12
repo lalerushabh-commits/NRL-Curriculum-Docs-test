@@ -4,29 +4,110 @@ sidebar_position: 3
 slug: /part-2-getting-started/creating-your-own-project
 ---
 
-Rather than editing the shared template directly, each team makes its **own copy** of the project, stamped with the team's number and name. NRL includes a wizard called **HexaSDK** to do exactly this — it is the NRL equivalent of WPILib's *"Create a new project."*
+Rather than editing the shared template directly, each team makes its **own copy** of the project, stamped with the team's number and name. NRL includes a wizard called **HexaSDK** to do exactly this — it is the NRL equivalent of WPILib's *"Create a new project."* Now that VS Code and PlatformIO are installed, here is the complete walkthrough, start to finish.
 
-## Running the wizard
+## Step 1 — Get the project files
 
-The easiest way needs nothing open first — just double-click a launcher:
+Go to the NRL kit's GitHub repository.
 
-- **Windows:** run `tools\new-nrl-project.bat`
+![The NRL kit repository on GitHub.](/img/curriculum/ch04-step01-repo-page.jpg)
+
+*The NRL kit repository on GitHub.*
+
+## Step 2 — Download the ZIP
+
+Click the green **`<> Code`** button and select **Download ZIP**.
+
+![Click the green Code button, then Download ZIP.](/img/curriculum/ch04-step02-download-zip.jpg)
+
+*Click the green Code button, then Download ZIP.*
+
+## Step 3 — Extract the ZIP
+
+Once it has downloaded, right-click the ZIP file and select **Extract All**.
+
+![Right-click the downloaded ZIP and choose Extract All.](/img/curriculum/ch04-step03-extract-zip.jpg)
+
+*Right-click the downloaded ZIP and choose Extract All.*
+
+## Step 4 — Open the tools folder
+
+Inside the extracted folder, double-click into **`tools`**.
+
+![Inside the extracted folder, open the tools folder.](/img/curriculum/ch04-step04-open-tools-folder.jpg)
+
+*Inside the extracted folder, open the tools folder.*
+
+## Step 5 — Run the launcher
+
+Double-click **`new-nrl-project`** (the Windows Batch File) — this is the launcher/project generator.
+
+![Double-click new-nrl-project (Windows Batch File) to start the wizard.](/img/curriculum/ch04-step05-new-nrl-project-launcher.jpg)
+
+*Double-click new-nrl-project (Windows Batch File) to start the wizard.*
+
 - **macOS:** double-click `tools/new-nrl-project.command`
 - **Linux:** run `bash tools/new-nrl-project.sh`
 
-![In the tools folder, double-click the new-nrl-project launcher (the Windows Batch File) to start the wizard.](/img/curriculum/ch04-wizard-launcher.png)
+## Step 6 — Confirm the security prompt
 
-*In the tools folder, double-click the new-nrl-project launcher (the Windows Batch File) to start the wizard.*
+A Windows "publisher could not be verified" warning pops up — click **Run**. This is expected: the script isn't digitally signed, but it's the same launcher from the kit you just downloaded.
 
-The wizard asks for a **project name**, a **team number**, a **team name**, and a **location**, then creates a fresh project folder and opens it in VS Code automatically. If you already have the template open in VS Code, you can instead run it from **Ctrl+Shift+P → Tasks: Run Task → "HexaSDK: Create a New Project."**
+![Windows shows a security warning because the script is unsigned — click Run to continue.](/img/curriculum/ch04-step06-security-warning-run.jpg)
 
-![The wizard confirms your details — name, team number, team name, the ESP-NOW channel it derived, and the location — then reports "Project created" with the next steps.](/img/curriculum/ch04-wizard-confirmation.png)
-
-*The wizard confirms your details — name, team number, team name, the ESP-NOW channel it derived, and the location — then reports "Project created" with the next steps.*
+*Windows shows a security warning because the script is unsigned — click Run to continue.*
 
 :::note[First-time Python]
 The wizard is a small Python program. If your computer has no suitable Python installed, the double-click launchers install one for you the first time (a one-time step). You don't have to set anything up by hand.
 :::
+
+## Step 7 — Fill in your team details
+
+A terminal window opens and asks for your **project name**, **team number**, and **team name**.
+
+![Enter the project name, team number, and team name in the terminal wizard.](/img/curriculum/ch04-step07-fill-team-details.jpg)
+
+*Enter the project name, team number, and team name in the terminal wizard.*
+
+## Step 8 — Choose where to save it
+
+A Windows Explorer window opens automatically — pick the folder where you want the project saved.
+
+![A file explorer window opens for you to choose the save location.](/img/curriculum/ch04-step08-choose-save-location.jpg)
+
+*A file explorer window opens for you to choose the save location.*
+
+## Step 9 — Confirm and generate
+
+The wizard fills in the details and shows the **ESP-NOW channel** it derived for your team, plus the save location. Note that channel down — you'll want it for pairing later. Press **Y** to generate the project.
+
+![The wizard confirms your details, including the ESP-NOW channel — press Y to generate.](/img/curriculum/ch04-step09-confirm-generate.jpg)
+
+*The wizard confirms your details, including the ESP-NOW channel — press Y to generate.*
+
+## Step 10 — Project created
+
+Once generation finishes, you'll see a confirmation like this.
+
+![The wizard reports the project was generated successfully.](/img/curriculum/ch04-step10-project-generated.jpg)
+
+*The wizard reports the project was generated successfully.*
+
+## Step 11 — VS Code opens automatically
+
+VS Code launches with your new project already loaded. The first setup takes about **10–15 minutes**, because PlatformIO needs to initialize and download dependencies — let it finish before you start building.
+
+![VS Code opens automatically with the new project. First-time PlatformIO setup takes 10–15 minutes.](/img/curriculum/ch04-step11-vscode-opens-automatically.jpg)
+
+*VS Code opens automatically with the new project. First-time PlatformIO setup takes 10–15 minutes.*
+
+## Step 12 — Always reopen via the workspace file
+
+If you close VS Code, remember where you saved the project and **always reopen it through the `.code-workspace` file** — never the bare folder (see [Module 2.2](/part-2-getting-started/installing-the-software) for why).
+
+![Always reopen the project through its .code-workspace file.](/img/curriculum/ch04-step12-reopen-code-workspace.jpg)
+
+*Always reopen the project through its .code-workspace file.*
 
 ## What the team number does
 
