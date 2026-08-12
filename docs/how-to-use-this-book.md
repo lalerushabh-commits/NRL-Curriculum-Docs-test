@@ -21,7 +21,7 @@ You don't have to do them in order relative to each other — a mechanical lead,
 | **Phase 1 — Mechanical Fundamentals** | Gears and gear ratio, load/payload/forces, and a review of simple machines — levers and the wheel and axle. |
 | **Phase 2 — CAD with Onshape** | Learning Onshape's interface, sketching, 3D features, and assemblies. |
 | **Phase 3 — Mechanism Design & Assembly** | Spur vs. helical gears, building them in Onshape, four-bar linkages, and gear meshing assemblies. |
-| **Phase 4 — Manufacturing Processes** | FDM 3D printing, laser cutting, CNC machining, and injection moulding — how robot parts actually get made. |
+| **Phase 4 — Manufacturing Processes** | FDM 3D printing, laser cutting, CNC machining, injection moulding, and hand tools — how robot parts actually get made. |
 | **Phase 5 — DIY (Do It Yourself)** | Dimensioned drawing sheets you model yourself in Onshape, with solution videos to check your work against. |
 
 ## 2. Electronics Curriculum
