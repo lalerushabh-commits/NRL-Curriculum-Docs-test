@@ -66,6 +66,10 @@ You can change the WiFi channel of both bot and controller under **SETTING → W
 
 To pair, first press the tactile button on the **Robot** for 3 seconds. Then, under the pairing menu, press and hold the left bumper and right bumper on the Controller. This generates a 4-digit random number on the Controller. Check that you see the same number on the Robot's OLED. If you do, press the same button on the Robot for 1 second until it shows "paired."
 
+![Holding the left and right bumpers on the Controller during pairing.](/img/curriculum/ch06-pairing-demo.gif)
+
+*Holding the left and right bumpers on the Controller during pairing.*
+
 ![Put the Robot into pairing mode with its onboard button.](/img/curriculum/ch06-pairing-button.png)
 
 *Put the Robot into pairing mode with its onboard button.*
