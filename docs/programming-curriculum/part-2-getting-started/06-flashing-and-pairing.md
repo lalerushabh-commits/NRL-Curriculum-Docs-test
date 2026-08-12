@@ -8,20 +8,47 @@ With a project created, it's time to put firmware on both boards and connect the
 
 ## 6.1 · Flash the firmware
 
-"Flashing" means uploading the compiled program to a board over USB. You flash each board once (and again whenever you change its code). Start with the **Controller**, then repeat for the **Robot** — the four steps are marked on the picture below.
+"Flashing" means uploading the compiled program to a board over USB. You flash each board once (and again whenever you change its code). The **Controller** and the **Robot** are flashed differently — start with the Controller.
 
-![Flashing both boards. STEP 1: pick the ControllerFirmware environment in the bottom status bar. STEP 2: open ControllerMain.ino. STEP 3: click Upload to flash the Controller. STEP 4: switch to the RobotFirmware environment and upload again to flash the RobotMain.ino to the Robot.](/img/curriculum/ch06-flashing-steps.png)
+### Flash the Controller
 
-*Flashing both boards. STEP 1: pick the ControllerFirmware environment in the bottom status bar. STEP 2: open ControllerMain.ino. STEP 3: click Upload to flash the Controller. STEP 4: switch to the RobotFirmware environment and upload again to flash the RobotMain.ino to the Robot.*
+The Controller ships with a prebuilt firmware image, flashed through a small Python script rather than a normal PlatformIO build.
 
-1. **Select the target.** In the bottom status bar, choose the **ControllerFirmware** environment.
-2. **Connect and open.** Plug the **Controller** board in over USB and open **ControllerMain**.
-3. **Upload.** Click **Upload** on the PlatformIO toolbar (or press **Ctrl+Alt+U**) and wait for "SUCCESS."
-4. **Repeat for the Robot.** Switch to the **RobotFirmware** environment, connect the **Robot** board, and **Upload** again.
+1. Make sure the **Python** extension is installed in VS Code (Extensions icon in the Activity Bar → search "Python" → Install), and let PlatformIO finish initializing first — check its status from the Activity Bar and wait if the status bar still shows "PlatformIO: Loading Tasks."
+
+![Installing the Python extension in VS Code.](/img/curriculum/ch06-install-python-extension.jpg)
+
+*Installing the Python extension in VS Code.*
+
+2. Open **`flash_controller.py`** under `ControllerFirmware`, plug the Controller in over USB, then click the dropdown arrow next to the **Run** button (top-right) and choose **Run Python File**.
+
+![flash_controller.py under ControllerFirmware.](/img/curriculum/ch06-flash-controller-py-location.jpg)
+
+*flash_controller.py under ControllerFirmware.*
+
+![Click the dropdown next to Run and choose "Run Python File" — not the usual PlatformIO Upload.](/img/curriculum/ch06-run-python-file-dropdown.jpg)
+
+*Click the dropdown next to Run and choose "Run Python File" — not the usual PlatformIO Upload.*
+
+3. Wait for the terminal to report success.
+
+![The terminal confirms the flash succeeded and reminds you to pick your team's WiFi channel on the Controller.](/img/curriculum/ch06-flash-controller-success.jpg)
+
+*The terminal confirms the flash succeeded and reminds you to pick your team's WiFi channel on the Controller.*
+
+### Flash the Robot
+
+4. Switch to the **RobotFirmware** environment in the bottom status bar, connect the **Robot** board, open **RobotMain.ino** (or an OpMode `.cpp` file), and click **Upload** on the PlatformIO toolbar (or the arrow in the status bar).
 
 :::tip[Upload = Build + Send]
 Upload automatically builds first, so you don't need a separate Build step. If Upload fails to find the board, check the USB cable (some are charge-only) and that no other program is using the serial port.
 :::
+
+Once the Robot is flashed, its OLED screen shows your team's details.
+
+![The Robot's OLED shows your team details after a successful flash.](/img/curriculum/ch06-oled-team-details-after-flash.jpg)
+
+*The Robot's OLED shows your team details after a successful flash.*
 
 ## 6.2 · Pair the two boards
 
