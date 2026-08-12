@@ -70,6 +70,10 @@ Once paired, the link is remembered (saved in the board's non-volatile memory), 
 
 ## 6.3 · The Controller, at a glance
 
+![The Controller's header at a glance: firmware version, WiFi channel, robot battery voltage, controller battery percentage, robot connection status, the driver station screen, and the controller status LED.](/img/curriculum/ch06-controller-info.png)
+
+*The Controller's header at a glance: firmware version, WiFi channel, robot battery voltage, controller battery percentage, robot connection status, the driver station screen, and the controller status LED.*
+
 You drive the whole match from the Controller. Here is the button map you'll use constantly:
 
 | Control | In the menu | During a match |
