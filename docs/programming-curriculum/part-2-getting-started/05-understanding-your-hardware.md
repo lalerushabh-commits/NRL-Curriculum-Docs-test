@@ -8,10 +8,14 @@ You do not need to be an electronics expert, but knowing what plugs in where —
 
 ## The two boards
 
-| Board | Role | What's on it |
-| --- | --- | --- |
-| **Robot** | Runs your OpMode; drives the robot. | Motor outputs, 4 servo ports, an IMU (motion sensor), an OLED screen, a status LED, a buzzer, a button, and power/current sensing. |
-| **Controller** | Human interface; sends input wirelessly. | A color TFT screen, two joysticks, face buttons, shoulder buttons, and its own status LED. |
+| Board | Role |
+| --- | --- |
+| **Robot** | Runs your OpMode; drives the robot. |
+| **Controller** | Human interface; sends input wirelessly. |
+
+:::note[Want the hardware details?]
+What's actually on each board — ports, sensors, screens, power regulation — is covered in the [Electronics Curriculum](/phase-2-your-hardware/the-command-hub-up-close). This module only covers what your *code* needs to know.
+:::
 
 ## Key connectors on the Robot board
 
