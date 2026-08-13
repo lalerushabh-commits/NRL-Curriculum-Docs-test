@@ -122,16 +122,10 @@ If you open the plain folder instead of the `.code-workspace` file, PlatformIO o
 
 ## What the team number does
 
-NRL has no wired "deploy" target like a competition roboRIO. Instead, your **team number selects the wireless radio channel** both boards use, with this formula:
-
-```
-channel = ((team - 1) mod 11) + 1  // a number from 1 to 11
-```
-
-Both the Robot and Controller firmware in a generated project are locked to that same channel. This keeps several kits in the same room from stepping on each other's signals.
+Your team number is baked into both the Robot and Controller firmware when the project is generated, and it's what keeps your kit's wireless channel separate from every other kit's in the room.
 
 :::warning[Flash both boards from the SAME project]
-Because the channel is baked into each firmware, the Robot and Controller must be built from the *same* generated project, or their radios will be on different channels and they will never connect.
+The Robot and Controller **must** be built from the *same* generated project. If they're not, they'll be on different channels — they either won't pair at all, or the connection will be unstable even if they do.
 :::
 
 ## What you get
