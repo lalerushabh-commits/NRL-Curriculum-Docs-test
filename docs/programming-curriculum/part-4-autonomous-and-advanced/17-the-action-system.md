@@ -30,11 +30,13 @@ An **Action** is a unit of work that can take several `loop()` passes to finish,
 Here's a routine that drives forward for two seconds, then stops — written as a sequence of steps. Notice the `[]{ ... }` bits: those are little inline functions (called *lambdas*) holding the code to run at each step.
 
 ```cpp
-runAction(sequential({
-  instant([]{ drive.drive(0.6f, 0.0f); }), // start driving forward
-  sleep_ms(2000),                          // wait 2 s (non-blocking)
-  instant([]{ drive.stop(); }),            // stop
-}));
+void start() override {                    // AUTO: queue it once, in start()
+  runAction(sequential({
+    instant([]{ drive.drive(0.6f, 0.0f); }), // start driving forward
+    sleep_ms(2000),                          // wait 2 s (non-blocking)
+    instant([]{ drive.stop(); }),            // stop
+  }));
+}
 ```
 
 Want the arm to rise *while* the robot keeps driving? Use `parallel`:
@@ -53,10 +55,10 @@ runAction(parallel({
 ## runAction vs. runBlocking
 
 <ApiTable rows={[
-  {member: 'runAction(a)', description: 'Queues the routine; advances one step per loop() pass. Non-blocking.', detail: 'Use in: loop() (TeleOp button presses, AUTO one-shots)'},
+  {member: 'runAction(a)', description: 'Queues the routine; advances one step per loop() pass. Non-blocking.', detail: 'Use in: start() for AUTO, a button press for TeleOp'},
   {member: 'runBlocking(a)', description: 'Runs the routine to completion before returning (still checks STOP and the deadline).', detail: 'Use in: rare — only when you deliberately want to wait it out.'},
 ]} />
 
 :::tip[Prefer runAction]
-In almost every case you want `runAction()` inside `loop()` — it keeps the robot alive and responsive while the routine plays out. Reach for `runBlocking()` only when you truly want the routine to finish before the next line runs.
+In almost every case you want `runAction()` — it keeps the robot alive and responsive while the routine plays out. Reach for `runBlocking()` only when you truly want the routine to finish before the next line runs.
 :::
