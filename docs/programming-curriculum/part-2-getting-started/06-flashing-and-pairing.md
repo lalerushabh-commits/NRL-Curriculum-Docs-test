@@ -72,6 +72,10 @@ Press the tactile button on the **Robot** for 3 seconds. Then, under the pairing
 
 *Holding the left and right bumpers on the Controller during pairing.*
 
+![Pressing the tactile button on the Robot (Command Hub) during pairing.](/img/curriculum/ch06-command-hub-pairing-demo.gif)
+
+*Pressing the tactile button on the Robot (Command Hub) during pairing.*
+
 Once paired, the link is remembered (saved in the board's non-volatile memory), so you only pair once. The Controller's header shows the connection status and the Robot's battery voltage.
 
 ## The Controller, at a glance
