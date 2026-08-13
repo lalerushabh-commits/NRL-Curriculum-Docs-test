@@ -102,16 +102,19 @@ Once your project is generated, the VS Code window opens with both the Controlle
 
 ## Step 9 — Open the OpMode creation task
 
-Once the project has finished loading, follow this same sequence each time you want to create a new OpMode:
+Once the project has finished loading, follow this same sequence each time you want to create a new OpMode. Open the command palette with **Ctrl + Shift + P** and select **Tasks: Run Task**.
 
-1. Open the command palette with **Ctrl + Shift + P**.
-2. Choose **Tasks: Run Task**.
-3. Type **NRL** (or **OpMode**) to filter the list.
-4. Select **NRL: New OpMode (template)**.
+![Opening the command palette and selecting "Tasks: Run Task".](/img/curriculum/ch06-run-task-command.png)
 
-![Filtering the Tasks: Run Task list down to "NRL: New OpMode (template)".](/img/curriculum/ch06-run-task-palette.png)
+*Opening the command palette and selecting "Tasks: Run Task".*
 
 ## Step 10 — Fill in the wizard
+
+From the task list, select **NRL: New OpMode** — *"Create a new robot OpMode (TeleOp or Auto) from a minimal template."*
+
+![Selecting "NRL: New OpMode" from the task list.](/img/curriculum/ch06-new-opmode-task.png)
+
+*Selecting "NRL: New OpMode" from the task list.*
 
 The wizard then runs in the terminal. Enter your details when prompted — here's a full example:
 
@@ -135,6 +138,6 @@ Create this OpMode? (y/n) [y]: y
 
 The new OpMode is generated from a template — ready for you to fill in with your own code.
 
-![The new OpMode file generated from the template, ready for you to fill in with your own code.](/img/curriculum/ch06-generated-opmode-file.png)
+![The new OpMode file generated from the template, ready for you to fill in with your own code.](/img/curriculum/ch06-first-opmode-generated.png)
 
 *The new OpMode file generated from the template, ready for you to fill in with your own code.*
