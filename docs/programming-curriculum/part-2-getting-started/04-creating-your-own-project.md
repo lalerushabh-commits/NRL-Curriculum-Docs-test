@@ -104,11 +104,21 @@ VS Code launches with your new project already loaded. The first setup takes abo
 
 ## Step 12 — Always reopen via the workspace file
 
-If you close VS Code, remember where you saved the project and **always reopen it through the `.code-workspace` file** — never the bare folder (see [Module 2.2](/part-2-getting-started/installing-the-software) for why).
+An NRL project contains **two** firmware folders — one for the Robot, one for the Controller. To let VS Code and PlatformIO see both at once, always open the project through its **workspace file**, never the bare folder.
 
 ![Always reopen the project through its .code-workspace file.](/img/curriculum/ch04-step12-reopen-code-workspace.jpg)
 
 *Always reopen the project through its .code-workspace file.*
+
+If you close VS Code, remember where you saved the project, then:
+
+1. In VS Code choose **File → Open Workspace from File...**
+2. Select the file ending in **`.code-workspace`** (named after the project name you entered in Step 7).
+3. If PlatformIO needs to re-download anything, let it finish before you start building.
+
+:::warning[Don't open the bare folder]
+If you open the plain folder instead of the `.code-workspace` file, PlatformIO only sees one firmware at a time and IntelliSense (code auto-complete) may show phantom errors. Always open the workspace file.
+:::
 
 ## What the team number does
 
