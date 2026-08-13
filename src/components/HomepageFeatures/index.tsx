@@ -1,50 +1,57 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
+  to: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Foundations & Setup',
+    title: '1. Mechanical Curriculum',
+    to: '/category/1-mechanical-curriculum',
     description: (
       <>
-        What the NRL platform is, just enough C++ to read every example, and
-        getting your tools, hardware, and first project up and running.
+        Gears, forces, and simple machines, then CAD in Onshape, mechanism
+        design, manufacturing processes, and hands-on DIY practice.
       </>
     ),
   },
   {
-    title: 'Programming the Robot',
+    title: '2. Electronics Curriculum',
+    to: '/category/2-electronics-curriculum',
     description: (
       <>
-        One short chapter per building block — motors, driving, servos, the
-        gamepad, the IMU, telemetry, the LED, the OLED, and power.
+        The hardware of the NRL robot — the Command Hub, the Controller,
+        power, motors, sensors, wiring, and the wireless link between them.
       </>
     ),
   },
   {
-    title: 'Autonomous & Reference',
+    title: '3. Programming Curriculum',
+    to: '/category/3-programming-curriculum',
     description: (
       <>
-        Write robots that drive themselves, then lean on worked examples, a
-        troubleshooting guide, and an API cheat-sheet when you're building.
+        Installing the software, understanding your hardware, and writing
+        driver-controlled and fully autonomous robot programs.
       </>
     ),
   },
 ];
 
-function Feature({title, description}: FeatureItem) {
+function Feature({title, to, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+      <Link to={to} className={styles.featureCard}>
+        <div className="text--center padding-horiz--md">
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
+        </div>
+      </Link>
     </div>
   );
 }
@@ -53,6 +60,10 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
+        <p className={styles.featuresIntro}>
+          Three curricula, built to be worked through at your own pace — read
+          them in order, or jump straight to the one your team needs.
+        </p>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

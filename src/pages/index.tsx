@@ -13,10 +13,17 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
+        <span className={clsx('nrl-badge', styles.heroBadge)}>
+          Self-paced · Student-driven
+        </span>
         <Heading as="h1" className={styles.heroTitle}>
           Learn to build <span className={styles.heroAccent}>what&apos;s next.</span>
         </Heading>
         <p className={styles.heroTagline}>{siteConfig.tagline}</p>
+        <p className={styles.heroSubtext}>
+          No instructor required — work through it on your own schedule, at
+          your own pace, in the order your team needs it.
+        </p>
         <div className={styles.buttons}>
           <Link
             className={clsx('button button--lg', styles.ctaButton)}
@@ -34,7 +41,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={siteConfig.title}
-      description="Learn to program a competition robot with the NRL platform.">
+      description="Design, build, and program a competition robot with the NRL platform.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'NRL Curriculum',
-  tagline: 'Learn to program a competition robot with the NRL platform',
+  tagline: 'Design, build, and program a competition robot with the NRL platform',
   favicon: 'img/favicon.svg',
 
   future: {

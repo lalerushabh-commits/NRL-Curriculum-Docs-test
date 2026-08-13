@@ -17,6 +17,12 @@
   }
 }
 
+.heroBadge {
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.9rem;
+}
+
 .heroTitle {
   font-size: 3.5rem;
   font-weight: 800;
@@ -30,6 +36,13 @@
   font-size: 1.25rem;
   color: var(--ifm-color-primary);
   font-weight: 600;
+}
+
+.heroSubtext {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 640px;
+  margin: 0.5rem auto 0;
 }
 
 .buttons {
