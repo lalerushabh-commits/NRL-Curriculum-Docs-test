@@ -31,7 +31,21 @@
       }
     },
     {
-      "label": "3. Check before publishing",
+      "label": "3. Import a Word document",
+      "detail": "Turns ONE Word file into ONE module: converts the writing, files its pictures, fills in the settings.",
+      "type": "shell",
+      "command": "node",
+      "args": ["tools/import-word.mjs"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "4. Check before publishing",
       "detail": "Looks for mistakes and builds the whole site. Run this before you push.",
       "type": "shell",
       "command": "node",

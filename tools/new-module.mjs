@@ -6,60 +6,8 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import readline from 'node:readline';
-import {stdin as input, stdout as output} from 'node:process';
-import {ROOT, DOCS, slugify, readFrontmatter, modulesIn, phasesIn, rel, c} from './lib.mjs';
-
-const rl = readline.createInterface({input, output});
-
-// Lines are queued as they arrive rather than requested one at a time: when input
-// is piped instead of typed, several lines can land before the next question is asked.
-const queued = [];
-const waiting = [];
-rl.on('line', (line) => (waiting.length ? waiting.shift()(line) : queued.push(line)));
-rl.on('close', () => waiting.forEach((resolve) => resolve(null)));
-
-async function ask(q) {
-  output.write(c.blue(q));
-  const line = queued.length ? queued.shift() : await new Promise((resolve) => waiting.push(resolve));
-  if (line === null) {
-    console.log(c.red('\nCancelled.'));
-    process.exit(1);
-  }
-  if (queued.length || !input.isTTY) output.write(`${line}\n`);
-  return line.trim();
-}
-
-/** Show a numbered menu and return the chosen item. */
-async function choose(label, items, render) {
-  console.log('');
-  if (label) console.log(c.bold(label));
-  items.forEach((it, i) => console.log(`  ${String(i + 1).padStart(2)}. ${render(it)}`));
-  for (;;) {
-    const a = await ask('\nType a number and press Enter: ');
-    const n = Number(a);
-    if (Number.isInteger(n) && n >= 1 && n <= items.length) return items[n - 1];
-    console.log(c.red('  That is not one of the numbers above.'));
-  }
-}
-
-async function askTitle(what) {
-  for (;;) {
-    const t = await ask(`\n${what}: `);
-    if (t.length >= 3) return t;
-    console.log(c.red('  Please type a real title.'));
-  }
-}
-
-/** The "4" in "Phase 4", used to number its modules 4.1, 4.2 ... */
-function phaseNumber(curriculumDir, phase) {
-  try {
-    const meta = JSON.parse(fs.readFileSync(path.join(curriculumDir, phase.name, '_category_.json'), 'utf8'));
-    return meta.position ?? 1;
-  } catch {
-    return 1;
-  }
-}
+import {ROOT, DOCS, slugify, readFrontmatter, modulesIn, phasesIn, createModule, rel, c} from './lib.mjs';
+import {ask, choose, askTitle, closePrompt} from './prompt.mjs';
 
 async function newModule() {
   const curriculum = await choose('Which curriculum?', phasesIn(DOCS), (p) => p.label);
@@ -83,34 +31,23 @@ async function newModule() {
 
   const title = await askTitle('Title of the new module (in plain words, e.g. "Wheels and Traction")');
 
-  const nextNum = existing.length + 1;
-  const prefix = String(nextNum).padStart(2, '0');
-  const stub = slugify(title);
-  const filename = `${prefix}-${stub}.md`;
-  const file = path.join(phaseDir, filename);
+  const body = fs
+    .readFileSync(path.join(ROOT, 'tools', 'templates', 'module.md'), 'utf8')
+    .replaceAll('__HEADING__', title);
 
-  if (fs.existsSync(file)) {
-    console.log(c.red(`\nThere is already a file called ${filename}. Pick a different title.`));
+  let made;
+  try {
+    made = createModule({curriculumDir, phase, title, body});
+  } catch (e) {
+    console.log(c.red(`\n${e.message}`));
     return;
   }
 
-  const fullTitle = `Module ${phaseNumber(curriculumDir, phase)}.${nextNum}: ${title}`;
-  const slug = `/${phase.name}/${stub}`;
-
-  const template = fs
-    .readFileSync(path.join(ROOT, 'tools', 'templates', 'module.md'), 'utf8')
-    .replaceAll('__TITLE__', fullTitle)
-    .replaceAll('__POSITION__', String(nextNum))
-    .replaceAll('__SLUG__', slug)
-    .replaceAll('__HEADING__', title);
-
-  fs.writeFileSync(file, template, 'utf8');
-
   console.log('');
   console.log(c.green(c.bold('Created your new module.')));
-  console.log(`  File:    ${c.bold(rel(file))}`);
-  console.log(`  Appears: ${c.bold(fullTitle)}, last in ${phase.label}`);
-  console.log(`  Address: ${c.bold(slug)}`);
+  console.log(`  File:    ${c.bold(rel(made.file))}`);
+  console.log(`  Appears: ${c.bold(made.fullTitle)}, last in ${phase.label}`);
+  console.log(`  Address: ${c.bold(made.slug)}`);
   console.log('');
   console.log(c.dim('Open that file from the list on the left and start writing. If the preview is running, it updates as you save.'));
 }
@@ -165,5 +102,5 @@ try {
   if (what.k === 'module') await newModule();
   else await newPhase();
 } finally {
-  rl.close();
+  closePrompt();
 }

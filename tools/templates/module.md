@@ -1,9 +1,3 @@
----
-title: "__TITLE__"
-sidebar_position: __POSITION__
-slug: __SLUG__
----
-
 Write the opening paragraph here — one or two sentences saying what this module is about and why it matters. This is the first thing a student reads, so keep it plain.
 
 ## __HEADING__

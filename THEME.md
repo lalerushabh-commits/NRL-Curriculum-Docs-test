@@ -51,7 +51,7 @@ and *Lexend* have an `800` — with the other fonts it will silently fall back t
 2. Start the preview (*Terminal → Run Task → 1. Preview the site*).
 3. Edit one value inside the **THEME KNOBS** block and save. The browser updates immediately.
 4. Look at it in **both** light and dark mode — the toggle is in the top right of the site.
-5. Run *3. Check before publishing*, then commit as usual.
+5. Run *4. Check before publishing*, then commit as usual.
 
 Keep the quotes exactly as they are: `--nrl-font-body: 'Lexend';` works,
 `--nrl-font-body: Lexend;` does not.
@@ -67,7 +67,7 @@ broken in one of the two modes. This is a job for Rushabh.
 **Per-word or per-paragraph fonts.** There is no way to make one paragraph a different font or
 size, in the way you would in Word. That is intentional: it is what keeps the whole curriculum
 looking like one book rather than sixty separate documents. For emphasis, use **bold** or one of
-the coloured boxes described in Part 7 of [AUTHORING.md](./AUTHORING.md).
+the coloured boxes described in Part 8 of [AUTHORING.md](./AUTHORING.md).
 
 ---
 

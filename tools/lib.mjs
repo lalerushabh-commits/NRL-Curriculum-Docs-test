@@ -69,6 +69,44 @@ export function allDocs(dir = DOCS, acc = []) {
 
 export const rel = (p) => path.relative(ROOT, p).split(path.sep).join('/');
 
+/** The "4" in "Phase 4", used to number its modules 4.1, 4.2 ... */
+export function phaseNumber(curriculumDir, phase) {
+  try {
+    const meta = JSON.parse(fs.readFileSync(path.join(curriculumDir, phase.name, '_category_.json'), 'utf8'));
+    return meta.position ?? 1;
+  } catch {
+    return 1;
+  }
+}
+
+/**
+ * Write a new module page at the end of a phase.
+ *
+ * The single place frontmatter is generated, so a page imported from Word is
+ * indistinguishable from one made by the scaffolder. Throws if the file exists.
+ */
+export function createModule({curriculumDir, phase, title, body}) {
+  const phaseDir = path.join(curriculumDir, phase.name);
+  const position = modulesIn(phaseDir).length + 1;
+  const stub = slugify(title);
+  const file = path.join(phaseDir, `${String(position).padStart(2, '0')}-${stub}.md`);
+
+  if (fs.existsSync(file)) {
+    throw new Error(`There is already a file called ${path.basename(file)}. Pick a different title.`);
+  }
+
+  const fullTitle = `Module ${phaseNumber(curriculumDir, phase)}.${position}: ${title}`;
+  const slug = `/${phase.name}/${stub}`;
+
+  fs.writeFileSync(file, `${frontmatter({title: fullTitle, position, slug})}\n${body}`, 'utf8');
+  return {file, fullTitle, slug, position};
+}
+
+/** The `---` settings block at the top of every page. */
+export function frontmatter({title, position, slug}) {
+  return `---\ntitle: "${title}"\nsidebar_position: ${position}\nslug: ${slug}\n---\n`;
+}
+
 // Console colours, disabled when the output is not a terminal.
 const on = process.stdout.isTTY;
 const wrap = (code) => (s) => (on ? `\u001b[${code}m${s}\u001b[0m` : s);
