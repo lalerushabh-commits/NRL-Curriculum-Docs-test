@@ -1,0 +1,46 @@
+{
+  // Pasting or dragging a picture/GIF into a curriculum page files it away in an
+  // "images" folder next to that page and writes the correct link automatically.
+  "markdown.copyFiles.destination": {
+    "/docs/**/*.md": "images/"
+  },
+  "markdown.copyFiles.overwriteBehavior": "uniqueFilename",
+  "markdown.editor.drop.enabled": true,
+  "markdown.editor.filePaste.enabled": true,
+
+  // Prose settings — wrap lines, no rulers, spell-check on.
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.rulers": [],
+    "files.trimTrailingWhitespace": false
+  },
+
+  // Hide the machinery so the file list on the left is just the curriculum.
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.docusaurus": true,
+    "**/build": true,
+    "**/package-lock.json": true
+  },
+  "explorer.sortOrder": "default",
+  "explorer.compactFolders": false,
+
+  "cSpell.words": [
+    "Docusaurus",
+    "NRL",
+    "Onshape",
+    "OpMode",
+    "OpModes",
+    "PlatformIO",
+    "Roboquest",
+    "TeleOp",
+    "keyidea",
+    "telemetry"
+  ]
+}

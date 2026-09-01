@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "name": "NRL Curriculum",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "window.title": "NRL Curriculum — ${activeEditorShort}",
+    "workbench.startupEditor": "readme",
+    "task.quickOpen.detail": true
+  },
+  "extensions": {
+    "recommendations": [
+      "unifiedjs.vscode-mdx",
+      "yzhang.markdown-all-in-one",
+      "streetsidesoftware.code-spell-checker"
+    ]
+  }
+}

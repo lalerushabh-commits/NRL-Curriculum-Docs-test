@@ -14,6 +14,50 @@
 @import '@fontsource/funnel-display/700.css';
 @import '@fontsource/funnel-display/800.css';
 
+/* Alternatives, ready to use in the knobs below. Unused families cost nothing:
+   a browser only downloads a font it actually has to draw with. */
+@import '@fontsource/lexend/400.css';
+@import '@fontsource/lexend/600.css';
+@import '@fontsource/lexend/700.css';
+@import '@fontsource/source-serif-4/400.css';
+@import '@fontsource/source-serif-4/600.css';
+@import '@fontsource/source-serif-4/700.css';
+@import '@fontsource/atkinson-hyperlegible/400.css';
+@import '@fontsource/atkinson-hyperlegible/700.css';
+
+/* ==========================================================================
+   THEME KNOBS — the only part of this file meant to be edited by hand.
+   Full instructions, including what each font looks like, are in THEME.md.
+   A font change affects the whole site, so check with Rushabh first.
+   ========================================================================== */
+:root {
+  /* Font for ordinary paragraph text. Pick one of:
+       'Inter'                   — the current one: neutral, modern
+       'Lexend'                  — rounder and roomier, easier for younger readers
+       'Atkinson Hyperlegible'   — designed for low vision; very distinct letters
+       'Source Serif 4'          — a serif, more book-like  */
+  --nrl-font-body: 'Inter';
+
+  /* Font for headings. Same list as above, plus:
+       'Funnel Display'          — the current one, matches the NRL brand site  */
+  --nrl-font-headings: 'Funnel Display';
+
+  /* Overall text size. 100% is the default; 105% or 110% makes the whole site
+     larger, 95% smaller. Everything scales together. */
+  --nrl-text-size: 100%;
+
+  /* How heavy headings look: 600 = semi-bold, 700 = bold, 800 = extra bold.
+     Only Funnel Display and Lexend have an 800. */
+  --nrl-heading-weight: 700;
+
+  /* Colours are deliberately not knobs — the palette is seven co-ordinated
+     shades with separate light and dark versions. Ask Rushabh to change them. */
+}
+
+/* ==========================================================================
+   Below this line is the site's own styling. Leave it alone unless you know CSS.
+   ========================================================================== */
+
 :root {
   --ifm-color-primary: #4754e9;
   --ifm-color-primary-dark: #3340e6;
@@ -29,9 +73,10 @@
   --ifm-background-color: #ffffff;
   --ifm-background-surface-color: #f3f4ff;
   --ifm-code-font-size: 92%;
-  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
-  --ifm-heading-font-family: 'Funnel Display', var(--ifm-font-family-base);
-  --ifm-heading-font-weight: 700;
+  --ifm-font-family-base: var(--nrl-font-body), system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: var(--nrl-font-headings), var(--ifm-font-family-base);
+  --ifm-heading-font-weight: var(--nrl-heading-weight);
+  --ifm-font-size-base: var(--nrl-text-size);
   --docusaurus-highlighted-code-line-bg: rgba(71, 84, 233, 0.1);
 
   --nrl-keyidea-color: var(--ifm-color-primary-darkest);

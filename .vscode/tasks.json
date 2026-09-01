@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1. Preview the site",
+      "detail": "Opens the curriculum in your browser and keeps it updated as you type. Leave it running.",
+      "type": "shell",
+      "command": "node",
+      "args": ["tools/preview.mjs"],
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "nrl",
+        "clear": true
+      }
+    },
+    {
+      "label": "2. New module or phase",
+      "detail": "Creates a new page (or a whole new section) with the right name, number and address filled in.",
+      "type": "shell",
+      "command": "node",
+      "args": ["tools/new-module.mjs"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "3. Check before publishing",
+      "detail": "Looks for mistakes and builds the whole site. Run this before you push.",
+      "type": "shell",
+      "command": "node",
+      "args": ["tools/check.mjs"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    }
+  ]
+}
