@@ -38,7 +38,7 @@ Everything is done from one menu in VS Code: **Terminal → Run Task**. It offer
 |---|---|
 | **1. Preview the site** | Opens the curriculum in your browser and keeps it in step with what you type. Start this first and leave it running all day. |
 | **2. New module or phase** | Creates a new page (or a whole new section) with its name, number and address filled in correctly. |
-| **3. Import a Word document** | Turns one Word file into one module. See Part 6. |
+| **3. Import a Word document** | Turns one Word file into one module. See Part 7. |
 | **4. Check before publishing** | Hunts for mistakes and builds the whole site. Always run this before you publish. |
 
 The first time you run **Preview**, it spends a few minutes setting itself up. That happens
@@ -91,7 +91,77 @@ If you cannot find a page, press **Ctrl+P** in VS Code and start typing its titl
 
 ---
 
-## Part 5 — Adding a new module or a new phase
+## Part 5 — Changing a module that already exists
+
+This is most of the job, so it gets its own part. Start the preview first
+(*Terminal → Run Task → 1. Preview the site*) and keep the browser beside VS Code — everything
+below shows up the moment you press **Ctrl+S**.
+
+Find the page as described in Part 4, click it open, and:
+
+### Change the words
+
+Type. That is all — it is ordinary text, with no boxes to fill in and no fields.
+
+The only part of the file to leave alone is the block of `---` lines at the very top. Everything
+below it is yours.
+
+### Change a heading, or add a new section
+
+Headings are the lines starting with `##`. Add a section by typing a new one:
+
+```
+## How wheels grip
+```
+
+`##` is a section and `###` is a smaller heading inside it. The list of links down the right-hand
+side of the page builds itself from these, so there is never a contents list to update.
+
+### Replace a picture with a better one
+
+1. Find the image line — it looks like `![A wheel diagram](images/wheel-diagram.png)`.
+2. Select that whole line and delete it.
+3. Paste or drag the new picture in, exactly as in Part 8.
+4. Delete the old file from the `images` folder next to the page.
+
+Skipping step 4 breaks nothing — the unused file just sits there. Doing step 4 but forgetting
+step 2 makes the check tell you the page points at a picture that is not there.
+
+**Overwriting the old file with a new one of the same name is not a shortcut.** It works, but your
+browser will often keep showing the old picture from its memory for a while, which is confusing.
+Replacing the line is more reliable.
+
+### Add a picture to a page that has none
+
+Click where you want it and paste. Part 8 has the details.
+
+### Change what a picture is described as
+
+Edit the words inside the square brackets: `![this bit here](images/wheel.png)`. They are read
+aloud to people using screen readers, and shown if the picture will not load.
+
+### Remove a picture
+
+Delete the whole `![...](...)` line, then delete the file from the `images` folder.
+
+### Change the module's name
+
+Edit the `title:` line at the top. That is the only line up there that is safe to reword — read
+Part 10 before touching the other two, and **never** change `slug`.
+
+### Replace the whole module from a Word document
+
+Run *Terminal → Run Task → 3. Import a Word document* and choose **a rewrite of a module that
+already exists**. Its title, its position and its web address are kept exactly as they are; only
+the words and pictures are replaced. See Part 7.
+
+### Then, always
+
+Run *4. Check before publishing*, then commit and push in GitHub Desktop — Part 3, steps 4 to 6.
+
+---
+
+## Part 6 — Adding a new module or a new phase
 
 **Never copy an existing file to make a new one.** Every page carries a hidden set of settings
 at the top — its title, its position in the sidebar, and its web address — and copying them by
@@ -100,14 +170,14 @@ hand is where things go wrong.
 Instead run *Terminal → Run Task → **2. New module or phase***. It asks you a few questions,
 then tells you exactly which file it made and where it will appear. Open that file and write.
 
-New pages are always added at the end of their phase. To move one, see Part 10.
+New pages are always added at the end of their phase. To move one, see Part 11.
 
 A brand-new phase stays invisible until it has at least one module in it — so create the phase,
 then run the task again to add its first module.
 
 ---
 
-## Part 6 — Writing in Word
+## Part 7 — Writing in Word
 
 If you would rather write in Word than type into VS Code, you can. **One module at a time.**
 
@@ -115,7 +185,7 @@ If you would rather write in Word than type into VS Code, you can. **One module 
 2. In VS Code, run *Terminal → Run Task → **3. Import a Word document***.
 3. Say whether it is a **new module** or a **rewrite of one that already exists**.
 4. Drag the Word file into the panel and press Enter.
-5. Answer the same where-does-it-go questions as Part 5.
+5. Answer the same where-does-it-go questions as Part 6.
 
 It converts the writing, saves every picture into the right place, fills in the settings block,
 and then lists anything worth a second look. **Read the page through afterwards** — Word
@@ -144,7 +214,7 @@ you see in Word is what arrives on the site.
 ### Getting coloured boxes out of Word
 
 Start a paragraph with one of these five words and a colon, and it becomes the matching coloured
-box from Part 8:
+box from Part 9:
 
 ```
 Key Idea: Traction is friction you can steer.
@@ -173,7 +243,7 @@ document. If you want to change something in it, change the module here and gene
 
 ---
 
-## Part 7 — Pictures and GIFs
+## Part 8 — Pictures and GIFs
 
 **To add one:** click in the page where you want the picture, then either paste it with
 **Ctrl+V** or drag the file in from a folder. That is the whole procedure. VS Code files the
@@ -199,7 +269,7 @@ rather than `images/...`. Both styles work — leave the existing ones alone.
 
 ---
 
-## Part 8 — Writing: everything you can put in a page
+## Part 9 — Writing: everything you can put in a page
 
 Plain text is plain text. Leave a blank line between paragraphs.
 
@@ -316,7 +386,7 @@ import ExternalModuleNote from '@site/src/components/ExternalModuleNote';
 
 ---
 
-## Part 9 — The settings block at the top of every page
+## Part 10 — The settings block at the top of every page
 
 Every page begins with a small block between two lines of dashes:
 
@@ -338,7 +408,7 @@ The "New module" task writes all three for you. Do not delete the block or the d
 
 ---
 
-## Part 10 — Reordering, renaming and deleting
+## Part 11 — Reordering, renaming and deleting
 
 **To reorder modules within a phase:** change the `sidebar_position` numbers so they read 1, 2,
 3… in the order you want, then run the check — it will tell you if two pages ended up sharing a
@@ -357,7 +427,7 @@ can fix those links.
 
 ---
 
-## Part 11 — When something goes wrong
+## Part 12 — When something goes wrong
 
 Run **Check before publishing**. It explains the problem in plain words and names the file. These
 are the five it will find:
@@ -378,7 +448,7 @@ Almost always a stray `<` or `{` in ordinary writing. A `<` immediately followed
 `` `<part name>` `` — or write `&lt;` instead. Same for `{`.
 
 **"The settings block at the top is missing …"**
-The block described in Part 9 was damaged. Copy the shape of it from a neighbouring page.
+The block described in Part 10 was damaged. Copy the shape of it from a neighbouring page.
 
 If the check prints something it does not recognise, it says so and shows the raw message. Send
 that to Rushabh rather than guessing.
@@ -388,18 +458,18 @@ that to Rushabh rather than guessing.
 
 ---
 
-## Part 12 — Changing how the site looks
+## Part 13 — Changing how the site looks
 
 Fonts, text size and heading weight can be changed, but they apply to the entire site at once —
 there is deliberately no way to change the font of a single word or paragraph, which is what
 keeps sixty-odd modules by different writers reading as one book. For emphasis inside a page,
-use **bold** or one of the coloured boxes in Part 8.
+use **bold** or one of the coloured boxes in Part 9.
 
 See [THEME.md](./THEME.md) for the site-wide settings. Check with Rushabh before changing them.
 
 ---
 
-## Part 13 — What you cannot break
+## Part 14 — What you cannot break
 
 Two things stand between a mistake and the live site:
 
@@ -410,6 +480,6 @@ Two things stand between a mistake and the live site:
 So the worst that can happen is that your work does not go out yet. Everything you have ever
 committed is kept, and any change can be undone — ask Rushabh.
 
-The one thing worth being careful about is Part 9's `slug`, because a broken address does not
+The one thing worth being careful about is Part 10's `slug`, because a broken address does not
 fail the check on the page that was renamed. It fails on every other page pointing at it, which
 is confusing. Leave slugs alone.

@@ -67,7 +67,7 @@ broken in one of the two modes. This is a job for Rushabh.
 **Per-word or per-paragraph fonts.** There is no way to make one paragraph a different font or
 size, in the way you would in Word. That is intentional: it is what keeps the whole curriculum
 looking like one book rather than sixty separate documents. For emphasis, use **bold** or one of
-the coloured boxes described in Part 8 of [AUTHORING.md](./AUTHORING.md).
+the coloured boxes described in Part 9 of [AUTHORING.md](./AUTHORING.md).
 
 ---
 
