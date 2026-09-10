@@ -12,13 +12,16 @@ A one-page cheat-sheet for everything covered in Phase 3 and Phase 4. See each m
 
 ```cpp
 class Name : public NRLOpMode {
-  void init() override { /* begin() hardware */ }
-  void loop() override { /* every pass */ }
-  void stop() override { /* stop motors */ }
+  void init()  override { /* begin() hardware — nothing moves yet */ }
+  void start() override { /* once, when the match starts — AUTO routines go here */ }
+  void loop()  override { /* every pass */ }
+  void stop()  override { /* stop motors */ }
 };
 
 REGISTER_OPMODE(Name, "Menu Label", TELEOP); // or AUTO
 ```
+
+`start()` is optional — TeleOp usually doesn't need it. AUTO almost always does.
 
 ## Motors — HexaDCMotor
 
@@ -55,7 +58,7 @@ REGISTER_OPMODE(Name, "Menu Label", TELEOP); // or AUTO
   {member: 'pressed(BTN_...)', description: 'Held right now.'},
   {member: 'justPressed(BTN_...) / justReleased(BTN_...)', description: 'Edge events.'},
   {member: 'onPress(BTN_..., cb)', description: 'Bind a callback (in init()).'},
-  {member: 'Buttons', description: 'BTN_X A B · BTN_DPAD_UP/DOWN/LEFT/RIGHT · BTN_LB RB LT RT · (BTN_Y = STOP)'},
+  {member: 'Buttons', description: 'BTN_X A Y · BTN_DPAD_UP/DOWN/LEFT/RIGHT · BTN_LB RB LT RT · (no B button on this board)'},
 ]} />
 
 ## Heading & IMU
@@ -79,7 +82,8 @@ REGISTER_OPMODE(Name, "Menu Label", TELEOP); // or AUTO
 ## Actions & DriveActions
 
 <ApiTable rows={[
-  {member: 'runAction(a) / isActionRunning()', description: 'Queue a routine / check it.'},
+  {member: 'runAction(a)', description: 'Add a routine to the queue (start() for AUTO, a button press for TeleOp). Adds — does not cancel what is running.'},
+  {member: 'isActionRunning() / cancelActions()', description: 'Is anything queued / drop everything (does NOT stop hardware — stop it yourself).'},
   {member: 'instant, sleep_ms, wait_until, sequential, parallel, repeat', description: 'Action factories.'},
   {member: 'driveActions.turn(deg) / turnTo(h)', description: 'Closed-loop IMU turns.'},
   {member: 'driveActions.driveInches(in) / driveForMs(ms)', description: 'Straight moves.'},

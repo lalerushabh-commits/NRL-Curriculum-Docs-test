@@ -159,22 +159,27 @@ Decimals are stored as approximations, so `0.1 + 0.2` may not land exactly on `0
 Predict the output before you run anything.
 
 **Q1.** What prints?
+
 ```cpp
 int a = 4, b = 4;
 std::cout << (a >= b)
           << (a != b);
 ```
+
 <Answer>`10` — `4 >= 4` is true, so 1. `4 != 4` is false, so 0. Printed side by side that reads 10.</Answer>
 
 **Q2.** What prints?
+
 ```cpp
 bool p = true;
 bool q = false;
 std::cout << (!p || q);
 ```
+
 <Answer>`0` — `!p` is false and `q` is false. `||` needs at least one true side, so the whole thing is false.</Answer>
 
 **Q3.** Spot the bug:
+
 ```cpp
 int temperature = 20;
 
@@ -182,6 +187,7 @@ if (temperature = 100) {
   std::cout << "Hot!";
 }
 ```
+
 <Answer>Always prints "Hot!" — `=` assigns 100 to `temperature`, and 100 counts as true. Fix: use `==` to compare.</Answer>
 
 :::note[Remember]

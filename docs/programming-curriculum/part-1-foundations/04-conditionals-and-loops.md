@@ -46,6 +46,7 @@ if (battery < 20) {
     std::cout << "Battery OK\n";
 }
 ```
+
 ```text
 Battery OK
 ```
@@ -73,6 +74,7 @@ if (score >= 90) {
     std::cout << "Grade F\n";
 }
 ```
+
 ```text
 Grade B
 ```
@@ -103,6 +105,7 @@ switch (mode) {
 ```
 
 Three parts:
+
 - `case` — one specific value to match
 - `break` — stop here, leave the switch
 - `default` — none of the above
@@ -143,6 +146,7 @@ while (count < 3) {
 ```
 
 Every `while` needs three things:
+
 1. A starting value (`count = 0`)
 2. A condition to test (`count < 3`)
 3. Something that moves it towards false (`count++`)
@@ -214,6 +218,7 @@ Trace it: 0 and 1 print. At 2, `continue` skips the print. 3 prints. At 4, `brea
 ## Common mistakes: loops
 
 **The infinite loop.**
+
 ```cpp
 int i = 0;
 while (i < 5) {
@@ -221,18 +226,22 @@ while (i < 5) {
     // forgot i++
 }
 ```
+
 Nothing changes `i`, so the condition is true forever. The program freezes.
 
 **The stray semicolon.**
+
 ```cpp
 for (int j = 0; j < 5; j++);
 {
     std::cout << j;
 }
 ```
+
 The `;` ends the loop immediately. The block below is not the loop body and `j` does not exist there.
 
 **Off by one.**
+
 ```cpp
 for (int i = 0; i <= 5; i++)
 // runs 6 times: 0,1,2,3,4,5
@@ -240,6 +249,7 @@ for (int i = 0; i <= 5; i++)
 for (int i = 0; i < 5; i++)
 // runs 5 times: 0,1,2,3,4
 ```
+
 `<` and `<=` differ by exactly one pass. Decide which you meant.
 
 ## Your turn
@@ -247,23 +257,28 @@ for (int i = 0; i < 5; i++)
 Trace each loop on paper, one pass at a time.
 
 **Q1.** What prints?
+
 ```cpp
 for (int i = 1; i <= 3; i++) {
   std::cout << i * i << " ";
 }
 ```
+
 <Answer>`1 4 9` — `i` takes 1, 2 and 3, and `i * i` gives 1, 4 and 9. Note `<= 3` means it does run for 3.</Answer>
 
 **Q2.** How many times?
+
 ```cpp
 int n = 0;
 do {
   std::cout << "run ";
 } while (n > 5);
 ```
+
 <Answer>Once — the condition is tested at the bottom. `0 > 5` is false, but the body has already run.</Answer>
 
 **Q3.** What prints?
+
 ```cpp
 int score = 60;
 
@@ -275,6 +290,7 @@ if (score >= 90) {
   std::cout << "F";
 }
 ```
+
 <Answer>`C` — 90 fails, 60 >= 60 passes, so the chain stops there. The else is never reached.</Answer>
 
 :::tip[How to trace a loop on paper]

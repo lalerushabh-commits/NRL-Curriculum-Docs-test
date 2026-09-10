@@ -24,31 +24,23 @@ Applying effort on one side of the fulcrum creates a turning effect that moves t
 
 ### Mechanical Advantage
 
-**Formula**: MA = Load ÷ Effort.
-**Example**: Load = 60 N, Effort = 20 N, MA = 3.
+**Formula**: MA = Load ÷ Effort. **Example**: Load = 60 N, Effort = 20 N, MA = 3.
 
 ### Principle of Moments
 
-Effort × Effort Arm = Load × Load Arm.
-**Example**: 40 N load at 10 cm balanced by 20 N effort at 20 cm.
+Effort × Effort Arm = Load × Load Arm. **Example**: 40 N load at 10 cm balanced by 20 N effort at 20 cm.
 
 ### Class 1 Lever
 
-Fulcrum in the middle.
-Examples: Seesaw, Scissors, Crowbar, Pliers.
-Robot Example: Pivoted gripper.
+Fulcrum in the middle. Examples: Seesaw, Scissors, Crowbar, Pliers. Robot Example: Pivoted gripper.
 
 ### Class 2 Lever
 
-Load in the middle.
-Examples: Wheelbarrow, Bottle opener, Nutcracker.
-Robot Example: Lifting platform.
+Load in the middle. Examples: Wheelbarrow, Bottle opener, Nutcracker. Robot Example: Lifting platform.
 
 ### Class 3 Lever
 
-Effort in the middle.
-Examples: Human arm, Tweezers, Fishing rod.
-Robot Example: High-speed robot arm.
+Effort in the middle. Examples: Human arm, Tweezers, Fishing rod. Robot Example: High-speed robot arm.
 
 ![The three lever classes, distinguished by where the fulcrum, load, and effort sit.](/img/mechanical/phase1-lever-class-3.png)
 
@@ -74,11 +66,9 @@ A wheel and axle is one of the six simple machines. It consists of a large wheel
 
 ### Parts of a Wheel and Axle
 
-**Wheel**: Larger circular part that provides leverage.
-Functions: Reduces effort, increases distance traveled, improves efficiency.
+**Wheel**: Larger circular part that provides leverage. Functions: Reduces effort, increases distance traveled, improves efficiency.
 
-**Axle**: Smaller shaft connected to the wheel.
-Functions: Supports the wheel, transfers rotational motion, delivers torque.
+**Axle**: Smaller shaft connected to the wheel. Functions: Supports the wheel, transfers rotational motion, delivers torque.
 
 ![The wheel and axle, rigidly connected so both rotate together.](/img/mechanical/phase1-wheel-and-axle-parts.png)
 
@@ -88,13 +78,11 @@ When force is applied to the wheel, torque is created. Because the wheel and axl
 
 ### Torque
 
-**Formula**: Torque = Force × Radius
-**Example**: Force = 20 N, Radius = 0.25 m, Torque = 20 × 0.25 = 5 N·m
+**Formula**: Torque = Force × Radius **Example**: Force = 20 N, Radius = 0.25 m, Torque = 20 × 0.25 = 5 N·m
 
 ### Mechanical Advantage
 
-**Formula**: MA = Wheel Radius ÷ Axle Radius (or Wheel Diameter ÷ Axle Diameter).
-**Example**: Wheel diameter = 40 cm, Axle diameter = 10 cm, MA = 4.
+**Formula**: MA = Wheel Radius ÷ Axle Radius (or Wheel Diameter ÷ Axle Diameter). **Example**: Wheel diameter = 40 cm, Axle diameter = 10 cm, MA = 4.
 
 ### Robotics Applications
 

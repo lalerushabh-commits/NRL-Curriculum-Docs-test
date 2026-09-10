@@ -35,7 +35,7 @@ imu.read();
 
 <ApiTable rows={[
   {member: 'begin()', description: 'Starts the IMU. Safe to call in init().'},
-  {member: 'tick(millis())', description: "Call every loop() — drives the non-blocking heading calibration and integration."},
+  {member: 'tick(millis())', description: 'Call every loop() — drives the non-blocking heading calibration and integration.'},
   {member: 'read()', description: 'Grabs a fresh snapshot; call before the get... methods.'},
   {member: 'getAccelX/Y/Z()', description: 'Acceleration in m/s² (Z ≈ 9.81 when flat).'},
   {member: 'getGyroX/Y/Z()', description: 'Rotation rate in rad/s.'},

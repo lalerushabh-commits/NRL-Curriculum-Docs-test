@@ -16,7 +16,7 @@ static HexaServo arm{{ .signalPin = SERVO_1, .startAngle = 90.0f, .settleMs = 0 
 
 <ApiTable rows={[
   {member: '.signalPin', description: 'Which servo port: SERVO_1 ... SERVO_4.'},
-  {member: '.startAngle', description: "Where the servo moves to when begin() runs. Default 90° (center)."},
+  {member: '.startAngle', description: 'Where the servo moves to when begin() runs. Default 90° (center).'},
   {member: '.settleMs', description: '0 (default) = hold the angle forever. A positive value auto-releases the servo after that many idle milliseconds.'},
   {member: '.offsetDeg', description: 'A calibration nudge if the servo horn is slightly misaligned.'},
   {member: '.minAngle / .maxAngle', description: 'Software travel limits, if you need to protect a mechanism.'},

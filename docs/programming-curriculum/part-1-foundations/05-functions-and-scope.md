@@ -79,6 +79,7 @@ int main() {
     return 0;
 }
 ```
+
 ```text
 Hello, Aarav!
 Hello, Priya!
@@ -189,6 +190,7 @@ Any function can change a global, so when the value is wrong you have to check t
 Last set. Trace the calls carefully.
 
 **Q1.** What prints?
+
 ```cpp
 int twice(int n) {
   return n * 2;
@@ -196,17 +198,21 @@ int twice(int n) {
 
 std::cout << twice(twice(3));
 ```
+
 <Answer>`12` — the inner call runs first: `twice(3)` is 6. That 6 is then passed out to `twice` again, giving 12.</Answer>
 
 **Q2.** Spot the bug:
+
 ```cpp
 int square(int n) {
   int result = n * n;
 }
 ```
+
 <Answer>No return — it promises an `int` but never returns one, so the value you get back is undefined. Fix: add `return result;`</Answer>
 
 **Q3.** What prints?
+
 ```cpp
 void tick() {
   int x = 0;
@@ -217,6 +223,7 @@ void tick() {
 tick();
 tick();
 ```
+
 <Answer>`11` — `x` is local to `tick()`, so it's created fresh at 0 on every call. It never carries over. Two calls, two 1s.</Answer>
 
 :::note[Remember]

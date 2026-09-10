@@ -24,7 +24,7 @@ static DriveActions driveActions(drive);
 Each of these returns an Action you hand to `runAction()`:
 
 <ApiTable rows={[
-  {member: 'driveActions.turn(90)', description: "Turn 90° right, relative to now (negative = left). Closed-loop on the IMU."},
+  {member: 'driveActions.turn(90)', description: 'Turn 90° right, relative to now (negative = left). Closed-loop on the IMU.'},
   {member: 'driveActions.turnTo(180)', description: 'Turn to an absolute heading of 180° in the current frame.'},
   {member: 'driveActions.driveInches(24)', description: 'Drive ~24 inches forward (negative = reverse), fusing the IMU and a timed model.'},
   {member: 'driveActions.driveForMs(1500)', description: 'Drive forward for 1.5 s — pure open-loop time.'},
@@ -37,14 +37,16 @@ Each of these returns an Action you hand to `runAction()`:
 For a multi-step auto, the fluent **builder** reads like a sentence — each step runs after the previous one finishes:
 
 ```cpp
-runAction(driveActions.auto_()
-  .waitForHeadingReady() // let the gyro finish calibrating (hold still)
-  .driveInches(24)       // forward 24 inches
-  .turn(90)               // precise 90-degree right turn
-  .driveInches(12)       // forward 12 inches
-  .turn(-90)              // precise 90-degree left turn
-  .stopAll()               // done
-  .build());
+void start() override {   // queue the whole thing once, when the match begins
+  runAction(driveActions.auto_()
+    .waitForHeadingReady() // let the gyro finish calibrating (hold still)
+    .driveInches(24)       // forward 24 inches
+    .turn(90)               // precise 90-degree right turn
+    .driveInches(12)       // forward 12 inches
+    .turn(-90)              // precise 90-degree left turn
+    .stopAll()               // done
+    .build());
+}
 ```
 
 :::note[Turns are precise; straight lines are estimated]

@@ -43,8 +43,10 @@ There are three ways to ask about a button, and choosing the right one matters:
 | `BTN_LB` / `BTN_RB` | left / right bumper | `BTN_DPAD_RIGHT` | D-pad right |
 | | | `BTN_LT` / `BTN_RT` | left / right trigger toggle |
 
-:::warning[BTN_Y is off-limits]
-`BTN_Y` always triggers the system STOP and is not usable in your program. Build your controls around the other buttons.
+:::note[Seven buttons, and there is no B]
+The Controller has **seven** buttons: X, A, Y and the four D-pad directions, plus the bumpers and trigger toggles. There is no B button on the board, so there is no `BTN_B` constant — using one is a compile error.
+
+`BTN_Y` **is** yours to use while your program runs. (In the menus it acts as BACK, and it dismisses the TeleOp exit-confirm popup — so if that popup is showing, one press does both.) Leaving a running OpMode is done with the **left trigger toggle**, not with Y.
 :::
 
 ## The edge-detection toggle pattern
@@ -69,7 +71,7 @@ For simple "when pressed, do this" actions, you can register a callback once in 
 ```cpp
 void init() override {
   gamepad1.onPress(BTN_A, []{ arm.setPosition(120); });
-  gamepad1.onPress(BTN_B, []{ arm.setPosition(30); });
+  gamepad1.onPress(BTN_Y, []{ arm.setPosition(30); });
 }
 ```
 

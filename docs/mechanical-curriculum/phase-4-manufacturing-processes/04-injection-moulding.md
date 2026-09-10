@@ -85,6 +85,7 @@ Weld lines form where two plastic flow fronts meet. They are slightly weaker tha
 
 :::keyidea[Why Injection Moulding Matters for Robotics Students]
 Understanding injection moulding helps students:
+
 - Recognise design features like ribs and draft angles.
 - Avoid weakening moulded components while modifying them.
 - Understand why commercial robot kit parts have their geometry.

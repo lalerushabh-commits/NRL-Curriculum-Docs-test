@@ -17,9 +17,9 @@ Real routines have steps: *drive forward, wait, raise the arm, turn.* The obviou
 An **Action** is a unit of work that can take several `loop()` passes to finish, checked a little at a time. You build routines by combining small Action "factories":
 
 <ApiTable rows={[
-  {member: "instant([]{ ... })", description: 'Run a bit of code once, immediately (set a motor, move a servo).'},
+  {member: 'instant([]{ ... })', description: 'Run a bit of code once, immediately (set a motor, move a servo).'},
   {member: 'sleep_ms(500)', description: 'Wait 500 ms — without freezing anything.'},
-  {member: "wait_until([]{ return cond; })", description: 'Wait until a condition becomes true (e.g. a sensor reading).'},
+  {member: 'wait_until([]{ return cond; })', description: 'Wait until a condition becomes true (e.g. a sensor reading).'},
   {member: 'sequential({ a, b, c })', description: 'Do a, then b, then c — one after another.'},
   {member: 'parallel({ a, b, c })', description: 'Do a, b, and c at the same time; finish when all are done.'},
   {member: 'repeat(action)', description: 'Loop an action until the AUTO deadline or STOP.'},

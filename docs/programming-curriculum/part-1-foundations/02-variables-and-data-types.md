@@ -21,6 +21,7 @@ count = count + 5;     // now 15
 ```
 
 Three things to declare one:
+
 - A **type** — what kind of value (`int`)
 - A **name** — how you refer to it (`count`)
 - A **value** — what goes in it (`0`)
@@ -30,6 +31,7 @@ Three things to declare one:
 :::
 
 Naming rules:
+
 - Letters, digits, and `_` only — no spaces.
 - Cannot start with a digit.
 - Case matters: `count` and `Count` differ.
@@ -130,6 +132,7 @@ const float PI        = 3.14159f;
 ```
 
 What you get:
+
 - The compiler blocks any accidental change.
 - One place to edit when the number changes.
 - A name explains what `255` actually means.
@@ -169,6 +172,7 @@ std::cout << d;   // 0, always
 Work these out on paper first — then run them and see if you were right.
 
 **Q1.** What prints?
+
 ```cpp
 int x = 9;
 int y = 2;
@@ -176,20 +180,25 @@ std::cout << x / y
           << " "
           << x % y;
 ```
+
 <Answer>`4 1` — `9 / 2` is integer division, so 4. Then `9 % 2` is the remainder left over, which is 1.</Answer>
 
 **Q2.** What prints?
+
 ```cpp
 bool done = false;
 std::cout << !done;
 ```
+
 <Answer>`1` — `done` is false, so `!done` is true, and true prints as 1.</Answer>
 
 **Q3.** Spot the bug — expected `2.5`:
+
 ```cpp
 float temp = 5 / 2;
 std::cout << temp;
 ```
+
 <Answer>Prints `2`. `5 / 2` is computed as ints before the answer is stored in a float. Fix: write `5.0f / 2`.</Answer>
 
 :::tip[Stuck? Trace it like the computer does]

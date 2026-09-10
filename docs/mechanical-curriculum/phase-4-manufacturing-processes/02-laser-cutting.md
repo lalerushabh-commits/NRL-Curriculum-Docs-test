@@ -48,6 +48,7 @@ Accounting for kerf is essential for accurate dimensions and properly fitting as
 Press-fit joints use matching tabs and slots that snap together without glue or screws.
 
 To compensate for kerf:
+
 - Tabs are designed slightly wider.
 - Slots are designed slightly narrower.
 

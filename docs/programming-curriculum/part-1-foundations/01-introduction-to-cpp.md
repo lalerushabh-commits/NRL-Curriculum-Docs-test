@@ -23,6 +23,7 @@ The compiler does exactly what you wrote — not what you meant. A missing semic
 :::
 
 A few things follow from this:
+
 - **Compiled, not interpreted** — errors are caught before the program ever runs.
 - **Fast and close to the hardware** — why phones, games, cars, and robots use it.
 - **Strict about types** — you must say what kind of value each thing holds.
@@ -41,6 +42,7 @@ int main() {
 ```
 
 Reading it line by line:
+
 - `#include <iostream>` brings in the ability to print.
 - `int main() { ... }` is where the program starts. Every program has exactly one.
 - `{ }` braces group the lines that belong together.

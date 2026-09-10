@@ -8,8 +8,7 @@ slug: /phase-1-mechanical-fundamentals/load-payload-and-forces
 
 Force is a push or pull that can change the motion or shape of an object.
 
-**Formula**: F = m × a
-**SI Unit**: Newton (N)
+**Formula**: F = m × a **SI Unit**: Newton (N)
 
 **Example**: A 5 kg robot accelerating at 2 m/s² requires 10 N of force.
 
@@ -21,8 +20,7 @@ Force is a push or pull that can change the motion or shape of an object.
 
 Load is anything the robot must move, carry, lift, pull, or push against.
 
-**Formula**: L = m × g
-**SI Unit**: Newton (N)
+**Formula**: L = m × g **SI Unit**: Newton (N)
 
 - **Dead Load**: Permanent parts.
 - **Live Load**: Temporary objects.

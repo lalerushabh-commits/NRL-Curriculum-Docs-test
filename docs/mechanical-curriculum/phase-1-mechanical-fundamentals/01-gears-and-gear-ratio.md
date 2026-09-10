@@ -12,8 +12,7 @@ A gear is a rotating mechanical component with specially shaped teeth cut around
 
 **Teeth**: Transfer motion, prevent slipping, ensure smooth rotation, determine gear ratio.
 
-More teeth → larger gear, lower speed, higher torque.
-Fewer teeth → smaller gear, higher speed, lower torque.
+More teeth → larger gear, lower speed, higher torque. Fewer teeth → smaller gear, higher speed, lower torque.
 
 ## How Do Gears Rotate?
 

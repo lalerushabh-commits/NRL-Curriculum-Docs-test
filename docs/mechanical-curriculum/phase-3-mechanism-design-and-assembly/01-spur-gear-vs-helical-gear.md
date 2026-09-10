@@ -49,9 +49,7 @@ The angled teeth create a force along the shaft in addition to the tangential fo
 
 ### 1. Module (m)
 
-Defines tooth size.
-**Formula**: m = d / z
-Larger module means larger, stronger but heavier teeth.
+Defines tooth size. **Formula**: m = d / z Larger module means larger, stronger but heavier teeth.
 
 ### 2. Number of Teeth (z)
 
@@ -59,8 +57,7 @@ Determines gear ratio, output speed and torque.
 
 ### 3. Pitch Diameter (d)
 
-Effective rolling diameter of the gear.
-**Formula**: d = m × z
+Effective rolling diameter of the gear. **Formula**: d = m × z
 
 ### 4. Helix Angle (ψ)
 
