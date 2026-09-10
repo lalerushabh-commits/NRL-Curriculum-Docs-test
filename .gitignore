@@ -24,3 +24,4 @@ yarn-error.log*
 # Publisher build output
 publisher/build/
 publisher/dist/
+publisher/__pycache__/
