@@ -3,7 +3,7 @@
   "tasks": [
     {
       "label": "1. Preview the site",
-      "detail": "Opens the curriculum in your browser and keeps it updated as you type. Leave it running.",
+      "detail": "Opens the curriculum in your browser so you can look at it. Leave it running.",
       "type": "shell",
       "command": "node",
       "args": ["tools/preview.mjs"],
@@ -17,11 +17,11 @@
       }
     },
     {
-      "label": "2. New module or phase",
-      "detail": "Creates a new page (or a whole new section) with the right name, number and address filled in.",
+      "label": "2. Publish from the Word document",
+      "detail": "Rebuilds the whole website from the Word document and puts it live. Same as the Publish button.",
       "type": "shell",
       "command": "node",
-      "args": ["tools/new-module.mjs"],
+      "args": ["tools/word/publish.mjs"],
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
@@ -31,25 +31,24 @@
       }
     },
     {
-      "label": "3. Import a Word document",
-      "detail": "Turns ONE Word file into ONE module: converts the writing, files its pictures, fills in the settings.",
+      "label": "3. Check the Word document without publishing",
+      "detail": "Does everything except put it live. Use it to see what would change, or to find mistakes.",
       "type": "shell",
       "command": "node",
-      "args": ["tools/import-word.mjs"],
+      "args": ["tools/word/publish.mjs", "--check-only"],
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
         "panel": "dedicated",
-        "focus": true,
         "clear": true
       }
     },
     {
-      "label": "4. Check before publishing",
-      "detail": "Looks for mistakes and builds the whole site. Run this before you push.",
+      "label": "4. Check the converter still matches the site",
+      "detail": "For maintainers: proves converting the Word document gives back the site as it stands.",
       "type": "shell",
       "command": "node",
-      "args": ["tools/check.mjs"],
+      "args": ["tools/word/verify.mjs"],
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",

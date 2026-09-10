@@ -86,6 +86,41 @@ for (const folder of folders) {
   }
 }
 
+// The pages are produced from the Word document, and source/manifest.json is
+// what decides each one's web address. If the two ever disagree, an address
+// has moved without anyone deciding to move it — which quietly breaks every
+// link anyone has saved to that page.
+const manifestFile = path.join(ROOT, 'source', 'manifest.json');
+if (fs.existsSync(manifestFile)) {
+  const manifest = JSON.parse(fs.readFileSync(manifestFile, 'utf8'));
+  const onSite = new Map();
+  for (const file of docs) {
+    const fm = readFrontmatter(file);
+    if (fm?.slug) onSite.set(fm.slug, file);
+  }
+
+  for (const m of manifest.modules) {
+    if (!onSite.has(m.slug)) {
+      note(
+        'source/manifest.json',
+        `The index lists a page at "${m.slug}" ("${m.title}"), but no page on the website has that address.`,
+        'Publish from the Word document again. If the page really was removed, the publisher records that for you.',
+      );
+    }
+  }
+
+  const retiredSlugs = new Set((manifest.retired ?? []).map((r) => r.slug));
+  for (const file of docs) {
+    const body = fs.readFileSync(file, 'utf8').replace(/^```[\s\S]*?^```/gm, '');
+    for (const m of body.matchAll(/\]\((\/[^)\s]+)\)/g)) {
+      if (retiredSlugs.has(m[1])) {
+        note(rel(file), `This page links to "${m[1]}", which was removed from the book.`,
+          'Point the link somewhere else in Word, or put the removed page back.');
+      }
+    }
+  }
+}
+
 console.log(c.bold(`Checked ${docs.length} pages.`));
 
 if (problems.length) {

@@ -1,0 +1,1483 @@
+{
+  "version": 1,
+  "note": "Generated from docs/ by tools/word/seed-manifest.mjs, then maintained by tools/word/convert.mjs. Slugs here are frozen: they are what keeps web addresses stable when a heading is renamed in Word.",
+  "frontPage": {
+    "file": "how-to-use-this-book.md",
+    "heading": "How to Use This Book",
+    "title": "How to Use This Book",
+    "slug": "/how-to-use-this-book",
+    "position": 0,
+    "images": []
+  },
+  "curricula": [
+    {
+      "id": "mechanical",
+      "folder": "mechanical-curriculum",
+      "label": "1. Mechanical Curriculum",
+      "category": {
+        "label": "1. Mechanical Curriculum",
+        "position": 1,
+        "collapsible": true,
+        "collapsed": false,
+        "link": {
+          "type": "generated-index",
+          "description": "Gears, forces, simple machines, CAD in Onshape, mechanism design, and manufacturing processes — the mechanical-engineering foundations behind every NRL robot."
+        }
+      },
+      "phases": [
+        {
+          "id": "mechanical-p1",
+          "folder": "phase-1-mechanical-fundamentals",
+          "label": "Phase 1: Mechanical Fundamentals",
+          "filePrefix": "position",
+          "nextFilePrefix": null,
+          "category": {
+            "label": "Phase 1: Mechanical Fundamentals",
+            "position": 1,
+            "collapsible": true,
+            "collapsed": false,
+            "link": {
+              "type": "generated-index",
+              "description": "[Foundation] Gears and gear ratio, load/payload/forces, and a review of simple machines — levers and the wheel and axle."
+            }
+          }
+        },
+        {
+          "id": "mechanical-p2",
+          "folder": "phase-2-cad-with-onshape",
+          "label": "Phase 2: CAD with Onshape",
+          "filePrefix": "position",
+          "nextFilePrefix": null,
+          "category": {
+            "label": "Phase 2: CAD with Onshape",
+            "position": 2,
+            "collapsible": true,
+            "collapsed": true,
+            "link": {
+              "type": "generated-index",
+              "description": "Learning Onshape's interface, sketching, 3D features, and assemblies through Onshape's own courses and videos."
+            }
+          }
+        },
+        {
+          "id": "mechanical-p3",
+          "folder": "phase-3-mechanism-design-and-assembly",
+          "label": "Phase 3: Mechanism Design & Assembly",
+          "filePrefix": "position",
+          "nextFilePrefix": null,
+          "category": {
+            "label": "Phase 3: Mechanism Design & Assembly",
+            "position": 3,
+            "collapsible": true,
+            "collapsed": true,
+            "link": {
+              "type": "generated-index",
+              "description": "[Applied CAD] Spur vs. helical gears, building them in Onshape, four-bar linkages, and gear meshing assemblies."
+            }
+          }
+        },
+        {
+          "id": "mechanical-p4",
+          "folder": "phase-4-manufacturing-processes",
+          "label": "Phase 4: Manufacturing Processes",
+          "filePrefix": "position",
+          "nextFilePrefix": null,
+          "category": {
+            "label": "Phase 4: Manufacturing Processes",
+            "position": 4,
+            "collapsible": true,
+            "collapsed": true,
+            "link": {
+              "type": "generated-index",
+              "description": "[Making It Real] FDM 3D printing, laser cutting, CNC machining, injection moulding, and the hand tools that back them all up — how robot parts actually get made."
+            }
+          }
+        },
+        {
+          "id": "mechanical-p5",
+          "folder": "phase-5-self-practice",
+          "label": "Phase 5: DIY (Do It Yourself)",
+          "filePrefix": "position",
+          "nextFilePrefix": null,
+          "category": {
+            "label": "Phase 5: DIY (Do It Yourself)",
+            "position": 5,
+            "collapsible": true,
+            "collapsed": true,
+            "link": {
+              "type": "generated-index",
+              "description": "Given only a dimensioned drawing sheet, model each part yourself in Onshape — then check your work against a solution video where one's available."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "electronics",
+      "folder": "electronics-curriculum",
+      "label": "2. Electronics Curriculum",
+      "category": {
+        "label": "2. Electronics Curriculum",
+        "position": 2,
+        "collapsible": true,
+        "collapsed": false,
+        "link": {
+          "type": "generated-index",
+          "description": "The hardware of the NRL robot — the Command Hub, the Controller, power, motors, sensors, wiring, and the wireless link between them."
+        }
+      },
+      "phases": [
+        {
+          "id": "electronics-p1",
+          "folder": "phase-1-electronics-foundations",
+          "label": "Phase 1: Foundations",
+          "filePrefix": "position",
+          "nextFilePrefix": null,
+          "category": {
+            "label": "Phase 1: Foundations",
+            "position": 1,
+            "collapsible": true,
+            "collapsed": false,
+            "link": {
+              "type": "generated-index",
+              "description": "What electricity is, and how to \"read\" your robot — just enough theory to understand everything that follows."
+            }
+          }
+        },
+        {
+          "id": "electronics-p2",
+          "folder": "phase-2-your-hardware",
+          "label": "Phase 2: Your Hardware",
+          "filePrefix": "position",
+          "nextFilePrefix": null,
+          "category": {
+            "label": "Phase 2: Your Hardware",
+            "position": 2,
+            "collapsible": true,
+            "collapsed": true,
+            "link": {
+              "type": "generated-index",
+              "description": "A guided tour of the two boards — the Command Hub and the Controller — and the safety rules that protect you and them."
+            }
+          }
+        },
+        {
+          "id": "electronics-p3",
+          "folder": "phase-3-power",
+          "label": "Phase 3: Power",
+          "filePrefix": "position",
+          "nextFilePrefix": null,
+          "category": {
+            "label": "Phase 3: Power",
+            "position": 3,
+            "collapsible": true,
+            "collapsed": true,
+            "link": {
+              "type": "generated-index",
+              "description": "The battery, its two chargers, the battery checker, the main switch, and the voltage rails — how energy flows through the robot, and what happens when it doesn't."
+            }
+          }
+        },
+        {
+          "id": "electronics-p4",
+          "folder": "phase-4-motion-and-sensing",
+          "label": "Phase 4: Motion & Sensing",
+          "filePrefix": "position",
+          "nextFilePrefix": null,
+          "category": {
+            "label": "Phase 4: Motion & Sensing",
+            "position": 4,
+            "collapsible": true,
+            "collapsed": true,
+            "link": {
+              "type": "generated-index",
+              "description": "One short module per building block: motors, servos, the motor driver, signals, buses, the IMU, and the line sensor."
+            }
+          }
+        },
+        {
+          "id": "electronics-p5",
+          "folder": "phase-5-wiring-wireless-and-the-whole-robot",
+          "label": "Phase 5: Wiring, Wireless & the Whole Robot",
+          "filePrefix": "position",
+          "nextFilePrefix": null,
+          "category": {
+            "label": "Phase 5: Wiring, Wireless & the Whole Robot",
+            "position": 5,
+            "collapsible": true,
+            "collapsed": true,
+            "link": {
+              "type": "generated-index",
+              "description": "Connecting everything with the harness, the wireless link and antenna, reading the robot's lights and screens, troubleshooting, and inspection — plus a reference and glossary."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "programming",
+      "folder": "programming-curriculum",
+      "label": "3. Programming Curriculum",
+      "category": {
+        "label": "3. Programming Curriculum",
+        "position": 3,
+        "collapsible": true,
+        "collapsed": false,
+        "link": {
+          "type": "generated-index",
+          "description": "Learn to program a competition robot with the NRL platform — from foundations through autonomous routines."
+        }
+      },
+      "phases": [
+        {
+          "id": "programming-p1",
+          "folder": "part-1-foundations",
+          "label": "Phase 1: Foundations",
+          "filePrefix": "position",
+          "nextFilePrefix": null,
+          "category": {
+            "label": "Phase 1: Foundations",
+            "position": 1,
+            "collapsible": true,
+            "collapsed": false,
+            "link": {
+              "type": "generated-index",
+              "description": "Plain C++ from scratch — no robot, no NRL framework — everything you need to read every code example in this book."
+            }
+          }
+        },
+        {
+          "id": "programming-p2",
+          "folder": "part-2-getting-started",
+          "label": "Phase 2: Getting Started",
+          "filePrefix": "legacy",
+          "nextFilePrefix": 7,
+          "category": {
+            "label": "Phase 2: Getting Started",
+            "position": 2,
+            "collapsible": true,
+            "collapsed": true,
+            "link": {
+              "type": "generated-index",
+              "description": "What the robot is, then installing the tools, understanding your hardware, creating a project, pairing, flashing, and your first working program."
+            }
+          }
+        },
+        {
+          "id": "programming-p3",
+          "folder": "part-3-programming-the-robot",
+          "label": "Phase 3: Programming the Robot",
+          "filePrefix": "legacy",
+          "nextFilePrefix": 16,
+          "category": {
+            "label": "Phase 3: Programming the Robot",
+            "position": 3,
+            "collapsible": true,
+            "collapsed": true,
+            "link": {
+              "type": "generated-index",
+              "description": "One short chapter per building block: motors, driving, servos, the gamepad, the IMU, telemetry, the LED, the OLED, and power."
+            }
+          }
+        },
+        {
+          "id": "programming-p4",
+          "folder": "part-4-autonomous-and-advanced",
+          "label": "Phase 4: Autonomous & Advanced",
+          "filePrefix": "legacy",
+          "nextFilePrefix": 20,
+          "category": {
+            "label": "Phase 4: Autonomous & Advanced",
+            "position": 4,
+            "collapsible": true,
+            "collapsed": true,
+            "link": {
+              "type": "generated-index",
+              "description": "Robots that drive themselves: the action system, closed-loop turns, and a gentle look at the control ideas underneath."
+            }
+          }
+        },
+        {
+          "id": "programming-p5",
+          "folder": "part-5-examples-troubleshooting-reference",
+          "label": "Phase 5: Examples, Troubleshooting & Reference",
+          "filePrefix": "legacy",
+          "nextFilePrefix": 25,
+          "category": {
+            "label": "Phase 5: Examples, Troubleshooting & Reference",
+            "position": 5,
+            "collapsible": true,
+            "collapsed": true,
+            "link": {
+              "type": "generated-index",
+              "description": "Worked examples, a troubleshooting guide, an API cheat-sheet, and a glossary."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "mechanical-p1-gears-and-gear-ratio",
+      "phase": "mechanical-p1",
+      "file": "01-gears-and-gear-ratio.md",
+      "slug": "/phase-1-mechanical-fundamentals/gears-and-gear-ratio",
+      "position": 1,
+      "title": "Gears & Gear Ratio",
+      "images": [
+        {
+          "path": "/img/mechanical/phase1-gear-rotation.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase1-gear-ratio-example.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase1-speed-and-torque.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase1-spur-gear-type.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase1-helical-gear-type.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase1-bevel-gear-type.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase1-worm-gear-type.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase1-rack-and-pinion.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase1-idler-gear.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase1-gear-backlash.png",
+          "italicCaption": false
+        }
+      ]
+    },
+    {
+      "id": "mechanical-p1-load-payload-and-forces",
+      "phase": "mechanical-p1",
+      "file": "02-load-payload-and-forces.md",
+      "slug": "/phase-1-mechanical-fundamentals/load-payload-and-forces",
+      "position": 2,
+      "title": "Load, Payload & Forces",
+      "images": [
+        {
+          "path": "/img/mechanical/phase1-force.png",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase1-centre-of-gravity.png",
+          "italicCaption": false
+        }
+      ]
+    },
+    {
+      "id": "mechanical-p1-simple-machines-review",
+      "phase": "mechanical-p1",
+      "file": "03-simple-machines-review.md",
+      "slug": "/phase-1-mechanical-fundamentals/simple-machines-review",
+      "position": 3,
+      "title": "Simple Machines Review",
+      "images": [
+        {
+          "path": "/img/mechanical/phase1-lever-parts.png",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase1-lever-class-3.png",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase1-wheel-and-axle-parts.png",
+          "italicCaption": false
+        }
+      ]
+    },
+    {
+      "id": "mechanical-p2-onshape-interface-and-navigation",
+      "phase": "mechanical-p2",
+      "file": "01-onshape-interface-and-navigation.md",
+      "slug": "/phase-2-cad-with-onshape/onshape-interface-and-navigation",
+      "position": 1,
+      "title": "Onshape Interface & Navigation",
+      "images": []
+    },
+    {
+      "id": "mechanical-p2-sketch-fundamentals",
+      "phase": "mechanical-p2",
+      "file": "02-sketch-fundamentals.md",
+      "slug": "/phase-2-cad-with-onshape/sketch-fundamentals",
+      "position": 2,
+      "title": "Sketch Fundamentals",
+      "images": [
+        {
+          "path": "/img/mechanical/phase2-onshape-sketch-entities-course.png",
+          "italicCaption": false
+        }
+      ]
+    },
+    {
+      "id": "mechanical-p2-3d-features",
+      "phase": "mechanical-p2",
+      "file": "03-3d-features.md",
+      "slug": "/phase-2-cad-with-onshape/3d-features",
+      "position": 3,
+      "title": "3D Features",
+      "images": [
+        {
+          "path": "/img/mechanical/phase2-onshape-part-studios-course.png",
+          "italicCaption": false
+        }
+      ]
+    },
+    {
+      "id": "mechanical-p2-assembly-and-constraints",
+      "phase": "mechanical-p2",
+      "file": "04-assembly-and-constraints.md",
+      "slug": "/phase-2-cad-with-onshape/assembly-and-constraints",
+      "position": 4,
+      "title": "Assembly & Constraints (Mates)",
+      "images": []
+    },
+    {
+      "id": "mechanical-p3-spur-gear-vs-helical-gear",
+      "phase": "mechanical-p3",
+      "file": "01-spur-gear-vs-helical-gear.md",
+      "slug": "/phase-3-mechanism-design-and-assembly/spur-gear-vs-helical-gear",
+      "position": 1,
+      "title": "Spur Gear vs. Helical Gear",
+      "images": [
+        {
+          "path": "/img/mechanical/phase3-spur-gear.png",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase3-helical-gear.png",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase3-gear-parameters.png",
+          "italicCaption": false
+        }
+      ]
+    },
+    {
+      "id": "mechanical-p3-helical-gear-step-by-step-build",
+      "phase": "mechanical-p3",
+      "file": "02-helical-gear-step-by-step-build.md",
+      "slug": "/phase-3-mechanism-design-and-assembly/helical-gear-step-by-step-build",
+      "position": 2,
+      "title": "Helical Gear — Step-by-Step Build in Onshape",
+      "images": []
+    },
+    {
+      "id": "mechanical-p3-four-bar-linkage-concept",
+      "phase": "mechanical-p3",
+      "file": "03-four-bar-linkage-concept.md",
+      "slug": "/phase-3-mechanism-design-and-assembly/four-bar-linkage-concept",
+      "position": 3,
+      "title": "Four-Bar Linkage — Concept",
+      "images": [
+        {
+          "path": "/img/mechanical/phase3-linkage-intro.png",
+          "italicCaption": false
+        }
+      ]
+    },
+    {
+      "id": "mechanical-p3-four-bar-linkage-step-by-step-build",
+      "phase": "mechanical-p3",
+      "file": "04-four-bar-linkage-step-by-step-build.md",
+      "slug": "/phase-3-mechanism-design-and-assembly/four-bar-linkage-step-by-step-build",
+      "position": 4,
+      "title": "Four-Bar Linkage — Step-by-Step Build",
+      "images": []
+    },
+    {
+      "id": "mechanical-p3-gear-meshing-assembly",
+      "phase": "mechanical-p3",
+      "file": "05-gear-meshing-assembly.md",
+      "slug": "/phase-3-mechanism-design-and-assembly/gear-meshing-assembly",
+      "position": 5,
+      "title": "Gear Meshing Assembly",
+      "images": []
+    },
+    {
+      "id": "mechanical-p4-fdm-3d-printing",
+      "phase": "mechanical-p4",
+      "file": "01-fdm-3d-printing.md",
+      "slug": "/phase-4-manufacturing-processes/fdm-3d-printing",
+      "position": 1,
+      "title": "FDM (Fused Deposition Modeling) 3D Printing",
+      "images": [
+        {
+          "path": "/img/mechanical/phase4-fdm-process.png",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase4-fdm-slicer-settings.png",
+          "italicCaption": false
+        }
+      ]
+    },
+    {
+      "id": "mechanical-p4-laser-cutting",
+      "phase": "mechanical-p4",
+      "file": "02-laser-cutting.md",
+      "slug": "/phase-4-manufacturing-processes/laser-cutting",
+      "position": 2,
+      "title": "Laser Cutting",
+      "images": [
+        {
+          "path": "/img/mechanical/phase4-laser-cutting-process.png",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase4-laser-kerf.png",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase4-laser-press-fit-joints.png",
+          "italicCaption": false
+        }
+      ]
+    },
+    {
+      "id": "mechanical-p4-cnc-machining",
+      "phase": "mechanical-p4",
+      "file": "03-cnc-machining.md",
+      "slug": "/phase-4-manufacturing-processes/cnc-machining",
+      "position": 3,
+      "title": "CNC Machining",
+      "images": [
+        {
+          "path": "/img/mechanical/phase4-cnc-router.png",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase4-cnc-mill.png",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase4-cnc-lathe.png",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase4-cnc-gcode.png",
+          "italicCaption": false
+        }
+      ]
+    },
+    {
+      "id": "mechanical-p4-injection-moulding",
+      "phase": "mechanical-p4",
+      "file": "04-injection-moulding.md",
+      "slug": "/phase-4-manufacturing-processes/injection-moulding",
+      "position": 4,
+      "title": "Injection Moulding",
+      "images": [
+        {
+          "path": "/img/mechanical/phase4-injection-moulding-process.png",
+          "italicCaption": false
+        }
+      ]
+    },
+    {
+      "id": "mechanical-p4-hand-tools",
+      "phase": "mechanical-p4",
+      "file": "05-hand-tools.md",
+      "slug": "/phase-4-manufacturing-processes/hand-tools",
+      "position": 5,
+      "title": "Hand Tools",
+      "images": [
+        {
+          "path": "/img/mechanical/phase4-hand-tool-allen-key.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase4-hand-tool-files.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase4-hand-tool-screwdriver.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase4-hand-tool-hand-drill.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase4-hand-tool-tapping-machine.jpg",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/mechanical/phase4-hand-tool-hacksaw.jpg",
+          "italicCaption": false
+        }
+      ]
+    },
+    {
+      "id": "mechanical-p5-arm-link",
+      "phase": "mechanical-p5",
+      "file": "01-arm-link.md",
+      "slug": "/phase-5-self-practice/arm-link",
+      "position": 1,
+      "title": "Arm Link",
+      "images": []
+    },
+    {
+      "id": "mechanical-p5-back-plate",
+      "phase": "mechanical-p5",
+      "file": "02-back-plate.md",
+      "slug": "/phase-5-self-practice/back-plate",
+      "position": 2,
+      "title": "Back Plate",
+      "images": []
+    },
+    {
+      "id": "mechanical-p5-side-plate",
+      "phase": "mechanical-p5",
+      "file": "03-side-plate.md",
+      "slug": "/phase-5-self-practice/side-plate",
+      "position": 3,
+      "title": "Side Plate",
+      "images": []
+    },
+    {
+      "id": "mechanical-p5-top-plate",
+      "phase": "mechanical-p5",
+      "file": "04-top-plate.md",
+      "slug": "/phase-5-self-practice/top-plate",
+      "position": 4,
+      "title": "Top Plate",
+      "images": []
+    },
+    {
+      "id": "mechanical-p5-base-plate",
+      "phase": "mechanical-p5",
+      "file": "05-base-plate.md",
+      "slug": "/phase-5-self-practice/base-plate",
+      "position": 5,
+      "title": "Base Plate",
+      "images": []
+    },
+    {
+      "id": "electronics-p1-welcome-to-nrl-electronics",
+      "phase": "electronics-p1",
+      "file": "01-welcome-to-nrl-electronics.md",
+      "slug": "/phase-1-electronics-foundations/welcome-to-nrl-electronics",
+      "position": 1,
+      "title": "Welcome to NRL Electronics",
+      "images": [
+        {
+          "path": "/img/electronics/phase1-command-hub.png",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/electronics/phase1-controller.png",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/electronics/phase1-signal-chain.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "electronics-p1-a-five-minute-electricity-primer",
+      "phase": "electronics-p1",
+      "file": "02-a-five-minute-electricity-primer.md",
+      "slug": "/phase-1-electronics-foundations/a-five-minute-electricity-primer",
+      "position": 2,
+      "title": "A Five-Minute Electricity Primer",
+      "images": []
+    },
+    {
+      "id": "electronics-p1-reading-the-robot",
+      "phase": "electronics-p1",
+      "file": "03-reading-the-robot.md",
+      "slug": "/phase-1-electronics-foundations/reading-the-robot",
+      "position": 3,
+      "title": "Reading the Robot",
+      "images": [
+        {
+          "path": "/img/electronics/phase1-block-diagram.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "electronics-p2-the-command-hub-up-close",
+      "phase": "electronics-p2",
+      "file": "01-the-command-hub-up-close.md",
+      "slug": "/phase-2-your-hardware/the-command-hub-up-close",
+      "position": 1,
+      "title": "The Command Hub, Up Close",
+      "images": [
+        {
+          "path": "/img/electronics/phase2-command-hub-top-view.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "electronics-p2-the-controller-up-close",
+      "phase": "electronics-p2",
+      "file": "02-the-controller-up-close.md",
+      "slug": "/phase-2-your-hardware/the-controller-up-close",
+      "position": 2,
+      "title": "The Controller, Up Close",
+      "images": [
+        {
+          "path": "/img/electronics/phase2-controller-face-on.png",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/electronics/phase2-controller-side.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "electronics-p2-using-and-caring-for-your-boards",
+      "phase": "electronics-p2",
+      "file": "03-using-and-caring-for-your-boards.md",
+      "slug": "/phase-2-your-hardware/using-and-caring-for-your-boards",
+      "position": 3,
+      "title": "Using & Caring for Your Boards — Dos and Don'ts",
+      "images": []
+    },
+    {
+      "id": "electronics-p2-safety-first",
+      "phase": "electronics-p2",
+      "file": "04-safety-first.md",
+      "slug": "/phase-2-your-hardware/safety-first",
+      "position": 4,
+      "title": "Safety First",
+      "images": []
+    },
+    {
+      "id": "electronics-p3-the-battery-and-the-bms",
+      "phase": "electronics-p3",
+      "file": "01-the-battery-and-the-bms.md",
+      "slug": "/phase-3-power/the-battery-and-the-bms",
+      "position": 1,
+      "title": "The Battery & the BMS",
+      "images": []
+    },
+    {
+      "id": "electronics-p3-charging-checking-and-battery-care",
+      "phase": "electronics-p3",
+      "file": "02-charging-checking-and-battery-care.md",
+      "slug": "/phase-3-power/charging-checking-and-battery-care",
+      "position": 2,
+      "title": "Charging, Checking & Battery Care",
+      "images": []
+    },
+    {
+      "id": "electronics-p3-the-power-path",
+      "phase": "electronics-p3",
+      "file": "03-the-power-path.md",
+      "slug": "/phase-3-power/the-power-path",
+      "position": 3,
+      "title": "The Power Path",
+      "images": [
+        {
+          "path": "/img/electronics/phase3-power-path.png",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/electronics/phase3-main-switch.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "electronics-p3-brownouts-and-power-monitoring",
+      "phase": "electronics-p3",
+      "file": "04-brownouts-and-power-monitoring.md",
+      "slug": "/phase-3-power/brownouts-and-power-monitoring",
+      "position": 4,
+      "title": "Brownouts & Power Monitoring",
+      "images": []
+    },
+    {
+      "id": "electronics-p4-dc-motors-and-gearboxes",
+      "phase": "electronics-p4",
+      "file": "01-dc-motors-and-gearboxes.md",
+      "slug": "/phase-4-motion-and-sensing/dc-motors-and-gearboxes",
+      "position": 1,
+      "title": "DC Motors & Gearboxes",
+      "images": [
+        {
+          "path": "/img/electronics/phase4-geared-motor.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "electronics-p4-servos",
+      "phase": "electronics-p4",
+      "file": "02-servos.md",
+      "slug": "/phase-4-motion-and-sensing/servos",
+      "position": 2,
+      "title": "Servos",
+      "images": [
+        {
+          "path": "/img/electronics/phase4-servo.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "electronics-p4-the-motor-driver",
+      "phase": "electronics-p4",
+      "file": "03-the-motor-driver.md",
+      "slug": "/phase-4-motion-and-sensing/the-motor-driver",
+      "position": 3,
+      "title": "The Motor Driver",
+      "images": [
+        {
+          "path": "/img/electronics/phase4-h-bridge.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "electronics-p4-pwm-controlling-power-with-pulses",
+      "phase": "electronics-p4",
+      "file": "04-pwm-controlling-power-with-pulses.md",
+      "slug": "/phase-4-motion-and-sensing/pwm-controlling-power-with-pulses",
+      "position": 4,
+      "title": "PWM — Controlling Power with Pulses",
+      "images": [
+        {
+          "path": "/img/electronics/phase4-pwm-duty-cycle.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "electronics-p4-analog-and-digital-signals",
+      "phase": "electronics-p4",
+      "file": "05-analog-and-digital-signals.md",
+      "slug": "/phase-4-motion-and-sensing/analog-and-digital-signals",
+      "position": 5,
+      "title": "Analog & Digital Signals",
+      "images": []
+    },
+    {
+      "id": "electronics-p4-buses-i2c-uart-and-spi",
+      "phase": "electronics-p4",
+      "file": "06-buses-i2c-uart-and-spi.md",
+      "slug": "/phase-4-motion-and-sensing/buses-i2c-uart-and-spi",
+      "position": 6,
+      "title": "Buses — I2C, UART & SPI",
+      "images": [
+        {
+          "path": "/img/electronics/phase4-buses.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "electronics-p4-the-imu",
+      "phase": "electronics-p4",
+      "file": "07-the-imu.md",
+      "slug": "/phase-4-motion-and-sensing/the-imu",
+      "position": 7,
+      "title": "The IMU — The Robot's Inner Ear",
+      "images": []
+    },
+    {
+      "id": "electronics-p4-the-arc-8-line-sensor",
+      "phase": "electronics-p4",
+      "file": "08-the-arc-8-line-sensor.md",
+      "slug": "/phase-4-motion-and-sensing/the-arc-8-line-sensor",
+      "position": 8,
+      "title": "The ARC-8 Line Sensor",
+      "images": [
+        {
+          "path": "/img/electronics/phase4-arc8-line-reading.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "electronics-p5-connectors-and-the-wiring-harness",
+      "phase": "electronics-p5",
+      "file": "01-connectors-and-the-wiring-harness.md",
+      "slug": "/phase-5-wiring-wireless-and-the-whole-robot/connectors-and-the-wiring-harness",
+      "position": 1,
+      "title": "Connectors & the Wiring Harness",
+      "images": []
+    },
+    {
+      "id": "electronics-p5-wiring-the-robot",
+      "phase": "electronics-p5",
+      "file": "02-wiring-the-robot.md",
+      "slug": "/phase-5-wiring-wireless-and-the-whole-robot/wiring-the-robot",
+      "position": 2,
+      "title": "Wiring the Robot",
+      "images": []
+    },
+    {
+      "id": "electronics-p5-hexa-link-and-the-antenna",
+      "phase": "electronics-p5",
+      "file": "03-hexa-link-and-the-antenna.md",
+      "slug": "/phase-5-wiring-wireless-and-the-whole-robot/hexa-link-and-the-antenna",
+      "position": 3,
+      "title": "Hexa Link & the Antenna",
+      "images": []
+    },
+    {
+      "id": "electronics-p5-lights-screens-and-telemetry",
+      "phase": "electronics-p5",
+      "file": "04-lights-screens-and-telemetry.md",
+      "slug": "/phase-5-wiring-wireless-and-the-whole-robot/lights-screens-and-telemetry",
+      "position": 4,
+      "title": "Lights, Screens & Telemetry",
+      "images": []
+    },
+    {
+      "id": "electronics-p5-troubleshooting",
+      "phase": "electronics-p5",
+      "file": "05-troubleshooting.md",
+      "slug": "/phase-5-wiring-wireless-and-the-whole-robot/troubleshooting",
+      "position": 5,
+      "title": "Troubleshooting — The Debug Guide",
+      "images": []
+    },
+    {
+      "id": "electronics-p5-the-pre-match-electrical-inspection",
+      "phase": "electronics-p5",
+      "file": "06-the-pre-match-electrical-inspection.md",
+      "slug": "/phase-5-wiring-wireless-and-the-whole-robot/the-pre-match-electrical-inspection",
+      "position": 6,
+      "title": "The Pre-Match Electrical Inspection",
+      "images": []
+    },
+    {
+      "id": "electronics-p5-quick-reference",
+      "phase": "electronics-p5",
+      "file": "07-quick-reference.md",
+      "slug": "/phase-5-wiring-wireless-and-the-whole-robot/quick-reference",
+      "position": 7,
+      "title": "Quick Reference",
+      "images": []
+    },
+    {
+      "id": "electronics-p5-glossary",
+      "phase": "electronics-p5",
+      "file": "08-glossary.md",
+      "slug": "/phase-5-wiring-wireless-and-the-whole-robot/glossary",
+      "position": 8,
+      "title": "Glossary",
+      "images": []
+    },
+    {
+      "id": "electronics-p5-conclusion-and-next-steps",
+      "phase": "electronics-p5",
+      "file": "09-conclusion-and-next-steps.md",
+      "slug": "/phase-5-wiring-wireless-and-the-whole-robot/conclusion-and-next-steps",
+      "position": 9,
+      "title": "Conclusion & Next Steps",
+      "images": []
+    },
+    {
+      "id": "programming-p1-introduction-to-cpp",
+      "phase": "programming-p1",
+      "file": "01-introduction-to-cpp.md",
+      "slug": "/part-1-foundations/introduction-to-cpp",
+      "position": 1,
+      "title": "Introduction to C++",
+      "images": []
+    },
+    {
+      "id": "programming-p1-variables-and-data-types",
+      "phase": "programming-p1",
+      "file": "02-variables-and-data-types.md",
+      "slug": "/part-1-foundations/variables-and-data-types",
+      "position": 2,
+      "title": "Variables & Data Types",
+      "images": []
+    },
+    {
+      "id": "programming-p1-operators",
+      "phase": "programming-p1",
+      "file": "03-operators.md",
+      "slug": "/part-1-foundations/operators",
+      "position": 3,
+      "title": "Operators",
+      "images": []
+    },
+    {
+      "id": "programming-p1-conditionals-and-loops",
+      "phase": "programming-p1",
+      "file": "04-conditionals-and-loops.md",
+      "slug": "/part-1-foundations/conditionals-and-loops",
+      "position": 4,
+      "title": "Conditionals & Loops",
+      "images": []
+    },
+    {
+      "id": "programming-p1-functions-and-scope",
+      "phase": "programming-p1",
+      "file": "05-functions-and-scope.md",
+      "slug": "/part-1-foundations/functions-and-scope",
+      "position": 5,
+      "title": "Functions & Scope",
+      "images": []
+    },
+    {
+      "id": "programming-p2-welcome-to-nrl",
+      "phase": "programming-p2",
+      "file": "01-welcome-to-nrl.md",
+      "slug": "/part-2-getting-started/welcome-to-nrl",
+      "position": 1,
+      "title": "Welcome to NRL",
+      "images": [
+        {
+          "path": "/img/curriculum/ch01-controller.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "programming-p2-installing-the-software",
+      "phase": "programming-p2",
+      "file": "03-installing-the-software.md",
+      "slug": "/part-2-getting-started/installing-the-software",
+      "position": 2,
+      "title": "Installing the Software",
+      "images": [
+        {
+          "path": "/img/curriculum/ch03-vscode-download.png",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch03-platformio-extension.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "programming-p2-creating-your-own-project",
+      "phase": "programming-p2",
+      "file": "04-creating-your-own-project.md",
+      "slug": "/part-2-getting-started/creating-your-own-project",
+      "position": 3,
+      "title": "Creating Your Own Project (HexaSDK)",
+      "images": [
+        {
+          "path": "/img/curriculum/ch04-step01-repo-page.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch04-step02-download-zip.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch04-step03-extract-zip.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch04-step04-open-tools-folder.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch04-step05-new-nrl-project-launcher.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch04-step06-security-warning-run.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch04-step07-fill-team-details.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch04-step08-choose-save-location.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch04-step09-confirm-generate.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch04-step10-project-generated.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch04-step11-vscode-opens-automatically.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch04-step12-reopen-code-workspace.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch04-generated-project.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "programming-p2-understanding-your-hardware",
+      "phase": "programming-p2",
+      "file": "05-understanding-your-hardware.md",
+      "slug": "/part-2-getting-started/understanding-your-hardware",
+      "position": 4,
+      "title": "Understanding Your Hardware",
+      "images": []
+    },
+    {
+      "id": "programming-p2-flashing-and-pairing",
+      "phase": "programming-p2",
+      "file": "06-flashing-and-pairing.md",
+      "slug": "/part-2-getting-started/flashing-and-pairing",
+      "position": 5,
+      "title": "Flashing and Pairing",
+      "images": [
+        {
+          "path": "/img/curriculum/ch06-install-python-extension.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch06-flash-controller-py-location.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch06-run-python-file-dropdown.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch06-flash-controller-success.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch06-oled-team-details-after-flash.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch06-wifi-channel-setting.jpg",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch06-pairing-demo.gif",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch06-command-hub-pairing-demo.gif",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch06-controller-info.png",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch06-vscode-loading.png",
+          "italicCaption": false
+        },
+        {
+          "path": "/img/curriculum/ch06-run-task-command.png",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch06-new-opmode-task.png",
+          "italicCaption": true
+        },
+        {
+          "path": "/img/curriculum/ch06-first-opmode-generated.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "programming-p3-motors",
+      "phase": "programming-p3",
+      "file": "07-motors.md",
+      "slug": "/part-3-programming-the-robot/motors",
+      "position": 1,
+      "title": "Motors",
+      "images": []
+    },
+    {
+      "id": "programming-p3-driving-with-tankdrive",
+      "phase": "programming-p3",
+      "file": "08-driving-with-tankdrive.md",
+      "slug": "/part-3-programming-the-robot/driving-with-tankdrive",
+      "position": 2,
+      "title": "Driving with TankDrive",
+      "images": []
+    },
+    {
+      "id": "programming-p3-servos",
+      "phase": "programming-p3",
+      "file": "09-servos.md",
+      "slug": "/part-3-programming-the-robot/servos",
+      "position": 3,
+      "title": "Servos",
+      "images": []
+    },
+    {
+      "id": "programming-p3-the-gamepad",
+      "phase": "programming-p3",
+      "file": "10-the-gamepad.md",
+      "slug": "/part-3-programming-the-robot/the-gamepad",
+      "position": 4,
+      "title": "The Gamepad",
+      "images": [
+        {
+          "path": "/img/curriculum/ch10-hexa-controller-button-labelling.png",
+          "italicCaption": true
+        }
+      ]
+    },
+    {
+      "id": "programming-p3-motion-sensor-imu-heading",
+      "phase": "programming-p3",
+      "file": "11-motion-sensor-imu-heading.md",
+      "slug": "/part-3-programming-the-robot/motion-sensor-imu-heading",
+      "position": 5,
+      "title": "The Motion Sensor (IMU) & Heading",
+      "images": []
+    },
+    {
+      "id": "programming-p3-telemetry",
+      "phase": "programming-p3",
+      "file": "12-telemetry.md",
+      "slug": "/part-3-programming-the-robot/telemetry",
+      "position": 6,
+      "title": "Telemetry",
+      "images": []
+    },
+    {
+      "id": "programming-p3-the-status-led",
+      "phase": "programming-p3",
+      "file": "13-the-status-led.md",
+      "slug": "/part-3-programming-the-robot/the-status-led",
+      "position": 7,
+      "title": "The Status LED",
+      "images": []
+    },
+    {
+      "id": "programming-p3-the-oled-display",
+      "phase": "programming-p3",
+      "file": "14-the-oled-display.md",
+      "slug": "/part-3-programming-the-robot/the-oled-display",
+      "position": 8,
+      "title": "The OLED Display",
+      "images": []
+    },
+    {
+      "id": "programming-p3-power-and-battery",
+      "phase": "programming-p3",
+      "file": "15-power-and-battery.md",
+      "slug": "/part-3-programming-the-robot/power-and-battery",
+      "position": 9,
+      "title": "Power & Battery",
+      "images": []
+    },
+    {
+      "id": "programming-p4-writing-an-autonomous-opmode",
+      "phase": "programming-p4",
+      "file": "16-writing-an-autonomous-opmode.md",
+      "slug": "/part-4-autonomous-and-advanced/writing-an-autonomous-opmode",
+      "position": 1,
+      "title": "Writing an Autonomous OpMode",
+      "images": []
+    },
+    {
+      "id": "programming-p4-the-action-system",
+      "phase": "programming-p4",
+      "file": "17-the-action-system.md",
+      "slug": "/part-4-autonomous-and-advanced/the-action-system",
+      "position": 2,
+      "title": "The Action System",
+      "images": []
+    },
+    {
+      "id": "programming-p4-precise-motion-with-driveactions",
+      "phase": "programming-p4",
+      "file": "18-precise-motion-with-driveactions.md",
+      "slug": "/part-4-autonomous-and-advanced/precise-motion-with-driveactions",
+      "position": 3,
+      "title": "Precise Motion with DriveActions",
+      "images": []
+    },
+    {
+      "id": "programming-p4-a-gentle-look-under-the-hood",
+      "phase": "programming-p4",
+      "file": "19-a-gentle-look-under-the-hood.md",
+      "slug": "/part-4-autonomous-and-advanced/a-gentle-look-under-the-hood",
+      "position": 4,
+      "title": "A Gentle Look Under the Hood",
+      "images": []
+    },
+    {
+      "id": "programming-p5-worked-examples",
+      "phase": "programming-p5",
+      "file": "20-worked-examples.md",
+      "slug": "/part-5-examples-troubleshooting-reference/worked-examples",
+      "position": 1,
+      "title": "Worked Examples",
+      "images": []
+    },
+    {
+      "id": "programming-p5-common-mistakes-and-troubleshooting",
+      "phase": "programming-p5",
+      "file": "21-common-mistakes-and-troubleshooting.md",
+      "slug": "/part-5-examples-troubleshooting-reference/common-mistakes-and-troubleshooting",
+      "position": 2,
+      "title": "Common Mistakes & Troubleshooting",
+      "images": []
+    },
+    {
+      "id": "programming-p5-api-quick-reference",
+      "phase": "programming-p5",
+      "file": "22-api-quick-reference.md",
+      "slug": "/part-5-examples-troubleshooting-reference/api-quick-reference",
+      "position": 3,
+      "title": "API Quick Reference",
+      "images": []
+    },
+    {
+      "id": "programming-p5-glossary",
+      "phase": "programming-p5",
+      "file": "23-glossary.md",
+      "slug": "/part-5-examples-troubleshooting-reference/glossary",
+      "position": 4,
+      "title": "Glossary",
+      "images": []
+    },
+    {
+      "id": "programming-p5-conclusion-and-next-steps",
+      "phase": "programming-p5",
+      "file": "24-conclusion-and-next-steps.md",
+      "slug": "/part-5-examples-troubleshooting-reference/conclusion-and-next-steps",
+      "position": 5,
+      "title": "Conclusion & Next Steps",
+      "images": []
+    }
+  ],
+  "imagePins": {
+    "a77c059fd38422c3f18e19bc9fa01932834270c2": {
+      "path": "/img/curriculum/ch06-command-hub-pairing-demo.gif",
+      "stripFromCaption": "(representative frame from an animated demo)",
+      "reason": "Word flattened this animated GIF to a still frame. Keep the GIF; ignore the still."
+    },
+    "d5f8954cced0ac81d2e45ce470f2ddf4840fc047": {
+      "path": "/img/curriculum/ch06-pairing-demo.gif",
+      "stripFromCaption": "(representative frame from an animated demo)",
+      "reason": "Word flattened this animated GIF to a still frame. Keep the GIF; ignore the still."
+    }
+  },
+  "codeFenceLanguage": {
+    "578a568a0990ea9d8a770e23a26b4c6d65a8bff4": "cpp",
+    "ca176b6a5b4ef536da47bb260291bea7833b7d66": "cpp",
+    "589705d55e87b71ec66c4d2a3bd80d517fcc0474": "text",
+    "893b86936bb3340d27d5bccd0600fdfbbf06e978": "cpp",
+    "5c923c464e1b896b87d025389ecd3cc2a8e19ad5": "cpp",
+    "d2f84c9b11faba9cb644213d3e7fcc3c66e17a0f": "cpp",
+    "2f8b3dbf2ad41bc72b0a922c02ff76aec0a61fa1": "cpp",
+    "4d697e8be5332009ece008fb1c23699a5b1ca9b0": "cpp",
+    "c76e7adb540fcc761c3657b3def7e155e65383a1": "cpp",
+    "0279cd1e94706684b7bf8277936349150d28672a": "cpp",
+    "21ad071c97023d36a80dcc856e08c3716f8fc556": "cpp",
+    "ba8c7801b3abb47e4c361167e3e33417b993a6f0": "cpp",
+    "1db8420e86b0a3231837e0dec043ebb39475091d": "cpp",
+    "719bffd6c4876ecd8831368bab00fa56a768727f": "cpp",
+    "edf5f8c6c3b1f46a5c8a1231bfc5dd87d9fd62df": "cpp",
+    "a27959c7f08f19a6871b23f00be1b5eed63fb387": "cpp",
+    "c2bfa76e950e87ea2b5fc466086a15b48f216484": "cpp",
+    "b03a2ed551a5d84f0d9ac059b0d1e7eb5e766953": "cpp",
+    "036e6c7000d67011486dc4c24c4367776b0ee899": "cpp",
+    "d52cab4b8c909ad28b0788fb62596db07c2ac0f0": "cpp",
+    "c58d396743909d67989c7088a8f1837bf9e55cf6": "cpp",
+    "5074b81de8cfea1e56a0a09bb0e252cb59e2b8e1": "cpp",
+    "8e5ab326872f80095aea75ca58a03a4b76ac36f1": "cpp",
+    "ac562f8abdf22ee3070c6fd588422e59d3ad810f": "cpp",
+    "e3a28fdf4c01a0c731a51e2e78bc38528f86b9fb": "cpp",
+    "56ff2fc552fe35a93a6a1558c30113c2d4747a89": "cpp",
+    "34bcbc4e16ac597f47e0e1d2c195410dc76e2123": "cpp",
+    "1a8ab32de1470d5f5d651613fc6cea0f372d8d9b": "cpp",
+    "a52d320b7a3b885c23c2e2283cddb6f8b3e64272": "text",
+    "37ec8ac8231cfb9b07876fa1d18c117580fc2f71": "cpp",
+    "fbba12b74a0955d17f248cabc9300d70b2fe62b3": "text",
+    "89732945461d9eb1ca1c664f7dfc627cf351dcb1": "cpp",
+    "b5d7170498d45cdfe44f4b6150a35edd73a53857": "cpp",
+    "7ebd896a1585d2349bd15fd4e6e416cff50d7a59": "cpp",
+    "d13369f069ce27c42f294790ede95364311f2924": "cpp",
+    "cd10cc5066e56dd94b764b9e82e00f25e75c8b81": "cpp",
+    "83344030ccc3a07413cf6e33cb3072b7a53e9252": "cpp",
+    "e2b9ecff5fd9662c21ca80f4de15b32248af21e0": "cpp",
+    "f074f84f11a05813efbf610eed76e1f571d6de51": "cpp",
+    "a975fd52262387b6549b68001ff262550e9de65a": "cpp",
+    "64403031eb0db9301af11038ff1cfee03c064791": "cpp",
+    "71a9d517627ee294af1149bca861f8999a1b97ec": "cpp",
+    "7200c90f89d4e901d8fe5edf65aed611d128e255": "cpp",
+    "e19221fcf961b5e8d06866b56f4a2b1c0d1fb3e2": "cpp",
+    "09c894cb63b2b84f44ebbfbf0d4d58b7fc104efa": "cpp",
+    "a7a9cb59b33ad0ee11b1bd9af6f9f9c62fc8498d": "cpp",
+    "e25755ad5d4fb608a01d5f389403f0fb6ec06357": "cpp",
+    "c63c9bde110a3840557277bfced5081cc2095110": "text",
+    "5914d773901ce1f6590f6cc5be724e59c3a9c426": "cpp",
+    "1ddeb4a9dc733c7aa50bb4b2f4d3c2bd87effaa1": "cpp",
+    "fd8dc8f5d461669093532f8f403139528b90151d": "cpp",
+    "5f25a487ff589976fcb57d0dcd00b4140571f899": "cpp",
+    "5efed521906c30760a4754b22f7f6d1cd13fc9c7": "cpp",
+    "103ea6f4376bb0d020f6befe964e2ad36205fd55": "cpp",
+    "9e0d7008e8fe347faa37b2e1101720284f1c7513": "cpp",
+    "5f53524ebc5c0baa4d512c05a2b4aa9620cc634e": "cpp",
+    "2c744e33a3f307fe2eac7681352d261da2224867": "text",
+    "ea0b2b97c1386a235a4f5bee3962aa1326a2b92f": "cpp",
+    "957519700a0902d2019da108291dba8cd15cd363": "cpp",
+    "de8638f80153db2a28ac9b7503ef363e15eaed3f": "cpp",
+    "cd33615a86a610732f6e1ab873bbaa39621c7810": "cpp",
+    "c5f66fd74f6d0de54c26c33ed377a232922559b3": "cpp",
+    "b76d3cd595be744d8d58f170bf7e1683cf4f9c63": "cpp",
+    "a916b92ae753ccc824172e5f0f1264408129e6a4": "cpp",
+    "dc21a51987f6a2011ef59a933fabaf89eb579eeb": "cpp",
+    "9053f0fc19e8b9b53369bc69e23d01c84583839e": "cpp",
+    "7620d5346f696a896c0db0458018832c0a51204a": "cpp",
+    "918ad2afcd36f6f77460ed81816f11916888e801": "cpp",
+    "62140a68086a8264411a4890e834e7679ff080ee": "cpp",
+    "d77ac4be587b29989c5279c656bb54a8ac1ee0b7": "cpp",
+    "13e76c9d7e538fa076b06d4ed3f1c76927d0b41c": "cpp",
+    "95c1ce61fc97ceb338288577a427ebba4c9359dd": "cpp",
+    "1851ab454e1be64e257199c9c043fb8deedfce45": "cpp",
+    "79e305f9124a7e791b03f0c4145d3413c49b1044": "cpp",
+    "9fb000f0339ae706c9b91d8303c47ca01146dae6": "cpp",
+    "e96662e055f6115aa2fdcfa0909c129ed60103aa": "cpp",
+    "a97b9c174a9bac9982deedca5bca6035248f4535": "cpp",
+    "ca437d3356b4c48e348fac0aa6bf9cbe9f53431f": "cpp",
+    "a50cf2d8c6c8548c798adeb7c0cdb50da8758ae1": "cpp",
+    "3c12b51aefdd49626dcc6a0ff4257f266e682df1": "cpp",
+    "496bc0bd8beb2129679393ede6a382e7a6409f41": "cpp",
+    "19e72e6b93960e6f262c0dbc1cce338501e01c75": "cpp"
+  },
+  "keepAlways": [
+    "img/logo.svg",
+    "img/favicon.svg",
+    "img/favicon.ico",
+    "img/docusaurus-social-card.jpg"
+  ],
+  "retired": []
+}

@@ -18,3 +18,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Word leaves an owner file beside an open document
+~$*.docx
+# Publisher build output
+publisher/build/
+publisher/dist/

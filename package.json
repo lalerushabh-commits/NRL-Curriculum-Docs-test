@@ -12,7 +12,9 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "publish": "node tools/word/publish.mjs",
+    "verify": "node tools/word/verify.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
@@ -26,19 +28,19 @@
     "@fontsource/source-serif-4": "^5.3.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
-    "mammoth": "^1.12.2",
+    "fast-xml-parser": "^5.11.1",
+    "fflate": "^0.8.3",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "turndown": "^7.2.4",
-    "turndown-plugin-gfm": "^1.0.2"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
     "@types/react": "^19.0.0",
-    "typescript": "~6.0.2"
+    "typescript": "~6.0.2",
+    "mammoth": "^1.12.2"
   },
   "browserslist": {
     "production": [

@@ -1,485 +1,256 @@
 # Editing the NRL Curriculum
 
-This guide is for whoever writes and edits the curriculum. It assumes you have never used
-GitHub, VS Code or the command line, and it never asks you to type a command.
+Everything on the curriculum website comes from **one Word document**:
 
-The whole site is just a folder of ordinary text files, one per module. You edit them, you
-watch the site update in your browser as you type, you run one check, and you publish.
+```
+NRL-Curriculum-Complete.docx
+```
 
----
+You edit that document in Word, the way you would edit anything else. When you
+want the website to catch up, you press one button. That is the whole system.
 
-## Part 1 — Setting up (once, on your computer)
+You never edit the website directly. You never need GitHub, VS Code, or a
+terminal. If someone shows you a folder full of files ending in `.md` — those
+are made *from* your document, automatically, every time you publish. Changing
+them by hand is pointless: the next publish overwrites them.
 
-You need three free programs. Install them in this order.
-
-1. **Node.js** — <https://nodejs.org>. Take the big green **LTS** button. Click Next through
-   the installer and accept the defaults. You will never open this program; other things use it.
-2. **Visual Studio Code** — <https://code.visualstudio.com>. This is the editor you will write in.
-3. **GitHub Desktop** — <https://desktop.github.com>. This is how your work gets saved and shared.
-
-Then get the curriculum onto your computer:
-
-4. Open **GitHub Desktop** and sign in with the GitHub account you were invited with.
-5. Choose **File → Clone repository**, pick **NRL-Curriculum-Docs** from the list, and note the
-   folder it saves into. Click **Clone**. It takes a minute.
-6. Open that folder and double-click **`NRL-Curriculum.code-workspace`**. VS Code opens.
-   Always open the curriculum this way — not by opening the plain folder.
-7. VS Code shows a small box in the corner offering **recommended extensions**. Click **Install**.
-
-That is the setup finished.
+> **This is the opposite of how it used to work.** Until now the website was the
+> master copy and Word was only a way of drafting one page at a time. It is the
+> other way round now: the Word document is the book.
 
 ---
 
-## Part 2 — The four buttons you will use
+## Part 1 — Setting up (once)
 
-Everything is done from one menu in VS Code: **Terminal → Run Task**. It offers four things.
+1. Install **Node.js** — go to [nodejs.org](https://nodejs.org), take the big
+   green **LTS** button, and click Next through the installer.
+2. Install **GitHub Desktop** — [desktop.github.com](https://desktop.github.com).
+   Open it once and sign in with the NRL GitHub account. You will not use the
+   app itself; the publisher needs it in order to be allowed to update the site.
+3. Put **NRL Curriculum Publisher.exe** somewhere you will find it. The Desktop
+   is fine.
+4. Keep the Word document at
+   `Desktop\NRL-Curriculum-Complete\NRL-Curriculum-Complete.docx`. If you keep
+   it somewhere else, the publisher has a **Choose a different file** link, and
+   it remembers your choice.
 
-| | What it does |
+The first time you press Publish it spends a few minutes setting itself up.
+That happens once.
+
+---
+
+## Part 2 — Publishing
+
+1. Make your edits in Word.
+2. **Save, and close Word.** The publisher refuses to run while the document is
+   open, because it can only read what has actually been saved.
+3. Double-click **NRL Curriculum Publisher**.
+4. Press **Publish to the website**.
+
+It tells you what it is doing as it goes, and finishes with *"Published. The
+website will update in about two minutes."* Wait those two minutes, then
+refresh the site.
+
+There is also **Check without publishing**. It does every step except the last
+one, so it finds any mistake without touching the live website. Use it as often
+as you like — it cannot do any harm.
+
+If anything is wrong, the publisher stops, says so in plain English, and
+**leaves the website exactly as it was**. There is no half-published state.
+
+---
+
+## Part 3 — How the document becomes the website
+
+The structure comes from Word's **heading styles**. This is the one technical
+thing worth understanding, and it is not complicated: in Word's Home tab there
+is a gallery of styles — Normal, Heading 1, Heading 2, and so on.
+
+| Word style | What it makes |
 |---|---|
-| **1. Preview the site** | Opens the curriculum in your browser and keeps it in step with what you type. Start this first and leave it running all day. |
-| **2. New module or phase** | Creates a new page (or a whole new section) with its name, number and address filled in correctly. |
-| **3. Import a Word document** | Turns one Word file into one module. See Part 7. |
-| **4. Check before publishing** | Hunts for mistakes and builds the whole site. Always run this before you publish. |
+| **Heading 1** | A curriculum — one of the three big parts of the book |
+| **Heading 2** | A phase inside a curriculum |
+| **Heading 3** | **One page on the website** |
+| **Heading 4** or **Heading 5** | A heading inside a page |
+| **Heading 6** | A smaller heading inside a page |
+| Normal | Ordinary writing |
 
-The first time you run **Preview**, it spends a few minutes setting itself up. That happens
-once. After that it starts in a few seconds.
-
-While Preview is running, every time you press **Ctrl+S** to save, the page in your browser
-updates by itself. You do not need to reload anything.
-
-To stop the preview, click inside its panel at the bottom of VS Code and press **Ctrl+C**.
-
----
-
-## Part 3 — Your working day
-
-1. **Start in GitHub Desktop** and click **Fetch origin** to pick up anyone else's changes.
-2. **In VS Code**, run *Terminal → Run Task → 1. Preview the site*.
-3. **Edit.** The curriculum is in the `docs` folder on the left, arranged exactly the way the
-   sidebar of the website is arranged. Click a file, change the words, press Ctrl+S, watch the
-   browser.
-4. **When you are done**, run *Terminal → Run Task → 4. Check before publishing*. It either
-   says `PASSED` or tells you in plain English what is wrong. Do not go further until it passes.
-5. **Back in GitHub Desktop**, your changed files are listed on the left. Type a short summary
-   of what you did in the box at the bottom left — *"Added a module on wheels and traction"* —
-   and click **Commit to main**.
-6. Click **Push origin**. That publishes it. The live site rebuilds itself a couple of minutes later.
-
-If you forget step 4, you will be reminded: the check runs again automatically when you push,
-and refuses to publish anything broken.
-
----
-
-## Part 4 — Finding the page you want to edit
-
-The folders on disk mirror the sidebar on the website exactly.
+A Heading 3 has to be written exactly like this:
 
 ```
-docs/
-  mechanical-curriculum/         ← "1. Mechanical Curriculum" in the sidebar
-    phase-1-mechanical-fundamentals/
-      01-gears-and-gear-ratio.md      ← "Module 1.1: Gears & Gear Ratio"
-      02-load-payload-and-forces.md
-  electronics-curriculum/
-  programming-curriculum/
+Module 3.4: The Gamepad
 ```
 
-So a page at `.../phase-3-power/02-charging-checking-and-battery-care.md` is the one that shows
-up as *Module 3.2: Charging, Checking & Battery Care*.
+The number before the dot is the phase; the number after it is the page's place
+in that phase. If a heading is not in that form, the publisher tells you which
+one and stops.
 
-If you cannot find a page, press **Ctrl+P** in VS Code and start typing its title.
+### Adding a page
+
+Put a new **Heading 3** where you want it, named in that pattern, and write
+underneath it. That is all. The publisher creates the page and tells you its new
+web address.
+
+### Renaming a page
+
+Change the words after the colon. The sidebar changes; **the web address does
+not**. That is deliberate — anyone who saved a link to that page still gets
+there. The publisher says so every time:
+
+> Renamed: "Gears & Gear Ratio" is now "Gears and Gear Ratios".
+> Its web address stays /phase-1-mechanical-fundamentals/gears-and-gear-ratio.
+
+### Reordering pages
+
+Move a Heading 3, with everything under it, up or down. Renumber the headings so
+they still read 1, 2, 3 in order. The sidebar follows.
+
+### Deleting a page
+
+Delete the Heading 3 and everything under it. The publisher **stops and asks
+first**, because deleting a page also kills its web address, and anyone with a
+saved link to it will get an error page from then on.
 
 ---
 
-## Part 5 — Changing a module that already exists
+## Part 4 — The coloured boxes
 
-This is most of the job, so it gets its own part. Start the preview first
-(*Terminal → Run Task → 1. Preview the site*) and keep the browser beside VS Code — everything
-below shows up the moment you press **Ctrl+S**.
+The book uses five kinds of box. Each is a **single-cell table with a coloured
+background** and a bold label on its first line.
 
-Find the page as described in Part 4, click it open, and:
+The reliable way to make one: find a box of the kind you want, select the whole
+box, copy it, paste it where you want it, and type over the text. Do not build
+one from scratch — copying keeps the colours right, and the colours are how the
+publisher recognises it.
 
-### Change the words
+The label on the first line must start with exactly one of these:
 
-Type. That is all — it is ordinary text, with no boxes to fill in and no fields.
-
-The only part of the file to leave alone is the block of `---` lines at the very top. Everything
-below it is yours.
-
-### Change a heading, or add a new section
-
-Headings are the lines starting with `##`. Add a section by typing a new one:
-
-```
-## How wheels grip
-```
-
-`##` is a section and `###` is a smaller heading inside it. The list of links down the right-hand
-side of the page builds itself from these, so there is never a contents list to update.
-
-### Replace a picture with a better one
-
-1. Find the image line — it looks like `![A wheel diagram](images/wheel-diagram.png)`.
-2. Select that whole line and delete it.
-3. Paste or drag the new picture in, exactly as in Part 8.
-4. Delete the old file from the `images` folder next to the page.
-
-Skipping step 4 breaks nothing — the unused file just sits there. Doing step 4 but forgetting
-step 2 makes the check tell you the page points at a picture that is not there.
-
-**Overwriting the old file with a new one of the same name is not a shortcut.** It works, but your
-browser will often keep showing the old picture from its memory for a while, which is confusing.
-Replacing the line is more reliable.
-
-### Add a picture to a page that has none
-
-Click where you want it and paste. Part 8 has the details.
-
-### Change what a picture is described as
-
-Edit the words inside the square brackets: `![this bit here](images/wheel.png)`. They are read
-aloud to people using screen readers, and shown if the picture will not load.
-
-### Remove a picture
-
-Delete the whole `![...](...)` line, then delete the file from the `images` folder.
-
-### Change the module's name
-
-Edit the `title:` line at the top. That is the only line up there that is safe to reword — read
-Part 10 before touching the other two, and **never** change `slug`.
-
-### Replace the whole module from a Word document
-
-Run *Terminal → Run Task → 3. Import a Word document* and choose **a rewrite of a module that
-already exists**. Its title, its position and its web address are kept exactly as they are; only
-the words and pictures are replaced. See Part 7.
-
-### Then, always
-
-Run *4. Check before publishing*, then commit and push in GitHub Desktop — Part 3, steps 4 to 6.
-
----
-
-## Part 6 — Adding a new module or a new phase
-
-**Never copy an existing file to make a new one.** Every page carries a hidden set of settings
-at the top — its title, its position in the sidebar, and its web address — and copying them by
-hand is where things go wrong.
-
-Instead run *Terminal → Run Task → **2. New module or phase***. It asks you a few questions,
-then tells you exactly which file it made and where it will appear. Open that file and write.
-
-New pages are always added at the end of their phase. To move one, see Part 11.
-
-A brand-new phase stays invisible until it has at least one module in it — so create the phase,
-then run the task again to add its first module.
-
----
-
-## Part 7 — Writing in Word
-
-If you would rather write in Word than type into VS Code, you can. **One module at a time.**
-
-1. Write the module in Word and save it as a normal `.docx` (File → Save As → *Word Document*).
-2. In VS Code, run *Terminal → Run Task → **3. Import a Word document***.
-3. Say whether it is a **new module** or a **rewrite of one that already exists**.
-4. Drag the Word file into the panel and press Enter.
-5. Answer the same where-does-it-go questions as Part 6.
-
-It converts the writing, saves every picture into the right place, fills in the settings block,
-and then lists anything worth a second look. **Read the page through afterwards** — Word
-formatting never survives perfectly — and run the check.
-
-### Use Word's Heading styles
-
-This is the one thing that really matters. Use **Home → Styles → Heading 1 / Heading 2**, not
-just bold text at a bigger size. A "heading" that is only big and bold arrives as an ordinary
-paragraph, and the page ends up as one flat wall of text with no sections and no contents list.
-
-### What comes across, and what does not
-
-| Survives | Does not |
+| Label | What it becomes |
 |---|---|
-| Heading styles, and the order of everything | Fonts, sizes, colours, highlighting |
-| **Bold** and *italic* | Text boxes, WordArt, columns, page breaks |
-| Bullet and numbered lists | Headers, footers and page numbers |
-| Tables (plain ones) | Merged table cells |
-| Pictures and GIFs | Equations |
-| Links | Comments and tracked changes |
+| `Note` | A note |
+| `Tip` | A tip |
+| `Warning` | A warning |
+| `Key Idea` | A key idea |
+| `Reveal the Answer` | A hidden answer the reader clicks to open |
 
-Accept or reject all tracked changes and delete your comments **before** importing, so that what
-you see in Word is what arrives on the site.
-
-### Getting coloured boxes out of Word
-
-Start a paragraph with one of these five words and a colon, and it becomes the matching coloured
-box from Part 9:
+The first four can take a title of your own after a colon:
 
 ```
-Key Idea: Traction is friction you can steer.
-Note: The battery must be charged first.
-Tip: Label both ends of every wire.
-Warning: Do not exceed the load rating.
-Danger: Keep fingers clear of the drivetrain.
+Warning: The one-second rule
+Key Idea: The ratio of teeth controls the ratio of speeds
+Tip: Check your work
 ```
 
-Only at the *start* of a paragraph — a sentence like "see the note: below" is left alone.
-
-### Rewriting a module that already exists
-
-Choosing *a rewrite* replaces everything written on that page, but **keeps its title, its place
-in the sidebar and its web address exactly as they were**. Nothing that links to it breaks. Any
-pictures a previous import put there are cleared out first, so nothing is left lying around.
-
-It asks you to type "yes" before it does this, because the old words are replaced.
-
-### The big "complete curriculum" Word file is not for editing
-
-There is a `NRL-Curriculum-Complete.docx` that contains the whole book. That file is a **printout
-made from this website** — a copy, generated on demand. Editing it does nothing to the site, and
-it cannot be imported back: the site is the master copy, and it is 79 separate pages, not one
-document. If you want to change something in it, change the module here and generate a fresh copy.
+Label a box anything else — `Caution`, say — and the publisher stops and tells
+you, rather than guessing. A safety warning quietly turned into a mild note is
+worse than a publish that did not happen.
 
 ---
 
-## Part 8 — Pictures and GIFs
+## Part 5 — Code
 
-**To add one:** click in the page where you want the picture, then either paste it with
-**Ctrl+V** or drag the file in from a folder. That is the whole procedure. VS Code files the
-picture away next to the page and writes a line like this:
+Code lives in its own **grey single-cell table**, in the Consolas font. Same
+advice as the boxes: copy an existing code block and type over it.
 
-```
-![A wheel diagram](images/wheel-diagram.png)
-```
-
-Change the words inside the square brackets to describe what the picture shows — they are read
-aloud to people using screen readers, and shown if the picture will not load. "Image" is not a
-description; "The Command Hub with the battery connector on the left" is.
-
-GIFs work exactly the same way, and so does dragging in several pictures at once.
-
-**To remove one:** delete that whole line from the page, and delete the picture file itself from
-the `images` folder next to the page. If you delete only the line, the unused file quietly stays
-in the project forever; if you delete only the file, the check will tell you the page points at
-a picture that is not there.
-
-**Older pictures** live in a shared `static/img` folder and are written as `/img/electronics/...`
-rather than `images/...`. Both styles work — leave the existing ones alone.
+Code written inside a sentence — like `gamepad1.leftY()` — is the same font with
+the same grey shading, applied to just those words.
 
 ---
 
-## Part 9 — Writing: everything you can put in a page
+## Part 6 — Pictures
 
-Plain text is plain text. Leave a blank line between paragraphs.
+Paste a picture into Word where you want it, then put a line **in italics**
+directly underneath describing it. That italic line is the caption. It is not
+optional: it is what a blind reader's screen reader announces, and the publisher
+stops if a picture does not have one.
 
-```
-## A section heading
-### A smaller heading underneath it
+If you also want the caption **visible** underneath the picture on the website,
+write it twice — two identical italic lines. One italic line means the
+description is there but not shown; two means it is shown as well. Both styles
+are already used in the book.
 
-**bold**, *italic*, and `a part name or a bit of code`.
+Worth knowing:
 
-- a bullet
-- another bullet
-
-1. a numbered step
-2. the next step
-
-> a quoted line
-```
-
-### Coloured boxes
-
-These are the strongest formatting tool you have — reach for one of these instead of trying to
-change a font or a colour.
-
-```
-:::keyidea[The one thing to remember]
-The single most important idea in the module.
-:::
-
-:::note
-A useful aside.
-:::
-
-:::tip
-A shortcut or a good habit.
-:::
-
-:::warning
-Something that wastes time or breaks a rule.
-:::
-
-:::danger
-Something that can destroy hardware or hurt someone.
-:::
-```
-
-The `[text in square brackets]` after `:::keyidea` is an optional custom heading for the box.
-
-### Linking to another module
-
-Link to the other page's **address**, which is the `slug:` line at the top of its file:
-
-```
-See [Module 3.3: Servos](/part-3-programming-the-robot/servos) for more.
-```
-
-Do not link to the file name, and do not paste the full `https://...` address of the live site.
-
-### Code examples
-
-Fence them, and say what language it is:
-
-````
-```cpp
-motor.setPower(0.5);
-```
-````
-
-### The four special blocks
-
-These are ready-made building blocks. Each one needs an `import` line, which goes immediately
-after the settings block at the very top of the page, before any text.
-
-**A method/parameter table:**
-
-```
-import ApiTable from '@site/src/components/ApiTable';
-
-<ApiTable rows={[
-  {member: 'begin()', description: 'Starts the motor. Call this in init().'},
-  {member: 'setPower(float p)', description: 'Sets power from -1.0 to 1.0.'},
-]} />
-```
-
-**A YouTube video:**
-
-```
-import YouTubeEmbed from '@site/src/components/YouTubeEmbed';
-
-<YouTubeEmbed id="dQw4w9WgXcQ" title="Building a four-bar linkage" />
-```
-
-The `id` is the part of a YouTube address after `v=`. For a whole playlist use
-`listId="..."` instead of `id="..."`, taking the part after `list=`.
-
-**A hidden answer to an exercise:**
-
-```
-import Answer from '@site/src/components/Answer';
-
-<Answer>
-A 3:1 ratio, because the driven gear has three times as many teeth.
-</Answer>
-```
-
-**A note that the module is taught by video rather than written here:**
-
-```
-import ExternalModuleNote from '@site/src/components/ExternalModuleNote';
-
-<ExternalModuleNote via="video" />
-```
-
-`via` can be `"video"`, `"course"` or `"course-and-playlist"`.
+- **Animations.** Word cannot show an animated GIF; it freezes it to one frame.
+  Two pictures in the book are animations, and the publisher knows to keep the
+  real animation rather than Word's frozen frame. If you want a *new* animation
+  on a page, ask rather than pasting it in.
+- **Paste pictures, not drawing objects.** A chart or diagram pasted from
+  another Office program is stored in a format the website cannot show. The
+  publisher stops and names the picture. Save it as a PNG or JPG and paste that.
+- Pictures already in the book are reused exactly as they are. Only genuinely
+  new ones get added, and the publisher lists them for you.
 
 ---
 
-## Part 10 — The settings block at the top of every page
+## Part 7 — Links
 
-Every page begins with a small block between two lines of dashes:
+- **To a website** — Word's normal Insert → Link.
+- **To another page in the book** — link to that page's heading (Insert → Link →
+  Place in This Document). Write the link text either as the page's name or as
+  `Module 4.6`. Both work.
 
-```
----
-title: "Module 3.3: Servos"
-sidebar_position: 3
-slug: /part-3-programming-the-robot/servos
----
-```
-
-- **title** — what shows in the sidebar and at the top of the page. Safe to reword.
-- **sidebar_position** — where it sits in its phase. 1 is first. No two pages in the same
-  phase may share a number.
-- **slug** — the page's web address. **Changing this breaks every link that points at the
-  page,** including links from other websites. Leave it alone unless you mean it.
-
-The "New module" task writes all three for you. Do not delete the block or the dashes.
+If a link points at a page that does not exist, the publisher stops and tells
+you which page and which link. It will not publish a broken link.
 
 ---
 
-## Part 11 — Reordering, renaming and deleting
+## Part 8 — What the publisher checks
 
-**To reorder modules within a phase:** change the `sidebar_position` numbers so they read 1, 2,
-3… in the order you want, then run the check — it will tell you if two pages ended up sharing a
-number. The file names are only for your own convenience; the numbers in the settings block are
-what actually decides the order.
+Before anything goes live, it:
 
-**To rename a module:** change the `title` line. That is all. Do not rename the file, and do not
-change the `slug`, unless you have decided to accept broken links.
+1. Refuses to run while the document is open in Word.
+2. Reads the whole document and reports **every** problem at once, so you fix
+   them in one pass instead of one publish at a time.
+3. Refuses to delete pages unless you say so.
+4. Stops if the document has suddenly lost a large part of the book — that
+   normally means the wrong file or a bad save, not a decision.
+5. **Builds the entire website** and only carries on if it works.
+6. Only then publishes.
 
-**To reorder or rename phases:** open the `_category_.json` file inside the phase folder and edit
-its `label` (the name in the sidebar) or `position` (where the phase sits).
-
-**To delete a module:** delete the file, and delete its `images` folder if it has one. Then run
-the check — it will list any other page that was still linking to the page you removed, so you
-can fix those links.
+If any step fails, nothing is published and the live website is untouched.
 
 ---
 
-## Part 12 — When something goes wrong
+## Part 9 — What you cannot break
 
-Run **Check before publishing**. It explains the problem in plain words and names the file. These
-are the five it will find:
-
-**"This page shows an image … but that file is not there."**
-The picture was deleted, moved or renamed. Delete the image line, or paste the picture in again.
-
-**"Broken links. A page links to an address that does not exist."**
-Open the page it names and fix the link. The correct address of any page is the `slug:` line at
-the top of that page's file.
-
-**"sidebar_position N is already used by … in the same phase."**
-Two pages in one phase are fighting for the same spot. Give one of them a different number.
-
-**"A page could not be read as a page."**
-Almost always a stray `<` or `{` in ordinary writing. A `<` immediately followed by a letter
-(like `<part name>`) is read as the start of a hidden instruction. Wrap it in backticks —
-`` `<part name>` `` — or write `&lt;` instead. Same for `{`.
-
-**"The settings block at the top is missing …"**
-The block described in Part 10 was damaged. Copy the shape of it from a neighbouring page.
-
-If the check prints something it does not recognise, it says so and shows the raw message. Send
-that to Rushabh rather than guessing.
-
-**The preview looks stuck or wrong.** Stop it (click in the panel, press Ctrl+C) and run
-*1. Preview the site* again. That clears almost everything.
+- You cannot break the live website by editing Word. The publisher builds the
+  whole site first and refuses to publish a broken one.
+- You cannot lose your writing. The Word document is yours; the website is made
+  from it. Every publish is also saved in the project's history and can be undone.
+- You cannot accidentally move a page's web address by renaming it.
+- If you are unsure, press **Check without publishing**.
 
 ---
 
-## Part 13 — Changing how the site looks
+## Part 10 — Changing how the site looks
 
-Fonts, text size and heading weight can be changed, but they apply to the entire site at once —
-there is deliberately no way to change the font of a single word or paragraph, which is what
-keeps sixty-odd modules by different writers reading as one book. For emphasis inside a page,
-use **bold** or one of the coloured boxes in Part 9.
-
-See [THEME.md](./THEME.md) for the site-wide settings. Check with Rushabh before changing them.
+Fonts and text size live in `THEME.md`. That is a job for whoever maintains the
+site, not something you need to touch in order to write the book.
 
 ---
 
-## Part 14 — What you cannot break
+## For whoever maintains this
 
-Two things stand between a mistake and the live site:
+The converter is in `tools/word/`. Reading `ooxml.mjs` then `grammar.mjs` is the
+fastest way in. Things worth knowing before changing anything:
 
-- **Check before publishing**, which you run yourself.
-- The same check running automatically when you push. If the site would not build, nothing is
-  published and you are told why.
-
-So the worst that can happen is that your work does not go out yet. Everything you have ever
-committed is kept, and any change can be undone — ask Rushabh.
-
-The one thing worth being careful about is Part 10's `slug`, because a broken address does not
-fail the check on the page that was renamed. It fails on every other page pointing at it, which
-is confusing. Leave slugs alone.
+- **`verify.mjs` is the regression test.** It converts the document and compares
+  the result against `docs/` page by page. If a change to the converter starts
+  losing something, this is what says so. Run it after every change.
+- **`source/manifest.json` holds everything the Word document cannot say** —
+  folder names, sidebar labels and descriptions, frozen web addresses, which
+  code block is C++ and which is plain text, and the two animated GIFs Word
+  flattens to stills. Losing it means losing every page's web address. It is
+  committed for that reason.
+- **`docs/` is generated output.** Do not hand-edit it; `check.mjs` compares it
+  against the manifest and complains if the two have drifted.
+- **Neither pandoc nor mammoth can do this job.** What separates a warning from
+  a code block from a data table in this document is the cell's background
+  colour, and both converters discard it before you can look. Pandoc also drops
+  every heading in this particular file, silently, because its `styles.xml`
+  defines the heading styles as based on a `Normal` style that it never defines.
+- **The publisher window is `publisher/`**, packaged by `publisher/build-exe.ps1`.
+  It is deliberately thin: the converter it runs comes from this repository, so
+  a converter fix reaches every machine on the next run without rebuilding the
+  exe.
