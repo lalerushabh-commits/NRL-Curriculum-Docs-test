@@ -145,6 +145,17 @@ def ensure_ready(on_line) -> None:
         run([git, "reset", "--hard", "origin/main"], REPO, on_line)
         run([git, "clean", "-fdq"], REPO, on_line)
 
+    # The converter lives in the repository, not in this program. If the copy
+    # on GitHub does not have it, there is nothing here that can publish, and
+    # saying so plainly beats letting Node print a stack trace at someone who
+    # has never seen one.
+    if not (REPO / "tools" / "word" / "publish.mjs").exists():
+        raise Failed(
+            "This copy of the website does not have the publishing tools in it yet.\n\n"
+            "That means the changes that add them have not been put on GitHub. "
+            "Ask Rushabh to publish the tooling update, then open this again."
+        )
+
     # Reinstall only when the list of tools has actually changed.
     lock = REPO / "package-lock.json"
     stamp = WORKDIR / "installed-lock.txt"
