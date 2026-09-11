@@ -37,7 +37,8 @@ class Publisher(tk.Tk):
         self.docx = steps.docx_path(self.settings)
         self.events: queue.Queue = queue.Queue()
         self.busy = False
-        self.site_url = steps.SITE_URL
+        self.site_url = steps.site_url(self.settings)
+        self.published = False
         self.changed_pages: list[dict] = []
 
         self._build()
@@ -136,6 +137,7 @@ class Publisher(tk.Tk):
         self.check_btn.configure(state="disabled")
         self.result.pack_forget()
         self.changed_pages = []
+        self.published = False
         self.progress.pack(fill="x", padx=24, pady=(2, 0))
         self.progress.start(12)
         self.log.configure(state="normal")
@@ -153,7 +155,7 @@ class Publisher(tk.Tk):
                 lambda event: put(("event", event)),
                 lambda line: put(("line", line)),
             )
-            put(("finished", ok and not check_only))
+            put(("finished", ok))
         except steps.Failed as e:
             put(("event", {"step": "error", "message": str(e)}))
             put(("finished", False))
@@ -182,6 +184,8 @@ class Publisher(tk.Tk):
         message = event.get("message", "")
         if event.get("url"):
             self.site_url = event["url"]
+        if step == "done":
+            self.published = bool(event.get("published"))
         if event.get("changedPages") is not None and step in ("comparing", "done"):
             self.changed_pages = event["changedPages"]
         tag = {"error": "bad", "done": "ok", "warn": "warn"}.get(step, None)
@@ -198,25 +202,33 @@ class Publisher(tk.Tk):
         self.publish_btn.configure(state="normal")
         self.check_btn.configure(state="normal")
         if published:
-            self._show_result()
+            self._show_result(self.published)
 
-    def _show_result(self) -> None:
+    def _show_result(self, published: bool) -> None:
         for w in self.result_inner.winfo_children():
             w.destroy()
         panel = self.result_inner
-        bg = "#14261b"
+        bg = "#14261b" if published else "#1c1e2a"
+        self.result.configure(bg=bg)
+        panel.configure(bg=bg)
 
-        tk.Label(panel, text="PUBLISHED", bg=bg, fg=OK,
-                 font=("Segoe UI", 8, "bold")).pack(anchor="w")
-        tk.Label(panel, text="Give it about two minutes, then refresh the page in your browser.",
-                 bg=bg, fg=FG, font=("Segoe UI", 10), anchor="w").pack(anchor="w", pady=(2, 8))
+        if published:
+            tk.Label(panel, text="PUBLISHED", bg=bg, fg=OK,
+                     font=("Segoe UI", 8, "bold")).pack(anchor="w")
+            tk.Label(panel, text="Give it about two minutes, then refresh the page in your browser.",
+                     bg=bg, fg=FG, font=("Segoe UI", 10), anchor="w").pack(anchor="w", pady=(2, 8))
+        else:
+            tk.Label(panel, text="ALREADY UP TO DATE", bg=bg, fg=MUTED,
+                     font=("Segoe UI", 8, "bold")).pack(anchor="w")
+            tk.Label(panel, text="The website already says what the document says. Nothing was changed.",
+                     bg=bg, fg=FG, font=("Segoe UI", 10), anchor="w").pack(anchor="w", pady=(2, 8))
 
         tk.Button(panel, text="Open the website", command=lambda: webbrowser.open(self.site_url),
                   bg=OK, fg="#0d0e14", bd=0, relief="flat", cursor="hand2",
                   activebackground="#2f9a41", activeforeground="#0d0e14",
                   font=("Segoe UI Semibold", 10), padx=16, pady=7).pack(anchor="w")
 
-        if self.changed_pages:
+        if published and self.changed_pages:
             n = len(self.changed_pages)
             tk.Label(panel, text=f"{'Page' if n == 1 else 'Pages'} that changed — click to open:",
                      bg=bg, fg=MUTED, font=("Segoe UI", 9)).pack(anchor="w", pady=(12, 2))

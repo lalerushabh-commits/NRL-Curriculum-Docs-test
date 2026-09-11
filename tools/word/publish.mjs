@@ -188,7 +188,7 @@ for (const i of result.newImages) say('warn', `New picture on ${i.page}: ${i.src
 for (const n of result.notes) say('warn', n);
 
 if (!changed.length && !created.length && !result.removed.length) {
-  say('done', 'The website already matches the document. Nothing to publish.');
+  say('done', 'The website already matches the document. Nothing to publish.', {published: false, url: siteUrl()});
   process.exit(0);
 }
 
@@ -232,7 +232,7 @@ if (check.status !== 0) {
 say('checking', 'The website builds cleanly.');
 
 if (CHECK_ONLY) {
-  say('done', 'Checked only — the pages were updated on this computer but nothing was published.');
+  say('done', 'Checked only — the pages were updated on this computer but nothing was published.', {published: false});
   process.exit(0);
 }
 
@@ -271,6 +271,7 @@ if (push.status !== 0) {
 }
 
 say('done', 'Published. The website will update in about two minutes.', {
+  published: true,
   url: siteUrl(),
   changedPages: [...asPages(changed), ...asPages(created)],
 });

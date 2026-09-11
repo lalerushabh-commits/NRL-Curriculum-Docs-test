@@ -34,6 +34,16 @@ def repo_url(settings: dict) -> str:
 def branch(settings: dict) -> str:
     return settings.get("branch") or BRANCH
 
+
+def site_url(settings: dict) -> str:
+    """The address the site is served from, worked out from the repository.
+    Hard-coding the real site's address sends anyone using a test repository
+    to the wrong place — a 404 if the real site is down, or worse, a page that
+    quietly does not contain their change."""
+    import re
+    m = re.search(r"github\.com[/:]([^/]+)/([^/.]+?)(?:\.git)?/?$", repo_url(settings))
+    return f"https://{m.group(1)}.github.io/{m.group(2)}/" if m else SITE_URL
+
 WORKDIR = Path(os.environ.get("LOCALAPPDATA", Path.home())) / "NRL" / "CurriculumPublisher"
 REPO = WORKDIR / "repo"
 SETTINGS = WORKDIR / "settings.json"
