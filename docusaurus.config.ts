@@ -4,6 +4,13 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+// Which repository is this being built for? GitHub Actions says, via
+// GITHUB_REPOSITORY ("owner/name"). Reading it means the same code deploys
+// correctly to a throwaway test repository as to the real one — the Pages
+// address is derived from the repository name, so hard-coding it would send
+// every link on a test deployment to the wrong place.
+const [owner, project] = (process.env.GITHUB_REPOSITORY ?? 'lalerushabh-commits/NRL-Curriculum-Docs').split('/');
+
 const config: Config = {
   title: 'NRL Curriculum',
   tagline: 'Design, build, and program a competition robot with the NRL platform',
@@ -13,11 +20,11 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://lalerushabh-commits.github.io',
-  baseUrl: '/NRL-Curriculum-Docs/',
+  url: `https://${owner}.github.io`,
+  baseUrl: `/${project}/`,
 
-  organizationName: 'lalerushabh-commits',
-  projectName: 'NRL-Curriculum-Docs',
+  organizationName: owner,
+  projectName: project,
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
@@ -35,8 +42,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
-          editUrl:
-            'https://github.com/lalerushabh-commits/NRL-Curriculum-Docs/tree/main/',
+          editUrl: `https://github.com/${owner}/${project}/tree/main/`,
           admonitions: {
             keywords: ['note', 'tip', 'info', 'warning', 'danger', 'keyidea'],
             extendDefaults: true,
