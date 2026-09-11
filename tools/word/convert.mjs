@@ -434,7 +434,24 @@ export function convert({docxPath, manifest, assetsDir}) {
     }
   }
 
-  return {files, problems, notes, added, removed, renamed, newImages, pageCount: pages.length};
+  // Which file is which page, so a change list can name pages, not paths.
+  const pageIndex = new Map();
+  if (front) {
+    const fp = manifest.frontPage;
+    pageIndex.set(`docs/${fp?.file ?? 'how-to-use-this-book.md'}`, {
+      title: fp?.title ?? 'How to Use This Book',
+      slug: fp?.slug ?? '/how-to-use-this-book',
+    });
+  }
+  for (const page of pages) {
+    if (!page.phaseRef) continue;
+    pageIndex.set(`docs/${page.curriculumRef.folder}/${page.phaseRef.folder}/${page.file}`, {
+      title: `Module ${page.phaseNumber}.${page.ordinal}: ${page.title}`,
+      slug: page.slug,
+    });
+  }
+
+  return {files, problems, notes, added, removed, renamed, newImages, pageCount: pages.length, pageIndex};
 }
 
 /**

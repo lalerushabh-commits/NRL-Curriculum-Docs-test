@@ -37,6 +37,8 @@ class Publisher(tk.Tk):
         self.docx = steps.docx_path(self.settings)
         self.events: queue.Queue = queue.Queue()
         self.busy = False
+        self.site_url = steps.SITE_URL
+        self.changed_pages: list[dict] = []
 
         self._build()
         self._pump()
@@ -92,6 +94,12 @@ class Publisher(tk.Tk):
                                font=("Segoe UI", 10), anchor="w")
         self.status.pack(fill="x", padx=24, pady=(10, 4))
 
+        # What changed, and where to look. Shown only after a run; the answer
+        # to "so what do I open now?" should not be buried in a log.
+        self.result = tk.Frame(self, bg="#14261b", highlightthickness=0)
+        self.result_inner = tk.Frame(self.result, bg="#14261b")
+        self.result_inner.pack(fill="x", padx=14, pady=12)
+
         log_frame = tk.Frame(self, bg=BG)
         log_frame.pack(fill="both", expand=True, padx=24, pady=(0, 20))
         self.log = tk.Text(log_frame, bg="#0d0e14", fg=FG, bd=0, relief="flat",
@@ -105,9 +113,6 @@ class Publisher(tk.Tk):
         for tag, colour in (("ok", OK), ("bad", BAD), ("warn", WARN), ("muted", MUTED)):
             self.log.tag_configure(tag, foreground=colour)
 
-        self.link = tk.Label(self, text="", bg=BG, fg=ACCENT, cursor="hand2",
-                             font=("Segoe UI", 10, "underline"))
-        self.link.bind("<Button-1>", lambda _e: webbrowser.open(steps.SITE_URL))
 
     # -------------------------------------------------------------- actions
 
@@ -129,7 +134,8 @@ class Publisher(tk.Tk):
         self.busy = True
         self.publish_btn.configure(state="disabled")
         self.check_btn.configure(state="disabled")
-        self.link.pack_forget()
+        self.result.pack_forget()
+        self.changed_pages = []
         self.progress.pack(fill="x", padx=24, pady=(2, 0))
         self.progress.start(12)
         self.log.configure(state="normal")
@@ -174,6 +180,10 @@ class Publisher(tk.Tk):
     def _event(self, event: dict) -> None:
         step = event.get("step", "")
         message = event.get("message", "")
+        if event.get("url"):
+            self.site_url = event["url"]
+        if event.get("changedPages") is not None and step in ("comparing", "done"):
+            self.changed_pages = event["changedPages"]
         tag = {"error": "bad", "done": "ok", "warn": "warn"}.get(step, None)
         self._write(message, tag)
         for line in event.get("detail", []) or []:
@@ -188,8 +198,40 @@ class Publisher(tk.Tk):
         self.publish_btn.configure(state="normal")
         self.check_btn.configure(state="normal")
         if published:
-            self.link.configure(text="Open the website")
-            self.link.pack(anchor="w", padx=24, pady=(0, 8))
+            self._show_result()
+
+    def _show_result(self) -> None:
+        for w in self.result_inner.winfo_children():
+            w.destroy()
+        panel = self.result_inner
+        bg = "#14261b"
+
+        tk.Label(panel, text="PUBLISHED", bg=bg, fg=OK,
+                 font=("Segoe UI", 8, "bold")).pack(anchor="w")
+        tk.Label(panel, text="Give it about two minutes, then refresh the page in your browser.",
+                 bg=bg, fg=FG, font=("Segoe UI", 10), anchor="w").pack(anchor="w", pady=(2, 8))
+
+        tk.Button(panel, text="Open the website", command=lambda: webbrowser.open(self.site_url),
+                  bg=OK, fg="#0d0e14", bd=0, relief="flat", cursor="hand2",
+                  activebackground="#2f9a41", activeforeground="#0d0e14",
+                  font=("Segoe UI Semibold", 10), padx=16, pady=7).pack(anchor="w")
+
+        if self.changed_pages:
+            n = len(self.changed_pages)
+            tk.Label(panel, text=f"{'Page' if n == 1 else 'Pages'} that changed — click to open:",
+                     bg=bg, fg=MUTED, font=("Segoe UI", 9)).pack(anchor="w", pady=(12, 2))
+            for page in self.changed_pages[:12]:
+                url = self.site_url.rstrip("/") + page["slug"]
+                link = tk.Label(panel, text=f"  {page['title']}", bg=bg, fg=ACCENT, cursor="hand2",
+                                font=("Segoe UI", 10, "underline"), anchor="w")
+                link.pack(anchor="w")
+                link.bind("<Button-1>", lambda _e, u=url: webbrowser.open(u))
+            if n > 12:
+                tk.Label(panel, text=f"  ...and {n - 12} more", bg=bg, fg=MUTED,
+                         font=("Segoe UI", 9)).pack(anchor="w")
+
+        # Above the log, below the status line.
+        self.result.pack(fill="x", padx=24, pady=(4, 10), before=self.log.master)
 
     def _write(self, text: str, tag: str | None = None) -> None:
         self.log.configure(state="normal")

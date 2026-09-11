@@ -166,9 +166,14 @@ for (const [rel, contents] of result.files) {
   if (differs) changed.push(rel);
 }
 
+// Named pages, not file paths: "Module 3.1: Motors", with the address to open.
+const asPages = (files) => files.map((f) => result.pageIndex.get(f)).filter(Boolean);
+
 say('comparing', summarise({changed, created, result}), {
   changed: changed.length,
   created: created.length,
+  changedPages: asPages(changed),
+  createdPages: asPages(created),
   added: result.added,
   renamed: result.renamed,
   removed: result.removed.map((m) => m.slug),
@@ -266,8 +271,20 @@ if (push.status !== 0) {
 }
 
 say('done', 'Published. The website will update in about two minutes.', {
-  url: 'https://lalerushabh-commits.github.io/NRL-Curriculum-Docs/',
+  url: siteUrl(),
+  changedPages: [...asPages(changed), ...asPages(created)],
 });
+
+/**
+ * The address the site is served from, worked out from where this copy of the
+ * repository was cloned. Hard-coding the real site's address would send
+ * someone using a test repository to the wrong place.
+ */
+function siteUrl() {
+  const remote = (git('remote', 'get-url', 'origin').stdout ?? '').trim();
+  const m = remote.match(/github\.com[/:]([^/]+)\/([^/.]+)(?:\.git)?$/);
+  return m ? `https://${m[1]}.github.io/${m[2]}/` : 'https://lalerushabh-commits.github.io/NRL-Curriculum-Docs/';
+}
 
 // ------------------------------------------------------------------ helpers
 
