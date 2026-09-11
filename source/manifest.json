@@ -236,7 +236,7 @@
           "filePrefix": "position",
           "nextFilePrefix": null,
           "category": {
-            "label": "Phase 1: Foundations – Hello WORLD",
+            "label": "Phase 1: Foundations",
             "position": 1,
             "collapsible": true,
             "collapsed": false,
