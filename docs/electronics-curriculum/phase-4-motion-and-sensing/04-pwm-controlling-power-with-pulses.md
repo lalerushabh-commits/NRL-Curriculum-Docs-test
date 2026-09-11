@@ -43,5 +43,5 @@ PWM delivers any fraction of full power by switching ON and OFF very fast — th
 :::
 
 :::note[Who sets the duty cycle?]
-Your programmers do, in code — mapping joystick values to duty cycles is one of the Programming book's early victories. Your side of the deal is hardware that lets the pulses arrive clean: seated signal cables, and power wiring routed away from signal wiring ([Module 5.2](/phase-5-wiring-wireless-and-the-whole-robot/wiring-the-robot)).
+Your programmers do, in code — mapping joystick values to duty cycles is one of the Programming book's early victories. Your side of the deal is hardware that lets the pulses arrive clean: seated signal cables, and power wiring routed away from signal wiring ([Module 5.2](/phase-5-wiring-wireless-and-the-whole-robot/conclusion-and-next-steps)).
 :::

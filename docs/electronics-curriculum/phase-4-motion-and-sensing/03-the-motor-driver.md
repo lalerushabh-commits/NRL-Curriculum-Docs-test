@@ -29,9 +29,9 @@ The NRL motor driver board, connectors labelled: XT30 in, two JST-VH motor outpu
 :::
 
 :::keyidea[Power and signal never mix]
-Notice the pattern: thick wires and big connectors carry **power**; the thin six-wire cable carries **signals**. The driver is where the two worlds meet — which is why its wiring deserves your neatest work and why [Module 5.2](/phase-5-wiring-wireless-and-the-whole-robot/wiring-the-robot) routes power and signal cables apart from each other.
+Notice the pattern: thick wires and big connectors carry **power**; the thin six-wire cable carries **signals**. The driver is where the two worlds meet — which is why its wiring deserves your neatest work and why [Module 5.2](/phase-5-wiring-wireless-and-the-whole-robot/conclusion-and-next-steps) routes power and signal cables apart from each other.
 :::
 
 :::warning[If one side of the robot won't drive]
-Don't reach for a replacement driver — a genuinely dead channel is rare. Check, in order: the dead motor's **JST-VH power cable** seated at both the driver and the motor; the **6-pin signal cable** fully clicked at the Hub and the driver; then swap the silent motor onto the working channel to learn whether the problem travels with the motor or stays with the wiring. [Module 5.5](/phase-5-wiring-wireless-and-the-whole-robot/troubleshooting) walks the full method.
+Don't reach for a replacement driver — a genuinely dead channel is rare. Check, in order: the dead motor's **JST-VH power cable** seated at both the driver and the motor; the **6-pin signal cable** fully clicked at the Hub and the driver; then swap the silent motor onto the working channel to learn whether the problem travels with the motor or stays with the wiring. [Module 5.5](/phase-5-wiring-wireless-and-the-whole-robot/conclusion-and-next-steps) walks the full method.
 :::

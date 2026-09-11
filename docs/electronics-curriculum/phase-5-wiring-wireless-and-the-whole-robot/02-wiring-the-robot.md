@@ -22,11 +22,11 @@ Well-wired robot chassis: separated power/signal runs, zip ties, service loops, 
 
 Before the second-person power-on check ([Module 2.4](/phase-2-your-hardware/safety-first)), run your own inspection:
 
-- Every connector: look, seat, tug ([Module 5.1](/phase-5-wiring-wireless-and-the-whole-robot/connectors-and-the-wiring-harness)).
+- Every connector: look, seat, tug ([Module 5.1](/phase-5-wiring-wireless-and-the-whole-robot/conclusion-and-next-steps)).
 - Battery held by its strap — a shifting pack yanks its own power cable.
 - Full mechanism sweep by hand — nothing rubs, nothing pinches at any position.
 - No cable within reach of a wheel or gear, even under vibration.
-- Antenna clear and positioned ([Module 5.3](/phase-5-wiring-wireless-and-the-whole-robot/hexa-link-and-the-antenna)).
+- Antenna clear and positioned ([Module 5.3](/phase-5-wiring-wireless-and-the-whole-robot/conclusion-and-next-steps)).
 - Phone photo of the finished layout for the team album.
 
 :::keyidea[Neat is fast]

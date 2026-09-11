@@ -11,7 +11,7 @@ Walk the chain one last time — **joystick → Controller → Hexa Link → Com
 ## Where to grow from here
 
 - **Team up with the Programming book.** Sit with your programmers as they run the [sensor](/part-3-programming-the-robot/motors) and [telemetry](/part-3-programming-the-robot/telemetry) chapters — you own the same hardware from two sides, and the best NRL teams blur that line.
-- **Become the inspector.** Own the [Module 5.6](/phase-5-wiring-wireless-and-the-whole-robot/the-pre-match-electrical-inspection) checklist at your next event. Nothing teaches faster than being the last set of eyes before a match.
+- **Become the inspector.** Own the [Module 5.6](/phase-5-wiring-wireless-and-the-whole-robot/conclusion-and-next-steps) checklist at your next event. Nothing teaches faster than being the last set of eyes before a match.
 - **Keep the fault log.** By season's end it will be the most valuable document your team owns — and you will have written it.
 - **Stay curious.** Every topic here — batteries, radio, control, sensing — opens into a real engineering field. The robot in front of you is a genuine, working introduction to all of them.
 
