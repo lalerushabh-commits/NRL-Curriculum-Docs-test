@@ -34,6 +34,7 @@ const IMPORT_LINES = [
  */
 function segment(blocks, problems) {
   const pages = [];
+  const outline = []; // [{heading, phases: [heading, ...]}] — what Word calls each section
   let front = null;
   let curriculum = null;
   let phase = null;
@@ -57,6 +58,7 @@ function segment(blocks, problems) {
           curriculum = null;
         } else {
           curriculum = {heading: text, index: pages.length};
+          outline.push({heading: text, phases: []});
           phase = null;
         }
         continue;
@@ -64,6 +66,7 @@ function segment(blocks, problems) {
 
       if (b.heading === 2) {
         phase = {heading: text, ordinal: (phase?.ordinal ?? 0) + 1};
+        if (curriculum) outline[outline.length - 1].phases.push(text);
         current = null;
         continue;
       }
@@ -107,7 +110,7 @@ function segment(blocks, problems) {
     current.blocks.push(b);
   }
 
-  return {front, pages};
+  return {front, pages, outline};
 }
 
 // ------------------------------------------------------------------ identity
@@ -225,7 +228,7 @@ export function convert({docxPath, manifest, assetsDir}) {
   const files = new Map();
   const idx = indexManifest(manifest);
 
-  const {front, pages} = segment(blocks, problems);
+  const {front, pages, outline} = segment(blocks, problems);
   const {removed} = reconcile(pages, manifest, idx, problems);
 
   // Every page's address, known before rendering so cross-links can resolve.
@@ -418,14 +421,31 @@ export function convert({docxPath, manifest, assetsDir}) {
     files.set(`${dir}/${page.file}`, renderPage(page, spec));
   }
 
-  // Category files come straight from the manifest — the document has no
-  // place to record a folder's label or its description.
-  for (const cur of manifest.curricula) {
-    files.set(`docs/${cur.folder}/_category_.json`, `${JSON.stringify(cur.category, null, 2)}\n`);
-    for (const ph of cur.phases) {
-      files.set(`docs/${cur.folder}/${ph.folder}/_category_.json`, `${JSON.stringify(ph.category, null, 2)}\n`);
+  // Section files. The folder name and the description come from the
+  // manifest — the document has no place for either — but the *name* the
+  // reader sees in the sidebar is whatever the heading says in Word. Renaming
+  // "Phase 1: Foundations" in Word renames it on the site; the folder and every
+  // address underneath it stay put, exactly as a page's address does.
+  const relabelled = [];
+  manifest.curricula.forEach((cur, ci) => {
+    const wordCur = outline[ci];
+    const curCategory = {...cur.category};
+    if (wordCur && wordCur.heading !== curCategory.label) {
+      relabelled.push({folder: cur.folder, from: curCategory.label, to: wordCur.heading});
+      curCategory.label = wordCur.heading;
     }
-  }
+    files.set(`docs/${cur.folder}/_category_.json`, `${JSON.stringify(curCategory, null, 2)}\n`);
+
+    cur.phases.forEach((ph, pi) => {
+      const wordPhase = wordCur?.phases[pi];
+      const phCategory = {...ph.category};
+      if (wordPhase && wordPhase !== phCategory.label) {
+        relabelled.push({folder: `${cur.folder}/${ph.folder}`, from: phCategory.label, to: wordPhase});
+        phCategory.label = wordPhase;
+      }
+      files.set(`docs/${cur.folder}/${ph.folder}/_category_.json`, `${JSON.stringify(phCategory, null, 2)}\n`);
+    });
+  });
 
   // Files shipped beside the document (the drawing sheets).
   if (assetsDir && fs.existsSync(assetsDir)) {
@@ -451,7 +471,7 @@ export function convert({docxPath, manifest, assetsDir}) {
     });
   }
 
-  return {files, problems, notes, added, removed, renamed, newImages, pageCount: pages.length, pageIndex};
+  return {files, problems, notes, added, removed, renamed, relabelled, newImages, pageCount: pages.length, pageIndex};
 }
 
 /**

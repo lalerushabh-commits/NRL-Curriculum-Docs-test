@@ -100,6 +100,13 @@ there. The publisher says so every time:
 > Renamed: "Gears & Gear Ratio" is now "Gears and Gear Ratios".
 > Its web address stays /phase-1-mechanical-fundamentals/gears-and-gear-ratio.
 
+### Renaming a curriculum or a phase
+
+Change the Heading 1 or Heading 2 text. The name in the sidebar follows; the
+web addresses underneath it do not move. The publisher reports it:
+
+> Section renamed: "Phase 1: Foundations" is now "Phase 1: C++ Foundations".
+
 ### Reordering pages
 
 Move a Heading 3, with everything under it, up or down. Renumber the headings so

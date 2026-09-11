@@ -184,6 +184,7 @@ for (const r of result.renamed) {
   say('warn', `Renamed: "${r.from}" is now "${r.to}". Its web address stays ${r.slug}.`);
 }
 for (const a of result.added) say('warn', `New page: ${a.title} — it will be at ${a.slug}`);
+for (const r of result.relabelled) say('warn', `Section renamed: "${r.from}" is now "${r.to}".`);
 for (const i of result.newImages) say('warn', `New picture on ${i.page}: ${i.src}`);
 for (const n of result.notes) say('warn', n);
 
@@ -300,6 +301,12 @@ function summarise({changed, created, result}) {
 
 /** Bring the index up to date with what was just published. */
 function applyManifestChanges(manifest, result) {
+  for (const r of result.relabelled) {
+    for (const cur of manifest.curricula) {
+      if (cur.folder === r.folder) cur.category.label = r.to;
+      for (const ph of cur.phases) if (`${cur.folder}/${ph.folder}` === r.folder) ph.category.label = r.to;
+    }
+  }
   for (const r of result.renamed) {
     const m = manifest.modules.find((x) => x.slug === r.slug);
     if (m) m.title = r.to;
