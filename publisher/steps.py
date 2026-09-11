@@ -22,6 +22,17 @@ from pathlib import Path
 
 REPO_URL = "https://github.com/lalerushabh-commits/NRL-Curriculum-Docs.git"
 SITE_URL = "https://lalerushabh-commits.github.io/NRL-Curriculum-Docs/"
+BRANCH = "main"
+
+
+def repo_url(settings: dict) -> str:
+    """Where the site is fetched from. Overridable so a change can be rehearsed
+    against a stand-in repository before it is allowed near the real one."""
+    return settings.get("repoUrl") or REPO_URL
+
+
+def branch(settings: dict) -> str:
+    return settings.get("branch") or BRANCH
 
 WORKDIR = Path(os.environ.get("LOCALAPPDATA", Path.home())) / "NRL" / "CurriculumPublisher"
 REPO = WORKDIR / "repo"
@@ -121,14 +132,17 @@ def run(cmd: list[str], cwd: Path | None, on_line) -> int:
     return process.wait()
 
 
-def ensure_ready(on_line) -> None:
+def ensure_ready(on_line, settings: dict | None = None) -> None:
     """
     Make sure there is a working copy of the site to publish from.
 
     This is a private copy the author never opens and never edits, which is why
     it is safe to reset it to whatever GitHub has before every run.
     """
-    node = find_node()
+    settings = settings or {}
+    url = repo_url(settings)
+    ref = f"origin/{branch(settings)}"
+    find_node()
     git = find_git()
     WORKDIR.mkdir(parents=True, exist_ok=True)
 
@@ -136,13 +150,13 @@ def ensure_ready(on_line) -> None:
         on_line("Setting up for the first time. This takes a few minutes, once.")
         if REPO.exists():
             shutil.rmtree(REPO, ignore_errors=True)
-        if run([git, "clone", REPO_URL, str(REPO)], WORKDIR, on_line) != 0:
+        if run([git, "clone", "--branch", branch(settings), url, str(REPO)], WORKDIR, on_line) != 0:
             raise Failed("I could not download the website from GitHub. Check the internet connection.")
     else:
         on_line("Getting the latest copy of the website...")
         run([git, "fetch", "origin"], REPO, on_line)
         # The copy is ours alone, so anything left behind by a failed run goes.
-        run([git, "reset", "--hard", "origin/main"], REPO, on_line)
+        run([git, "reset", "--hard", ref], REPO, on_line)
         run([git, "clean", "-fdq"], REPO, on_line)
 
     # The converter lives in the repository, not in this program. If the copy

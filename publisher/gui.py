@@ -140,7 +140,7 @@ class Publisher(tk.Tk):
     def _work(self, check_only: bool) -> None:
         put = self.events.put
         try:
-            steps.ensure_ready(lambda line: put(("line", line)))
+            steps.ensure_ready(lambda line: put(("line", line)), self.settings)
             ok = steps.publish(
                 self.docx,
                 check_only,
