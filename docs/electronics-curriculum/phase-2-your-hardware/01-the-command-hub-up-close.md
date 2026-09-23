@@ -6,7 +6,7 @@ slug: /phase-2-your-hardware/the-command-hub-up-close
 
 One board runs the whole robot. Here is every port, light, and button on it — and what each one is for.
 
-The **HEXA Command Hub** is the robot's brain. At its centre sits an **ESP32-S3-WROOM-1U (N8R8)** microcontroller module — a small computer with built-in 2.4 GHz radio that uses an **external antenna** ([Module 5.3](/phase-5-wiring-wireless-and-the-whole-robot/conclusion-and-next-steps)). Around that module, the Hub provides power regulation, motor and servo control, sensor ports, and self-monitoring.
+The **HEXA Command Hub** is the robot's brain. At its centre sits an **ESP32-S3-WROOM-1U (N8R8)** microcontroller module — a small computer with built-in 2.4 GHz radio that uses an **external antenna** ([Module 5.3](/phase-5-wiring-wireless-and-the-whole-robot/hexa-link-and-the-antenna)). Around that module, the Hub provides power regulation, motor and servo control, sensor ports, and self-monitoring.
 
 ![Your map of the Hub, top view. Every port in the tables below is here — match each one against the white silkscreen labels printed on your real board, which always have the final word.](/img/electronics/phase2-command-hub-top-view.png)
 

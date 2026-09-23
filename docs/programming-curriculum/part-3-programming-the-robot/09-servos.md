@@ -34,7 +34,7 @@ static HexaServo arm{{ .signalPin = SERVO_1, .startAngle = 90.0f, .settleMs = 0 
 ]} />
 
 :::note[settleMs = 0 means "hold"]
-With `.settleMs = 0`, the servo keeps its signal and firmly holds its commanded angle — which is what you usually want for an arm. This relies on a clean servo power supply; if a servo buzzes at rest on a weak battery, that's a power issue (see [Module 5.2](/part-5-examples-troubleshooting-reference/conclusion-and-next-steps)), not a code bug.
+With `.settleMs = 0`, the servo keeps its signal and firmly holds its commanded angle — which is what you usually want for an arm. This relies on a clean servo power supply; if a servo buzzes at rest on a weak battery, that's a power issue (see [Module 5.2](/part-5-examples-troubleshooting-reference/common-mistakes-and-troubleshooting)), not a code bug.
 :::
 
 ## A complete servo OpMode

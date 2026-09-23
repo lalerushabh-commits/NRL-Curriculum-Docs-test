@@ -26,7 +26,7 @@ Close-up of Command Hub port rows with silkscreen labels visible. Every port is 
 
 ## Lights and screens — the robot talking back
 
-The Hub and Controller carry status LEDs, an RGB indicator, a buzzer, and screens. Together they answer the four questions you will ask most often: *Is it powered? Is it charged? Is it connected? Is it happy?* [Module 5.4](/phase-5-wiring-wireless-and-the-whole-robot/conclusion-and-next-steps) gives you the full decoder table; for now, just know that a silent, dark robot is telling you something too.
+The Hub and Controller carry status LEDs, an RGB indicator, a buzzer, and screens. Together they answer the four questions you will ask most often: *Is it powered? Is it charged? Is it connected? Is it happy?* [Module 5.4](/phase-5-wiring-wireless-and-the-whole-robot/lights-screens-and-telemetry) gives you the full decoder table; for now, just know that a silent, dark robot is telling you something too.
 
 :::tip[Photograph everything]
 Before you unplug anything, take a phone photo. After you finish wiring, take another. When something stops working three weeks later, those photos are the fastest route back to "known good." Great teams keep a shared album of their robot's wiring history.

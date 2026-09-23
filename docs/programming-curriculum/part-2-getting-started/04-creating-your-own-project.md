@@ -8,9 +8,9 @@ Rather than editing the shared template directly, each team makes its **own copy
 
 ## Step 1 — Get the project files
 
-Go to the NRL kit's GitHub repository.
+Go to the NRL kit's GitHub repository: [github.com/NationalRoboticsLeague-NRL/NRL-NationalRoboticsLeague](https://github.com/NationalRoboticsLeague-NRL/NRL-NationalRoboticsLeague).
 
-![The NRL kit repository on GitHub.](/img/curriculum/ch04-step01-repo-page.jpg)
+![The NRL kit repository on GitHub.](/img/curriculum/the-nrl-kit-repository-on-github.jpg)
 
 *The NRL kit repository on GitHub.*
 
@@ -18,7 +18,7 @@ Go to the NRL kit's GitHub repository.
 
 Click the green **`<> Code`** button and select **Download ZIP**.
 
-![Click the green Code button, then Download ZIP.](/img/curriculum/ch04-step02-download-zip.jpg)
+![Click the green Code button, then Download ZIP.](/img/curriculum/click-the-green-code-button-then-download-zip.jpg)
 
 *Click the green Code button, then Download ZIP.*
 

@@ -26,4 +26,4 @@ When you press any button on the Controller, its metal contacts actually **bounc
 
 ## The 60-second health read
 
-Before every practice run, read the panel in order: **(1)** boards power up, screens alive → **(2)** Hub OLED shows paired → **(3)** Controller TFT shows the link healthy → **(4)** telemetry battery voltage ≥ healthy → **(5)** idle current small and steady → **(6)** brief joystick wiggle moves the right wheels the right way. Sixty seconds, no tools, and you have verified most of this book. [Module 5.6](/phase-5-wiring-wireless-and-the-whole-robot/conclusion-and-next-steps) grows this habit into the formal inspection.
+Before every practice run, read the panel in order: **(1)** boards power up, screens alive → **(2)** Hub OLED shows paired → **(3)** Controller TFT shows the link healthy → **(4)** telemetry battery voltage ≥ healthy → **(5)** idle current small and steady → **(6)** brief joystick wiggle moves the right wheels the right way. Sixty seconds, no tools, and you have verified most of this book. [Module 5.6](/phase-5-wiring-wireless-and-the-whole-robot/the-pre-match-electrical-inspection) grows this habit into the formal inspection.

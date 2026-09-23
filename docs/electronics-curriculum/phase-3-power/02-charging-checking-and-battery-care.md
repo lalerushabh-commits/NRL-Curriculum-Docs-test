@@ -32,7 +32,7 @@ The two chargers look similar and their plugs may even fit each other's jacks �
 Your kit includes a small **battery checker** with an XT30 connector. Plug the pack's XT30 into it and it instantly displays the pack's voltage — no robot needed. It is the fastest answer to the three questions you will ask most often:
 
 - **"Is this pack charged?"** — check before strapping a pack onto the robot; ~12.4 V or higher means match-ready.
-- **"Is this pack empty or is the robot broken?"** — when a robot won't power up, checking the pack takes five seconds and cuts the mystery in half ([Module 5.5](/phase-5-wiring-wireless-and-the-whole-robot/conclusion-and-next-steps)).
+- **"Is this pack empty or is the robot broken?"** — when a robot won't power up, checking the pack takes five seconds and cuts the mystery in half ([Module 5.5](/phase-5-wiring-wireless-and-the-whole-robot/troubleshooting)).
 - **"Which of these packs should we use?"** — check all packs at the start of a match day and line them up from fullest to emptiest.
 
 :::note[Photo coming soon]
